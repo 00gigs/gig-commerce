@@ -8,12 +8,32 @@ const [password, setPassword] = useState('')
 const [error,setError]=useState('')
 
 
-const handleSubmit =(e)=>{
+const handleSubmit = async (e)=>{
   e.preventDefault()
   if(!username || !password){
     setError('Please fill all fields')
     return
   }
+  try {
+    const res =  await fetch('/api/login',{
+       method:'POST',
+       headers:{"Content-Type":"application/json"},
+       body:JSON.stringify({
+         username,
+         password
+       })
+     })
+ 
+     if(res.ok){
+       const form = e.target
+       form.reset()
+     }else{
+       console.log('user log in failed' )
+     }
+   } catch (error) {
+     console.log('error during log in', error)
+   }
+
 }
 
   return (
