@@ -1,8 +1,13 @@
 "use client";
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation';
+import { signIn } from 'next-auth/react';
 
 const LoginForm = () => {
+  const router = useRouter();
+
+
 const [username, setUserName] = useState('')
 const [password, setPassword] = useState('')
 const [error,setError]=useState('')
@@ -15,21 +20,18 @@ const handleSubmit = async (e)=>{
     return
   }
   try {
-    const res =  await fetch('/api/login',{
-       method:'POST',
-       headers:{"Content-Type":"application/json"},
-       body:JSON.stringify({
-         username,
-         password
-       })
-     })
+        const res =  await  signIn('credentials',{
+          username,
+          password,
+          redirect:false
+         })
  
-     if(res.ok){
-       const form = e.target
-       form.reset()
-     }else{
-       console.log('user log in failed' )
-     }
+         if(res.error){
+          setError("invalid credentials")
+          return
+         }
+
+         router.push("/")
    } catch (error) {
      console.log('error during log in', error)
    }
