@@ -46,7 +46,7 @@ const Register = () => {
       if (res.ok) {
         const form = e.target;
         form.reset();
-        router.push("/");
+        router.push("http://localhost:3000/Login");
       } else {
         console.log("user registration failed");
       }
