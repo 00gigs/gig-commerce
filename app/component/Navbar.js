@@ -3,20 +3,69 @@
 import React from "react";
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
-
+import { useState } from "react";
 const Navbar = () => {
+  const { data: session } = useSession();
 
-const {data: session} = useSession()
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggle =()=>{
+    setIsOpen(!isOpen)
+  }
 
   return (
-    <div className="bg-slate-600 w-screen h-fit p-3">
+    <div className="bg-slate-600 w-screen h-10 p-3 flex justify-end">{/**main*/}
+      <div className="flex items-center w-screen justify-start">
+        <div>{/**drawer menu*/}
+          <button className="p-2 m-4 hover:bg-slate-800 rounded" onClick={toggle}>{/** open drawer menu*/}
+      {isOpen ? '' :<img width="30" height="30" src="https://img.icons8.com/ios/50/menu--v1.png" alt="menu--v1"/>} 
+          </button>
+          <div  className={`fixed top-0 left-0 z-40 h-full bg-gray-800 text-white transform ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        } transition-transform duration-300 ease-in-out w-64`}>
 
-<p>user: <span>{session?.user?.email}</span></p>
-
-      <button className="border-2 rounded-lg bg-slate-800" onClick={() => signOut({ callbackUrl: 'http://localhost:3000/Login'  })}>
-        SignOut
-      </button>
-    </div>
+          <div>{/**drawer menu items*/}
+            <h1 className="text-xl font-bold my-3 ml-1">Services</h1>
+            <ul className="mx-3">
+              <li className="hover:cursor-pointer my-2">- landscaper</li>
+              <li className="hover:cursor-pointer my-2">- General contractor</li>
+              <li className="hover:cursor-pointer my-2">- Cleaning Contractor</li>
+              <li className="hover:cursor-pointer my-2">- Moving Contractor</li>
+            </ul>
+          </div>
+{/**close drawer menu*/}
+          {isOpen && (
+        <div
+          className=" absolute bottom-3 right-3 flex justify-center hover:cursor-pointer text-red-300"
+          onClick={() => setIsOpen(false)}
+        >close</div>
+      )}
+          </div>
+          </div>{/**drawer menu*/}
+          <a href="/">
+       <h1 className="text-xl italic underline text-indigo-200 font-bold tracking-widest">Hanz</h1>
+          </a>
+      </div>
+      <div className="flex items-center">{/**user&signOut*/}
+        <span className=" text-xs flex items-center mx-5">
+          <img
+            width="24"
+            height="24"
+            src="https://img.icons8.com/material-rounded/24/user.png"
+            alt="user"
+          />
+          {session?.user?.email}
+        </span>
+        <button
+          className="text-xs ml-2 border-2 p-1 rounded-lg bg-slate-800 hover:bg-slate-400"
+          onClick={() =>
+            signOut({ callbackUrl: "http://localhost:3000/Login" })
+          }
+        >
+          SignOut
+        </button>
+      </div>{/**user&signOut*/}
+   {/**main*/} </div> 
   );
 };
 
