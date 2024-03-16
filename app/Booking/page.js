@@ -116,7 +116,7 @@ const page = () => {
               </div>
             </form>
           </div>
-          <button className="font-bold rounded-md w-full border-t-4 mt-2 hover:bg-green-400 hover:text-green-100 hover:font-extrabold " type="submit">
+          <button className="font-bold rounded-md w-full border-t-4 mt-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold " type="submit">
             Submit Booking
           </button>
         </div>

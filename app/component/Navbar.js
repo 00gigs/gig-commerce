@@ -4,6 +4,7 @@ import React from "react";
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
+import Link from 'next/link'
 const Navbar = () => {
   const { data: session } = useSession();
 
@@ -27,10 +28,10 @@ const Navbar = () => {
           <div>{/**drawer menu items*/}
             <h1 className="text-xl font-bold my-3 ml-1">Services</h1>
             <ul className="mx-3">
-              <li className="hover:cursor-pointer my-2">- landscaper</li>
-              <li className="hover:cursor-pointer my-2">- General contractor</li>
-              <li className="hover:cursor-pointer my-2">- Cleaning Contractor</li>
-              <li className="hover:cursor-pointer my-2">- Moving Contractor</li>
+              <li className="hover:cursor-pointer my-2"> <Link href={'/landscaping'}> - landscaper</Link> </li>
+              <li className="hover:cursor-pointer my-2"><Link href={'/GeneralContract'}>- General contractor</Link></li>
+              <li className="hover:cursor-pointer my-2"><Link href={'/Cleaning'}>- Cleaning Contractor</Link> </li>
+              <li className="hover:cursor-pointer my-2"><Link href={'/Moving'}>- Moving Contractor</Link> </li>
             </ul>
           </div>
 {/**close drawer menu*/}
