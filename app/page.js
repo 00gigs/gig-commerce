@@ -6,7 +6,7 @@ export default function Home() {
   return (
    <div>
     <Navbar/>
-   <div className="text-black">
+   <div className="flex min-h-screen justify-center items-center text-black bg-slate-100">
    Home page
    </div>
    
