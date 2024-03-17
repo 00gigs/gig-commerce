@@ -1,3 +1,4 @@
+'use client'
 import Navbar from "./component/Navbar";
 import Link from 'next/link'; 
 export default function Home() {
@@ -7,7 +8,10 @@ export default function Home() {
       <Navbar />
       <div className="grid text-center min-h-screen  text-black bg-slate-100 mx-6 p-2 border-4">  {/**content whole */}
         <div>{/**headBanner  */}
-          <h1 className="text-[22px] font-bold italic tracking-wide"><p className="italic underline text-indigo-200 font-bold tracking-widest">Hanz</p>`Your Premier All-In-One Home 🏡 Solutions Provider`</h1>
+          <div className="text-[22px] font-bold italic tracking-wide">
+            <h2 className="italic underline text-indigo-200 font-bold tracking-widest">Hanz</h2>
+            `Your Premier All-In-One Home 🏡 Solutions Provider`
+            </div>
         </div>{/**headBanner  */}
         <div className="flex justify-center">
       <Link href='/Booking' className=" p-3 flex justify-center bg-green-200 rounded-xl shadow-xl font-bold w-1/3  m-3 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold" > "BOOK TODAY" </Link>
@@ -25,41 +29,34 @@ export default function Home() {
           <h1 className="font-bold text-[22px] mt-2 underline">Move with Confidence with Hanz Moving Services</h1>
           <p className="font-light text-p[18px] tracking-tight">Relocating can be stressful, but with Hanz's moving services, you can enjoy a smooth and worry-free transition. Our team of expert movers is ready to handle every aspect of your move, from packing and loading to transportation and setup in your new space. Check out our Moving page for more information on how we can support your next move.</p>
         </div>{/**text content  */}
-        <div className="flex justify-end gap-4"> {/**table  */}
-          <table className="border-4 border-black m-4">
-            <tr className="border-4 border-black">
-              <th className="border-r-4 border-black">Services</th>
-              <th>Results</th>
-            </tr>
-            <tr className="border-4 border-black">
-              <td className="border-r-4 border-black">Landscaping</td>
-              <td>
-                Transform your outdoor space into a personal oasis with Hanz's
-                landscaping services.
-              </td>
-            </tr>
-            <tr className="border-4 border-black">
-              <td className="border-r-4 border-black">General Contracting </td>
-              <td>
-                Turn your construction and renovation ideas into reality with
-                precision and passion.
-              </td>
-            </tr>
-            <tr className="border-4 border-black">
-              <td className="border-r-4 border-black">Cleaning Services </td>
-              <td>
-                Experience a cleaner, fresher home without lifting a finger.
-              </td>
-            </tr>
-            <tr>
-              <td className="border-r-4 border-black">Moving Services </td>
-              <td>
-                Relocate with ease and efficiency, thanks to Hanz's expert
-                moving solutions.
-              </td>
-            </tr>
-          </table>
-        </div>  {/**table  */}
+        <div className="flex justify-end gap-4">
+      <table className="border-4 border-black m-4">{/**Table */}
+        <thead>
+          <tr className="border-4 border-black">
+            <th className="border-r-4 border-black">Services</th>
+            <th>Results</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="border-4 border-black">
+            <td className="border-r-4 border-black">Landscaping</td>
+            <td>Transform your outdoor space into a personal oasis with Hanz's landscaping services.</td>
+          </tr>
+          <tr className="border-4 border-black">
+            <td className="border-r-4 border-black">General Contracting</td>
+            <td>Turn your construction and renovation ideas into reality with precision and passion.</td>
+          </tr>
+          <tr className="border-4 border-black">
+            <td className="border-r-4 border-black">Cleaning Services</td>
+            <td>Experience a cleaner, fresher home without lifting a finger.</td>
+          </tr>
+          <tr className="border-4 border-black">
+            <td className="border-r-4 border-black">Moving Services</td>
+            <td>Relocate with ease and efficiency, thanks to Hanz's expert moving solutions.</td>
+          </tr>
+        </tbody>
+      </table>{/**Table */}
+    </div>
         <div className="p-2 m-4 space-y-4">
         <p  className="font-light text-p[18px] tracking-tight">At Hanz, we understand the importance of finding a reliable partner for your home maintenance and improvement projects. Our platform serves as a bridge between you and the professional services you need, ensuring quality, efficiency, and satisfaction. Trust Hanz to take care of your property, so you can focus on enjoying your home to the fullest.</p>
         <img className='float-right w-52 h-48 object-cover mx-3 my-2 border-2 border-black rounded' src='https://img.freepik.com/free-photo/husband-wife-moving-new-apartment-together-unpacking-furniture-decorate-household-enjoying-relocation-after-buying-first-house-start-new-beginnings-celebrate-life-event_482257-49831.jpg?t=st=1710694409~exp=1710698009~hmac=55369a1b6542e48bcbbf2ddb3f84ab116557727bbda05370207c26a8d0d6e2cf&w=996'/>
@@ -69,7 +66,6 @@ export default function Home() {
       <Link href='/Booking' className=" p-3 flex justify-center bg-green-200 rounded-xl shadow-xl font-bold w-1/3  mb-8 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold" > "BOOK TODAY" </Link>
       </div>
       </div>
-
       {/**homepage whole */}
     </div>
   );
