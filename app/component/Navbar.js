@@ -46,6 +46,10 @@ const Navbar = () => {
           <a href="/">
        <h1 className="text-xl italic underline text-indigo-200 font-bold tracking-widest">Hanz</h1>
           </a>
+          <div className="mx-2 flex gap-3">
+          <Link className="text-[10px]" href={'/Contact'}> Contact</Link>
+          <Link className="text-[10px]" href={'/About'}> About</Link>
+          </div>
       </div>
       <div className="flex items-center">{/**user&signOut*/}
         <span className=" text-xs flex items-center mx-5">

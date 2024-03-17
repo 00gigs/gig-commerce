@@ -5,14 +5,14 @@ const page = () => {
     <div>
       <Navbar />
       <div className="flex min-h-screen justify-center items-center text-black bg-slate-100">
-        <div className="bg-slate-300 rounded-md h-full my-5 w-80 bg-blend-darken">
+        <div className="bg-slate-300 rounded-md h-full my-5 w-fit bg-blend-darken">
           <h1 className="text-center mt-1 font-extrabold">BOOK NOW</h1>
-          <div className="flex justify-center bg-slate-500 w-72 h-[25rem] mx-4 rounded-sm shadow-2xl overflow-y-scroll border-4">
-            <form>
-              <p className="text-[19px] font-bold my-2 text-center">
+          <div className="flex justify-center bg-slate-500 w-[35rem] h-[25rem] m-4 rounded-sm shadow-2xl overflow-y-scroll border-4">
+            <form >
+              <p className="text-[19px] font-bold my-2 text-center m-4">
                 what type of service do you need ?
               </p>
-              <div className="grid grid-cols-3 gap-3 m-2 font-medium">
+              <div className="grid  gap-3  text-center font-medium">
                 {/**checkbox services*/}
                 <label className="text-[19px] my-2 text-center">
                   <input type="checkbox" />
@@ -39,7 +39,7 @@ const page = () => {
               <p className="text-[19px] my-2 text-center font-bold">
                 Job details
               </p>
-              <div className="grid grid-cols-2 m-2 font-medium">
+              <div className="grid text-center grid-cols-1 mx-5 font-medium">
                 {/**job details */}
                 <label className="text-[19px] m-2">
                   Workers requested
@@ -72,17 +72,17 @@ const page = () => {
                 </label>
               </div>
               <hr />
-              <div className="flex justify-center items-center text-center flex-col m-2">
+              <div className="flex justify-center items-center text-center flex-col m-2 w-fit">
                 {/**customer details */}
-                <label className="text-[19px] my-2">
-                  Name
+                <label className="text-[19px] my-2 max-w-fit mx-3">
+                 - Name
                   <input
-                    placeholder="Name"
+                    placeholder="Full Name"
                     className="mx-2 bg-transparent border-b-2"
                   />
                 </label>
-                <label className="text-[19px] my-2">
-                  Location
+                <label className="text-[19px] my-2  max-w-fit mx-3">
+                 - Location
                   <input
                     placeholder="Address"
                     className="mx-2 bg-transparent border-b-2"
@@ -98,8 +98,8 @@ const page = () => {
                     maxLength={5}
                   />
                 </label>
-                <label className="text-[19px] my-2">
-                  Contact
+                <label className="text-[19px] my-2  max-w-fit mx-3">
+                 - Contact
                   <input
                     placeholder="Email"
                     type="email"
