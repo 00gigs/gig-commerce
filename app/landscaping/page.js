@@ -11,7 +11,8 @@ const Page = () => {
     <div className='h-100 bg-slate-200'>
         <Navbar/>
         <div className='text-black'>
-          <Link href='/Booking' className="p-3 border-black flex justify-center bg-green-200 font-bold w-full  mt-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold" > Book a Landscaper today </Link>
+        <p className="italic underline text-indigo-200 font-bold tracking-widest text-center m-2 text-xl	">Hanz</p>
+          <Link href='/Booking' className="p-3 border-black flex justify-center bg-green-200 font-bold w-full shadow-xl  mt-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold" > Book a Landscaper today </Link>
 <div className=' border-black mx-8  p-3 text-center mt-4'>
   <div className='flex-1 mb-8'>
 <img className='float-right w-48 h-30 object-cover mx-3 my-2 border-2 border-black rounded' src='https://images.unsplash.com/photo-1605117882932-f9e32b03fea9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHNjYXBpbmd8ZW58MHx8MHx8fDA%3D'/>
@@ -20,7 +21,7 @@ const Page = () => {
   </div>
 </div>   
 <div>
-<Link href='/Booking' className=" p-3 flex justify-center bg-green-200 font-bold w-full  mt-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold" > Book a Landscaper today </Link>
+<Link href='/Booking' className="shadow-xl p-3 flex justify-center bg-green-200 font-bold w-full  mt-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold" > Book a Landscaper today </Link>
 </div>
 <div className='border-b-4 mb-2 mt-2 text-center h-screen mx-8 py-2  border-black'>
 <h1 className='font-bold text-sm mb-4'>"OUR SKILLED CONTRACTORS OFFER COST-EFFECTIVE, HIGH-QUALITY LANDSCAPING AND GARDEN CARE"</h1>

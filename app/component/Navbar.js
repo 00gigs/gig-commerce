@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className="bg-slate-600 w-screen h-10 p-3 flex justify-end">{/**main*/}
       <div className="flex items-center w-screen justify-start">
         <div>{/**drawer menu*/}
-          <button className="p-2 m-4 hover:bg-slate-800 rounded" onClick={toggle}>{/** open drawer menu*/}
+          <button className="p-1 m-1 hover:bg-slate-800 hover:shadow-xl rounded" onClick={toggle}>{/** open drawer menu*/}
       {isOpen ? '' :<img width="30" height="30" src="https://img.icons8.com/ios/50/menu--v1.png" alt="menu--v1"/>} 
           </button>
           <div  className={`fixed top-0 left-0 z-40 h-full bg-gray-800 text-white transform ${
