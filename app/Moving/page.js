@@ -3,16 +3,15 @@ import React from 'react'
 import Navbar from '../component/Navbar'
 import Link from 'next/link'; // Import Link from Next.js
 const Page = () => {
-
- 
-
-
   return (
     <div className='h-100 bg-slate-200'>
         <Navbar/>
         <div className='text-black'>
          <p className="italic underline text-indigo-200 font-bold tracking-widest text-center m-2 text-xl	">Hanz</p>
-          <Link href='/Booking' className="shadow-xl p-3 border-black flex justify-center bg-amber-600 font-bold w-full  mt-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold " > Book Moving services today </Link>
+          <Link href='/Booking' className="shadow-xl p-3 border-black flex justify-center bg-amber-600 font-bold w-full  mt-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold " >
+        
+             <span className="moving-text">Book Moving services today </span>
+             </Link>
 <div className=' border-black mx-8  p-3 text-center mt-4'>
   <div className='flex-1 mb-8'>
 <img className='float-right w-48 h-40 object-cover mx-3 my-2 border-2 border-black rounded' src='https://images.pexels.com/photos/4246266/pexels-photo-4246266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'/>
@@ -21,7 +20,9 @@ const Page = () => {
   </div>
 </div>   
 <div>
-<Link href='/Booking' className="shadow-xl p-3 flex justify-center bg-amber-600 font-bold w-full  mt-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold" > Book Moving services today </Link>
+<Link href='/Booking' className="shadow-xl p-3 flex justify-center bg-amber-600 font-bold w-full  mt-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold" > 
+<span className="moving-text">Book Moving services today </span>
+</Link>
 </div>
 <div className='border-b-4 mb-2 mt-2 text-center h-screen mx-8 py-2  border-black'>
 <h1 className='font-bold text-sm mb-4'>"OUR MOVING EXPERTS PROVIDE AFFORDABLE, TOP-NOTCH SERVICES FOR RESIDENTIAL AND COMMERCIAL RELOCATIONS."</h1>

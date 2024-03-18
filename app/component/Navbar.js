@@ -44,7 +44,7 @@ const Navbar = () => {
           </div>
           </div>{/**drawer menu*/}
           <a href="/">
-       <h1 className="text-xl italic underline text-indigo-200 font-bold tracking-widest">Hanz</h1>
+       <h1 className="text-xl italic underline text-indigo-200 font-bold tracking-wide hover:tracking-widest duration-300">Hanz</h1>
           </a>
           <div className="mx-2 flex gap-3">
           <Link className="text-[10px]" href={'/Contact'}> Contact</Link>

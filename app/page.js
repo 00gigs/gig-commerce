@@ -1,6 +1,7 @@
 'use client'
 import Navbar from "./component/Navbar";
 import Link from 'next/link'; 
+
 export default function Home() {
   return (
     <div className="bg-slate-100 w-screen">
@@ -13,9 +14,15 @@ export default function Home() {
             `Your Premier All-In-One Home 🏡 Solutions Provider`
             </div>
         </div>{/**headBanner  */}
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
       <Link href='/Booking' className=" p-3 flex justify-center bg-green-200 rounded-xl shadow-xl font-bold w-1/3  m-3 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold" > "BOOK TODAY" </Link>
-      </div>
+      </div> */}
+
+<div className=" flex justify-center bg-gradient-to-r from-teal-200 via-slate-200 to-amber-200 mx-48 rounded-md">
+      <Link className="bouncing-div bg-opacity-60 p-3 flex justify-center  rounded-xl shadow-2xl font-bold  m-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold"  href='/Booking'>
+          <span className="block whitespace-nowrap">BOOK TODAY</span>
+      </Link>
+    </div>
         <div className="m-3">{/**text content  */}
           <p className="font-medium text-[20px] italic tracking-wide">In today's fast-paced world, managing property maintenance and home care needs can be a daunting task for homeowners in the Northeast region. Fortunately, Hanz offers a seamless solution with its comprehensive range of home services. From landscaping and general contracting to thorough cleaning and hassle-free moving, Hanz is your go-to platform for all-in-one home solutions. We ensure every service is delivered with unmatched quality and a personal touch.</p>
           <h1 className="font-bold text-[22px] mt-2 underline">Transform Your Outdoors with Hanz Landscaping</h1>
@@ -62,9 +69,11 @@ export default function Home() {
         <img className='float-right w-52 h-48 object-cover mx-3 my-2 border-2 border-black rounded' src='https://img.freepik.com/free-photo/husband-wife-moving-new-apartment-together-unpacking-furniture-decorate-household-enjoying-relocation-after-buying-first-house-start-new-beginnings-celebrate-life-event_482257-49831.jpg?t=st=1710694409~exp=1710698009~hmac=55369a1b6542e48bcbbf2ddb3f84ab116557727bbda05370207c26a8d0d6e2cf&w=996'/>
           <p  className="font-light text-p[18px] tracking-tight">Discover how Hanz can simplify your home maintenance and improvement tasks by exploring our services today. Let us be your partner in creating a home that reflects your style, meets your needs, and exceeds your expectations.</p>
         </div>
-      <div className="flex justify-center">
-      <Link href='/Booking' className=" p-3 flex justify-center bg-green-200 rounded-xl shadow-xl font-bold w-1/3  mb-8 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold" > "BOOK TODAY" </Link>
-      </div>
+        <div className=" flex justify-center bg-gradient-to-r from-teal-200 via-slate-200 to-amber-200 mx-48 rounded-md">
+      <Link className="bouncing-div bg-opacity-60 p-3 flex justify-center  rounded-xl shadow-2xl font-bold  m-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold"  href='/Booking'>
+          <span className="block whitespace-nowrap">BOOK TODAY</span>
+      </Link>
+    </div>
       </div>
       {/**homepage whole */}
     </div>
