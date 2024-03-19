@@ -1,5 +1,5 @@
-import mongoose,{Schema, model, models} from 'mongoose'
-import { type } from 'os'
+import mongoose,{Schema, models} from 'mongoose'
+
 
 const userSchema = new Schema({
     username:{
