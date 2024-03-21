@@ -120,9 +120,9 @@ const handleJobChange = (e) =>{
                   Hours needed
                   <select className="mx-1" onChange={(e)=>setHours(e.target.value)} value={hours} name="hours" required>
                   <option>Select below</option>
-                    <option>2 hours or more</option>
-                    <option>up to 5 hours</option>
-                    <option>up to 8 hours</option>
+                    <option>2 or Less Hours</option>
+                    <option>3 to 5 Hours</option>
+                    <option>6 to 8 Hours</option>
                   </select>
                 </label>
                 <label className="text-[19px] m-2" >

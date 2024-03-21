@@ -143,9 +143,58 @@ function formatDateString(dateString) {
         Booking Payment
       </h1>
       <div className=" flex flex-col mb-5 max-sm:min-h-screen ">
-        <span>Deposit due now:</span>
-        <span>Total due to Worker(s):</span>
-        <span>Total job cost:</span>
+        <span>Deposit due now:
+          {data.hours === '2 or Less Hours' && data.workers === '1'?<>$50</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '2'?<>$100</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '3'?<>$150</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '4'?<>$200</>:null}
+
+          {data.hours === '3 to 5 Hours' && data.workers === '1'?<>$75</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '2'?<>$150</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '3'?<>$225</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '4'?<>$300</>:null}
+
+          {data.hours === '6 to 8 Hours'&& data.workers === '1'?<>$80</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '2'?<>$160</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '3'?<>$240</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '4'?<>$320</>:null}
+        
+        
+        </span>
+        <span>Total due to Worker(s):
+        {data.hours === '2 or Less Hours' && data.workers === '1'?<>$50</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '2'?<>$100</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '3'?<>$150</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '4'?<>$200</>:null}
+
+          {data.hours === '3 to 5 Hours' && data.workers === '1'?<>$100</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '2'?<>$200</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '3'?<>$300</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '4'?<>$400</>:null}
+
+          {data.hours === '6 to 8 Hours'&& data.workers === '1'?<>$160</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '2'?<>$320</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '3'?<>$480</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '4'?<>$640</>:null}
+
+        </span>
+        <span>Total job cost:
+        {data.hours === '2 or Less Hours' && data.workers === '1'?<>$100</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '2'?<>$200</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '3'?<>$300</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '4'?<>$400</>:null}
+
+          {data.hours === '3 to 5 Hours' && data.workers === '1'?<>$175</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '2'?<>$350</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '3'?<>$525</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '4'?<>$700</>:null}
+
+          {data.hours === '6 to 8 Hours'&& data.workers === '1'?<>$240</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '2'?<>$480</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '3'?<>$720</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '4'?<>$960</>:null}
+
+        </span>
       </div>
     </div>
     </div>

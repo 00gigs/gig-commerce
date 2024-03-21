@@ -8,7 +8,6 @@ export async function GET(req) {
       const url = new URL(req.url);
 // Extract query parameters from the request URL
 const id = url.searchParams.get('userId');
-console.log(id)
       const forumInfo = await forum.findOne({ customerId: `${id}` }).sort({ createdAt: -1 });
       return NextResponse.json(forumInfo, { status: 201 });
     } catch (error) {
