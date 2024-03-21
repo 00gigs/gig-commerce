@@ -1,32 +1,14 @@
-    {
-  "job": {
-    "houseKeeping": true
-  },
-  "workers": {
-    "workerAmount": "two"
-  },
-  "hours": {
-    "hours": "up to 5 hours"
-  },
-  "time": {
-    "time": "10:10"
-  },
-  "date": {
-    "date": "2024-03-21"
-  },
-  "description": {
-    "description": "description"
-  },
-  "customerName": "customerName",
-  "customerAddress": {
-    "address": "address",
-    "city": "city",
-    "zip": "21123"
-  },
-  "customerContact": {
-    "customerEmail": "customerEmail",
-    "phone": "314134134323"
-  }
+{
+    "job":"landscaping",
+"workers":"1",
+"hours":"2 hours or more",
+"time":"10:10",
+"date":"2024-03-20T00:00:00.000Z",
+"description":"description",
+"customerName":"customerName",
+"customerAddress":"customerAddress",
+"customerCity":"customerCity",
+"customerZip":"31414",
+"customerEmail":"aadfadf@afad.com",
+"customerPhone":"31431413"
 }
-
-

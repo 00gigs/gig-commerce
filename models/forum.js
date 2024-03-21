@@ -2,39 +2,51 @@
 import mongoose,{Schema,models} from 'mongoose'
 const forumSchema = new Schema({
     job:{
-        type:Object,
+        type:String,
         required:true
     },
     workers:{
-        type:Object,
+        type:String,
         required:true
     },
     hours:{
-        type:Object,
+        type:String,
         required:true
     },
     time:{
-        type:Object,
+        type:String,
         required:true
     },
     date:{
-        type:Object,
+        type:String,
         required:true
     },
   description:{
-        type:Object,
+        type:String,
         required:true
     },
   customerName:{
-        type:Object,
+        type:String,
         required:true
     },
   customerAddress:{
-        type:Object,
+        type:String,
         required:true
     },
-  customerContact:{
-        type:Object,
+    customerCity:{
+        type:String,
+        required:true
+    },
+    customerZip:{
+        type:String,
+        required:true
+    },
+    customerEmail:{
+        type:String,
+        required:true
+    },
+    customerPhone:{
+        type:String,
         required:true
     },
 },
