@@ -11,4 +11,8 @@
 "customerZip":"31414",
 "customerEmail":"aadfadf@afad.com",
 "customerPhone":"31431413"
+**********HERE 
 }
+
+
+add user id(👈fill with logged in user ) to the above schema to allow mongoDB to retrieve forum and  filter by logged in user id from next auth.

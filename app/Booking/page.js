@@ -4,6 +4,7 @@ import React from "react";
 import Navbar from "../component/Navbar";
 import  {useState}  from "react";
 import { useRouter } from 'next/navigation';
+import { getSession } from 'next-auth/react';
 const page = () => {
   const notifySubmit = () => toast('Forum submitted.',{icon:'✅',style:{background:'#90EE90'}});
   const missingFields = () => toast('Please fill out all fields',{icon:'❌',style:{background:'#F08080'}});
@@ -22,9 +23,13 @@ const page = () => {
 const [customerPhone,setCustomerPhone]= useState('');
 
 
-  
+
+
   const handleSubmit = async (e) => {
     e.preventDefault()
+  {/*get user to identify forum for get methods*/}
+    const user = await getSession()
+   const customerId = user.user.email
     if(!job||!workers||!hours||!time||!date||!description||!customerName||!customerAddress||!customerCity||!customerZip||!customerEmail||!customerPhone||workers==='Select below'||hours==='Select below'){
       missingFields()
     }else{
@@ -42,7 +47,9 @@ const [customerPhone,setCustomerPhone]= useState('');
           customerCity,
           customerZip,
           customerEmail,
-          customerPhone},),
+          customerPhone,
+          customerId,
+        },),
       })
         
   if(!res.ok){
