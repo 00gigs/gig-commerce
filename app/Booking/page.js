@@ -3,45 +3,27 @@ import React from "react";
 import Navbar from "../component/Navbar";
 import  {useState}  from "react";
 const page = () => {
-  const [job, setJob] = useState({
-    moving: false,
-    landscaping: false,
-    houseKeeping: false,
-    handyman: false,
-    generalContracts: false,
-  });
-  const [workers, setWorkers] = useState({
-    workerAmount:''
-  });
-  const [hours, setHours] = useState({
-    hours:''
-  });
-  const [time, setTime] = useState({
-    time:''
-  });
-  const [date, setDate] = useState({
-    date:''
-  });
+  const [job, setJob] = useState('');
+  const [workers, setWorkers] = useState('');
+  const [hours, setHours] = useState('');
+  const [time, setTime] = useState('');
+  const [date, setDate] = useState('');
   const [description, setDescription] = useState('');
   const [customerName, setCustomerName] = useState('');
-  const [customerAddress, setCustomerAddress] = useState({
-    address:'',
-    city:'',
-    zip:''
-  });
-  const [customerContact, setCustomerContact] = useState({
-    customerEmail:'',
-    phone:''
-  });
+  const [customerAddress, setCustomerAddress] = useState('');
+  const [customerCity, setCustomerCity] = useState('');
+  const [customerZip, setCustomerZip] = useState('');
+  const [customerEmail, setCustomerEmail] = useState('');
+const [customerPhone,setCustomerPhone]= useState('');
 
 
   
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault()
     const res = await fetch("/api/form", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        job,
+      headers: { "Content-Type": "application/json"  },
+      body: JSON.stringify( {job,
         workers,
         hours,
         time,
@@ -49,54 +31,21 @@ const page = () => {
         description,
         customerName,
         customerAddress,
-        customerContact,
-      }),
+        customerCity,
+        customerZip,
+        customerEmail,
+        customerPhone},),
     })
-console.log(res)
-    ;
+if(!res.ok){
+  throw new Error('Failed to submit customer forum',res)
+}else{
+  console.log('Forum submitted')
+}
   };
 
 const handleJobChange = (e) =>{
-  setJob({[e.target.name]: e.target.checked})
+  setJob(e.target.name)
 }
-const handleWorkersChange = (e) =>{
-  const {name,value} = e.target
-    setWorkers({[name]:value})
-}
-const handleHoursChange = (e) =>{
-  const {name,value} = e.target
-  setHours({[name]:value})
-}
-const handleTimeChange = (e) =>{
-  const {name,value} = e.target
-  setTime({[name]:value})
-}
-
-const handleDateChange = (e) =>{
-  const {name,value} = e.target
-  setDate({[name]:value})
-}
-
-
-
-
-const handleDescriptionChange = (e) =>{
-  const {name,value} = e.target
-  setDescription({[name]:value})
-}
-const handleCustomerAddressChange = (e) =>{
-  const {name,value} = e.target
-  setCustomerAddress(prevState=>({
-    ...prevState,
-    [name]:value}))
-}
-const handleCustomerContactChange = (e) =>{
-  const {name,value} = e.target
-  setCustomerContact(prevState=>({
-    ...prevState,
-    [name]:value}))
-}
-
 
   return (
     <div>
@@ -140,16 +89,16 @@ const handleCustomerContactChange = (e) =>{
                 {/**job details */}
                 <label className="text-[19px] m-2">
                   Workers requested
-                  <select className="mx-1" onChange={handleWorkersChange} name="workerAmount" value={workers.workerAmount}>
-                    <option value='one'>1</option>
-                    <option value='two'>2</option>
-                    <option value='three'>3</option>
-                    <option value='four'>4</option>
+                  <select className="mx-1" onChange={(e)=>setWorkers(e.target.value)} name="workerAmount" value={workers}>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
                   </select>
                 </label>
                 <label className="text-[19px] m-2">
                   Hours needed
-                  <select className="mx-1" onChange={handleHoursChange} value={hours.hours} name="hours">
+                  <select className="mx-1" onChange={(e)=>setHours(e.target.value)} value={hours} name="hours">
                     <option>2 hours or more</option>
                     <option>up to 5 hours</option>
                     <option>up to 8 hours</option>
@@ -157,15 +106,15 @@ const handleCustomerContactChange = (e) =>{
                 </label>
                 <label className="text-[19px] m-2" >
                   Appointment time
-                  <input type="time" value={time.time} name="time" onChange={handleTimeChange}/>
+                  <input type="time" value={time.time} name="time" onChange={(e)=>setTime(e.target.value)}/>
                 </label>
                 <label className="text-[19px] m-2">
                   Appointment date
-                  <input type="date" name="date" onChange={handleDateChange} value={date.date}/>
+                  <input type="date" name="date" onChange={(e)=>setDate(e.target.valueAsDate)} value={date.date}/>
                 </label>
                 <label className="text-[19px] m-2">
                   Job description
-                  <textarea maxLength={75} name="description" onChange={handleDescriptionChange} value={description.description}/>
+                  <textarea maxLength={75} name="description" onChange={(e)=>setDescription(e.target.value)} value={description}/>
                 </label>
               </div>
               <hr />
@@ -187,23 +136,20 @@ const handleCustomerContactChange = (e) =>{
                   name="address"
                     placeholder="Address"
                     className="mx-2 bg-transparent border-b-2"
-                    onChange={handleCustomerAddressChange}
-                    value={customerAddress.address}
+                    onChange={(e)=>setCustomerAddress(e.target.value)}
                   />
                   <input
                   name="city"
                     placeholder="City"
                     className="mx-2 bg-transparent border-b-2"
-                    onChange={handleCustomerAddressChange}
-                    value={customerAddress.city}
+                    onChange={(e)=>setCustomerCity(e.target.value)}
                   />
                   <input
                   name="zip"
                     placeholder="zip"
                     type="text"
                     className="mx-2 bg-transparent border-b-2"
-                    onChange={handleCustomerAddressChange}
-                    value={customerAddress.zip}
+                    onChange={(e)=>setCustomerZip(e.target.value)}
                     maxLength={5}
                   />
                 </label>
@@ -214,8 +160,7 @@ const handleCustomerContactChange = (e) =>{
                     placeholder="Email"
                     type="email"
                     className="mx-2 bg-transparent border-b-2"
-                    onChange={handleCustomerContactChange}
-                    value={customerContact.customerEmail}
+                    onChange={(e)=>setCustomerEmail(e.target.value)}
                   />
                   <input
                   name="phone"
@@ -224,8 +169,7 @@ const handleCustomerContactChange = (e) =>{
                     className="mx-2 bg-transparent border-b-2"
                     min={10}
                     maxLength={10}
-                    onChange={handleCustomerContactChange}
-                    value={customerContact.phone}
+                    onChange={(e)=>setCustomerPhone(e.target.value)}
                   />
                 </label>
               </div>
@@ -248,3 +192,6 @@ const handleCustomerContactChange = (e) =>{
 };
 
 export default page;
+
+
+
