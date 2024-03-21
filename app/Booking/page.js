@@ -1,8 +1,12 @@
 'use client'
+import toast, { Toaster } from 'react-hot-toast';
 import React from "react";
 import Navbar from "../component/Navbar";
 import  {useState}  from "react";
+import { useRouter } from 'next/navigation';
 const page = () => {
+  const notifySubmit = () => toast('Forum submitted.');
+  const router = useRouter()
   const [job, setJob] = useState('');
   const [workers, setWorkers] = useState('');
   const [hours, setHours] = useState('');
@@ -39,10 +43,13 @@ const [customerPhone,setCustomerPhone]= useState('');
           customerEmail,
           customerPhone},),
       })
+        
   if(!res.ok){
     throw new Error('Failed to submit customer forum',res)
   }else{
     console.log('Forum submitted')
+    notifySubmit()
+    router.push('/Payment')
   }
     }
   };
@@ -195,6 +202,18 @@ const handleJobChange = (e) =>{
             Submit Booking
           </button>
               </div>
+              <Toaster position="top-center" reverseOrder={false}
+              toastOptions={{
+                // Default options for specific types
+                success: {
+                  duration: 3000,
+                  theme: {
+                    primary: 'green',
+                    secondary: 'black',
+                  },
+                },
+              }}
+              />
             </form>
           </div>
         </div>
