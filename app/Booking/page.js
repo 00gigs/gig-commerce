@@ -5,7 +5,8 @@ import Navbar from "../component/Navbar";
 import  {useState}  from "react";
 import { useRouter } from 'next/navigation';
 const page = () => {
-  const notifySubmit = () => toast('Forum submitted.');
+  const notifySubmit = () => toast('Forum submitted.',{icon:'✅',style:{background:'#90EE90'}});
+  const missingFields = () => toast('Please fill out all fields',{icon:'❌',style:{background:'#F08080'}});
   const router = useRouter()
   const [job, setJob] = useState('');
   const [workers, setWorkers] = useState('');
@@ -25,7 +26,7 @@ const [customerPhone,setCustomerPhone]= useState('');
   const handleSubmit = async (e) => {
     e.preventDefault()
     if(!job||!workers||!hours||!time||!date||!description||!customerName||!customerAddress||!customerCity||!customerZip||!customerEmail||!customerPhone||workers==='Select below'||hours==='Select below'){
-      alert('please fill out all fields')
+      missingFields()
     }else{
       const res = await fetch("/api/form", {
         method: "POST",
@@ -206,7 +207,7 @@ const handleJobChange = (e) =>{
               toastOptions={{
                 // Default options for specific types
                 success: {
-                  duration: 3000,
+                  duration: 4000,
                   theme: {
                     primary: 'green',
                     secondary: 'black',
