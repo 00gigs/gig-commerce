@@ -20,27 +20,31 @@ const [customerPhone,setCustomerPhone]= useState('');
   
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const res = await fetch("/api/form", {
-      method: "POST",
-      headers: { "Content-Type": "application/json"  },
-      body: JSON.stringify( {job,
-        workers,
-        hours,
-        time,
-        date,
-        description,
-        customerName,
-        customerAddress,
-        customerCity,
-        customerZip,
-        customerEmail,
-        customerPhone},),
-    })
-if(!res.ok){
-  throw new Error('Failed to submit customer forum',res)
-}else{
-  console.log('Forum submitted')
-}
+    if(!job||!workers||!hours||!time||!date||!description||!customerName||!customerAddress||!customerCity||!customerZip||!customerEmail||!customerPhone||workers==='Select below'||hours==='Select below'){
+      alert('please fill out all fields')
+    }else{
+      const res = await fetch("/api/form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json"  },
+        body: JSON.stringify( {job,
+          workers,
+          hours,
+          time,
+          date,
+          description,
+          customerName,
+          customerAddress,
+          customerCity,
+          customerZip,
+          customerEmail,
+          customerPhone},),
+      })
+  if(!res.ok){
+    throw new Error('Failed to submit customer forum',res)
+  }else{
+    console.log('Forum submitted')
+  }
+    }
   };
 
 const handleJobChange = (e) =>{
@@ -89,7 +93,8 @@ const handleJobChange = (e) =>{
                 {/**job details */}
                 <label className="text-[19px] m-2">
                   Workers requested
-                  <select className="mx-1" onChange={(e)=>setWorkers(e.target.value)} name="workerAmount" value={workers}>
+                  <select className="mx-1" onChange={(e)=>setWorkers(e.target.value)} name="workerAmount" value={workers}  required>
+                    <option>Select below</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -98,7 +103,8 @@ const handleJobChange = (e) =>{
                 </label>
                 <label className="text-[19px] m-2">
                   Hours needed
-                  <select className="mx-1" onChange={(e)=>setHours(e.target.value)} value={hours} name="hours">
+                  <select className="mx-1" onChange={(e)=>setHours(e.target.value)} value={hours} name="hours" required>
+                  <option>Select below</option>
                     <option>2 hours or more</option>
                     <option>up to 5 hours</option>
                     <option>up to 8 hours</option>
@@ -106,15 +112,15 @@ const handleJobChange = (e) =>{
                 </label>
                 <label className="text-[19px] m-2" >
                   Appointment time
-                  <input type="time" value={time.time} name="time" onChange={(e)=>setTime(e.target.value)}/>
+                  <input type="time" value={time.time} name="time" onChange={(e)=>setTime(e.target.value)} required/>
                 </label>
                 <label className="text-[19px] m-2">
                   Appointment date
-                  <input type="date" name="date" onChange={(e)=>setDate(e.target.valueAsDate)} value={date.date}/>
+                  <input type="date" name="date" onChange={(e)=>setDate(e.target.valueAsDate)} value={date.date} required/>
                 </label>
                 <label className="text-[19px] m-2">
                   Job description
-                  <textarea maxLength={75} name="description" onChange={(e)=>setDescription(e.target.value)} value={description}/>
+                  <textarea maxLength={75} name="description" onChange={(e)=>setDescription(e.target.value)} value={description} required/>
                 </label>
               </div>
               <hr />
@@ -128,6 +134,7 @@ const handleJobChange = (e) =>{
                     className="mx-2 bg-transparent border-b-2"
                     onChange={(e)=>setCustomerName(e.target.value)}
                     minLength={5}
+                    required
                   />
                 </label>
                 <label className="text-[19px] my-2  max-w-fit mx-3">
@@ -137,12 +144,14 @@ const handleJobChange = (e) =>{
                     placeholder="Address"
                     className="mx-2 bg-transparent border-b-2"
                     onChange={(e)=>setCustomerAddress(e.target.value)}
+                    required
                   />
                   <input
                   name="city"
                     placeholder="City"
                     className="mx-2 bg-transparent border-b-2"
                     onChange={(e)=>setCustomerCity(e.target.value)}
+                    required
                   />
                   <input
                   name="zip"
@@ -151,6 +160,7 @@ const handleJobChange = (e) =>{
                     className="mx-2 bg-transparent border-b-2"
                     onChange={(e)=>setCustomerZip(e.target.value)}
                     maxLength={5}
+                    required
                   />
                 </label>
                 <label className="text-[19px] my-2  max-w-fit mx-3">
@@ -161,6 +171,7 @@ const handleJobChange = (e) =>{
                     type="email"
                     className="mx-2 bg-transparent border-b-2"
                     onChange={(e)=>setCustomerEmail(e.target.value)}
+                    required
                   />
                   <input
                   name="phone"
@@ -170,6 +181,7 @@ const handleJobChange = (e) =>{
                     min={10}
                     maxLength={10}
                     onChange={(e)=>setCustomerPhone(e.target.value)}
+                    required
                   />
                 </label>
               </div>
