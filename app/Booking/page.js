@@ -135,7 +135,7 @@ const handleJobChange = (e) =>{
                 </label>
                 <label className="text-[19px] m-2">
                   Job description
-                  <textarea maxLength={75} name="description" onChange={(e)=>setDescription(e.target.value)} value={description} required/>
+                  <textarea minLength={10} maxLength={200} name="description" onChange={(e)=>setDescription(e.target.value)} value={description} required/>
                 </label>
               </div>
               <hr />

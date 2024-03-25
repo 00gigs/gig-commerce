@@ -5,19 +5,12 @@ import { useState } from "react";
 import Navbar from "../component/Navbar";
 import { useEffect } from "react";
 import { getSession } from "next-auth/react";
-
+import Link from 'next/link'
 const page = () => {
 {/**dynamic job details state */}
 const [data,setData] = useState('')
   {/**pull forum data from database*/}
-
-
-
-
-
-
 useEffect(() => {
-
   getForum()
 }, [])
 
@@ -56,6 +49,51 @@ function formatDateString(dateString) {
 }
 {/**DATE CONVERSION FUNCTION ^^^^*/}
 
+
+const paymentBody = {
+  "line_items": {
+    "0": {
+      "quantity": "1",
+      "price": "price_1OxxItP1EBjezyR2rRIPR51C"
+    }
+  },
+  "phone_number_collection": {
+    "enabled": "true"
+  },
+  "allow_promotion_codes": "false",
+  "billing_address_collection": "required",
+  "automatic_tax": {
+    "enabled": "false"
+  },
+  "after_completion": {
+    "type": "hosted_confirmation"
+  },
+  "consent_collection": {
+    "terms_of_service": "none"
+  },
+  "tax_id_collection": {
+    "enabled": "false"
+  },
+  "submit_type": "auto",
+  "invoice_creation": {
+    "enabled": "false"
+  }
+}
+
+
+const payNow = async () =>{
+  const res = await fetch('/api/webhook',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify(paymentBody)
+  })
+  if(!res.ok){
+   throw new Error(`Failed to fetch user forum, status: ${res.status}`)
+  }
+  console.log('payment POST success!',res)
+}
+
+
   return (
     <div>
        <Navbar />
@@ -65,76 +103,76 @@ function formatDateString(dateString) {
         '
       </h1>
       <h1 className="mt-1 font-extrabold underline">Job Details</h1>
-      <div className="grid grid-cols-3 gap-5 p-2 m-2 border-4 h-[17rem] w-[30rem] border-slate bg-gradient-to-b from-cyan-100 to-neutral-200 max-sm:flex flex-col max-sm:h-[36rem] text-center">
+      <div className="grid grid-cols-3 gap-5 p-2 m-2 border-4 h-[25rem] w-[30rem] border-slate bg-gradient-to-b from-cyan-100 to-neutral-200 max-sm:flex flex-col max-sm:h-[40rem] text-center">
         <span className="grid">
           job
-          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-bold">
+          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[20px]">
             {data.job}
           </span>
         </span>
         <span className="grid">
           workers
-          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-bold">
+          <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
             {data.workers}
           </span>
         </span>
         <span className="grid">
           hours
-          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-bold">
+          <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
             {data.hours}
           </span>
         </span>
         <span className="grid">
           time
-          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-bold">
+          <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-bold text-[20px]">
             {data.time}
           </span>
         </span>
         <span className="grid">
           date
-          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-bold">
+          <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-bold text-[20px]">
             {formatDateString(data.date)}
           </span>
         </span>
         <span className="grid">
           description
-          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-bold">
+          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[17px]">
             {data.description}
           </span>
         </span>
         <span className="grid">
           Name
-          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-bold">
+          <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
             {data.customerName}
           </span>
         </span>
         <span className="grid">
           Address
-          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-bold">
+          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[20px]">
             {data.customerAddress}
           </span>
         </span>
         <span className="grid">
           City
-          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-bold">
+          <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
             {data.customerCity}
           </span>
         </span>
         <span className="grid">
           Zip
-          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-bold">
+          <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
             {data.customerZip}
           </span>
         </span>
         <span className="grid">
           Email
-          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-bold">
+          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[17px]">
             {data.customerEmail}
           </span>
         </span>
         <span className="grid">
           Phone
-          <span className="bg-slate-100 bg-opacity-50 rounded-lg font-bold">
+          <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
             {data.customerPhone}
           </span>
         </span>
@@ -142,7 +180,7 @@ function formatDateString(dateString) {
       <h1 className="text-center mt-1 font-extrabold underline">
         Booking Payment
       </h1>
-      <div className=" flex flex-col mb-5 max-sm:min-h-screen ">
+      <div className=" flex flex-col mb-5 border-2 rounded-lg border-black p-5 max-sm:min-h-screen ">
         <span>Deposit due now:
           {data.hours === '2 or Less Hours' && data.workers === '1'?<>$50</>:null}
           {data.hours === '2 or Less Hours' && data.workers === '2'?<>$100</>:null}
@@ -195,6 +233,25 @@ function formatDateString(dateString) {
           {data.hours === '6 to 8 Hours'&& data.workers === '4'?<>$960</>:null}
 
         </span>
+       
+        {data.hours === '2 or Less Hours' && data.workers === '1'?<Link href={'https://buy.stripe.com/test_aEUeWV5oH8UT9os4gi'}>
+        <button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $50</button>
+        </Link> 
+        :null}
+          {data.hours === '2 or Less Hours' && data.workers === '2'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $100</button></>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '3'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $150</button></>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '4'?<>$200</>:null}
+
+          {data.hours === '3 to 5 Hours' && data.workers === '1'?<>$75</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '2'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $150</button></>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '3'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $225</button></>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '4'?<>$300</>:null}
+
+          {data.hours === '6 to 8 Hours'&& data.workers === '1'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $80</button></>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '2'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $160</button></>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '3'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $240</button></>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '4'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $320</button></>:null}
+        
       </div>
     </div>
     </div>

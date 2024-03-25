@@ -60,3 +60,34 @@ body {
   /* Apply the animation */
   animation: bounce 3s infinite;
 }
+
+
+
+@keyframes bgcolor {
+  0% {
+      background-color: #cffafe 
+  }
+
+  30% {
+      background-color: #cffafebc
+  }
+
+  60% {
+      background-color: #90e8f0ed
+  }
+
+  90% {
+      background-color: #76b3b9
+  }
+
+  100% {
+      background-color: #319099d0
+  }
+}
+
+.change-bg{
+  -webkit-animation: bgcolor 5s infinite;
+  animation: bgcolor 5s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
