@@ -5,14 +5,106 @@ import { useState } from "react";
 import Navbar from "../component/Navbar";
 import { useEffect } from "react";
 import { getSession } from "next-auth/react";
-import Link from 'next/link'
+
+
+
 const page = () => {
-{/**dynamic job details state */}
-const [data,setData] = useState('')
+  
+  const [data,setData] = useState('')
+  //key = lookup_key in post body to get unique product
+ 
+
+
+
+  
+  
+  
+  {/**dynamic job details state */}
   {/**pull forum data from database*/}
-useEffect(() => {
-  getForum()
-}, [])
+  useEffect(() => {
+    const fetchData = async ()=>{
+      await getForum()
+      await getPrice()
+    }
+    fetchData()
+  }, [])
+  
+  const [price,setPrice] = useState([])
+
+
+const getPrice = async () =>{
+  
+  const res = await fetch(`/api/getProducts`,{
+    method:'GET',
+    headers:{'Content-Type':'application/json'}
+  })
+  if(!res.ok){
+    throw new Error(`Failed to fetch product price, status: ${res.status}`)
+  }
+  const priceData = await res.json()
+ setPrice(priceData.data)
+}
+
+let index = 0
+
+if(data.hours === '2 or Less Hours' && data.workers === '1'){
+  index = 12
+}
+if(data.hours === '2 or Less Hours' && data.workers === '2'){
+  index = 10
+}
+if(data.hours === '2 or Less Hours' && data.workers === '3'){
+  index = 9
+}
+if(data.hours === '2 or Less Hours' && data.workers === '4'){
+  index = 8
+}
+if(data.hours === '3 to 5 Hours' && data.workers === '1'){
+  index = 7
+}
+if(data.hours === '3 to 5 Hours' && data.workers === '2'){
+  index = 6
+}
+if(data.hours === '3 to 5 Hours' && data.workers === '3'){
+  index = 5
+}
+if(data.hours === '3 to 5 Hours' && data.workers === '4'){
+  index = 4
+}
+if(data.hours === '6 to 8 Hours' && data.workers === '1'){
+  index = 3
+}
+if(data.hours === '6 to 8 Hours' && data.workers === '2'){
+  index = 2
+}
+if(data.hours === '6 to 8 Hours' && data.workers === '3'){
+  index = 1
+}
+if(data.hours === '6 to 8 Hours' && data.workers === '4'){
+  index = 0
+}
+
+
+const unitAmount = price.length > 0 ? price[`${index}`].unit_amount / 100 : 0
+
+
+{data.hours === '2 or Less Hours' && data.workers === '1'?<>$50</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '2'?<>$100</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '3'?<>$150</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '4'?<>$200</>:null}
+
+          {data.hours === '3 to 5 Hours' && data.workers === '1'?<>$75</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '2'?<>$150</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '3'?<>$225</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '4'?<>$300</>:null}
+
+          {data.hours === '6 to 8 Hours'&& data.workers === '1'?<>$80</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '2'?<>$160</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '3'?<>$240</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '4'?<>$320</>:null}
+
+
+
 
 const getForum = async () =>{
   // const userEmail = (await getSession()).user.email
@@ -31,6 +123,7 @@ const getForum = async () =>{
   setData(forumData)
 }
 {/**set job details with forum details */}
+
 
 
 
@@ -182,20 +275,20 @@ const payNow = async () =>{
       </h1>
       <div className=" flex flex-col mb-5 border-2 rounded-lg border-black p-5 max-sm:min-h-screen ">
         <span>Deposit due now:
-          {data.hours === '2 or Less Hours' && data.workers === '1'?<>$50</>:null}
-          {data.hours === '2 or Less Hours' && data.workers === '2'?<>$100</>:null}
-          {data.hours === '2 or Less Hours' && data.workers === '3'?<>$150</>:null}
-          {data.hours === '2 or Less Hours' && data.workers === '4'?<>$200</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '1'?<>${unitAmount}</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '2'?<>${unitAmount}</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '3'?<>${unitAmount}</>:null}
+          {data.hours === '2 or Less Hours' && data.workers === '4'?<>${unitAmount}</>:null}
 
-          {data.hours === '3 to 5 Hours' && data.workers === '1'?<>$75</>:null}
-          {data.hours === '3 to 5 Hours'&& data.workers === '2'?<>$150</>:null}
-          {data.hours === '3 to 5 Hours'&& data.workers === '3'?<>$225</>:null}
-          {data.hours === '3 to 5 Hours'&& data.workers === '4'?<>$300</>:null}
+          {data.hours === '3 to 5 Hours' && data.workers === '1'?<>${unitAmount}</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '2'?<>${unitAmount}</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '3'?<>${unitAmount}</>:null}
+          {data.hours === '3 to 5 Hours'&& data.workers === '4'?<>${unitAmount}</>:null}
 
-          {data.hours === '6 to 8 Hours'&& data.workers === '1'?<>$80</>:null}
-          {data.hours === '6 to 8 Hours'&& data.workers === '2'?<>$160</>:null}
-          {data.hours === '6 to 8 Hours'&& data.workers === '3'?<>$240</>:null}
-          {data.hours === '6 to 8 Hours'&& data.workers === '4'?<>$320</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '1'?<>${unitAmount}</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '2'?<>${unitAmount}</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '3'?<>${unitAmount}</>:null}
+          {data.hours === '6 to 8 Hours'&& data.workers === '4'?<>${unitAmount}</>:null}
         
         
         </span>
@@ -233,10 +326,16 @@ const payNow = async () =>{
           {data.hours === '6 to 8 Hours'&& data.workers === '4'?<>$960</>:null}
 
         </span>
-       
-        {data.hours === '2 or Less Hours' && data.workers === '1'?<Link href={'https://buy.stripe.com/test_aEUeWV5oH8UT9os4gi'}>
+
+
+        <div>
+
+        </div>
+{/*       
+
+
+        {data.hours === '2 or Less Hours' && data.workers === '1'?
         <button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $50</button>
-        </Link> 
         :null}
           {data.hours === '2 or Less Hours' && data.workers === '2'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $100</button></>:null}
           {data.hours === '2 or Less Hours' && data.workers === '3'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $150</button></>:null}
@@ -251,7 +350,7 @@ const payNow = async () =>{
           {data.hours === '6 to 8 Hours'&& data.workers === '2'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $160</button></>:null}
           {data.hours === '6 to 8 Hours'&& data.workers === '3'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $240</button></>:null}
           {data.hours === '6 to 8 Hours'&& data.workers === '4'?<><button onClick={payNow} className="change-bg  shadow-xl p-2  rounded-xl border-2 border-black uppercase  cursor-pointer hover:text-xl hover:shadow-2xl">Book Now for $320</button></>:null}
-        
+         */}
       </div>
     </div>
     </div>
