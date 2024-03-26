@@ -1,31 +1,32 @@
-
-import {NextResposne} from 'next/server'
-
-const stripe = require('stripe')(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+import {NextResponse} from 'next/server'
+import Stripe from 'stripe'
 
 export async function POST(req) {
-  if (req.method === 'POST') {
+const stripe = Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET)
+const url = new URL(req.url)
+const id = url.searchParams.get('priceId')
+console.log(id)
     try {
-      // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create({
         line_items: [
           {
-            // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-            price: req.body.price,
+            
+            price: id,
             quantity: 1,
           },
         ],
         mode: 'payment',
-        success_url: `${req.headers.origin}/?success=true`,
-        cancel_url: `${req.headers.origin}/?canceled=true`,
+        success_url:'http://localhost:3001/ThankYou' ,
+        cancel_url: 'http://localhost:3001/Payment'
       });
-      NextResposne.redirect(session.url,303)
+      return new NextResponse(JSON.stringify({ url: session.url }), {
+        status: 200, // Use 200 OK status when successfully creating a session
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
     } catch (err) {
-    NextResposne.json({body:'error',err},{status:500})
+    return NextResponse.json({body:'error'},{status:500})
     }
-  } else {
+  }  
     
-    NextResposne.setHeader('Allow', 'POST')
-    NextResposne.json({body:'Not allowed'},{status:405})
-  }
-}

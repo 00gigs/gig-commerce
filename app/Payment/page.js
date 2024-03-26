@@ -5,21 +5,9 @@ import { useState } from "react";
 import Navbar from "../component/Navbar";
 import { useEffect } from "react";
 import { getSession } from "next-auth/react";
-
-
-
 const page = () => {
-  
   const [data,setData] = useState('')
-  //key = lookup_key in post body to get unique product
- 
-
-
-
-  
-  
-  
-  {/**dynamic job details state */}
+  {/**dynamic job details(forum information destructor) state */}
   {/**pull forum data from database*/}
   useEffect(() => {
     const fetchData = async ()=>{
@@ -30,10 +18,9 @@ const page = () => {
   }, [])
   
   const [price,setPrice] = useState([])
-
+{/**enable price data destructor  (e.g price.unit_amount)^^^ */}
 
 const getPrice = async () =>{
-  
   const res = await fetch(`/api/getProducts`,{
     method:'GET',
     headers:{'Content-Type':'application/json'}
@@ -44,9 +31,8 @@ const getPrice = async () =>{
   const priceData = await res.json()
  setPrice(priceData.data)
 }
-
+{/**conditional price data */}
 let index = 0
-
 if(data.hours === '2 or Less Hours' && data.workers === '1'){
   index = 12
 }
@@ -83,29 +69,10 @@ if(data.hours === '6 to 8 Hours' && data.workers === '3'){
 if(data.hours === '6 to 8 Hours' && data.workers === '4'){
   index = 0
 }
-
-
 const unitAmount = price.length > 0 ? price[`${index}`].unit_amount / 100 : 0
-
-
-{data.hours === '2 or Less Hours' && data.workers === '1'?<>$50</>:null}
-          {data.hours === '2 or Less Hours' && data.workers === '2'?<>$100</>:null}
-          {data.hours === '2 or Less Hours' && data.workers === '3'?<>$150</>:null}
-          {data.hours === '2 or Less Hours' && data.workers === '4'?<>$200</>:null}
-
-          {data.hours === '3 to 5 Hours' && data.workers === '1'?<>$75</>:null}
-          {data.hours === '3 to 5 Hours'&& data.workers === '2'?<>$150</>:null}
-          {data.hours === '3 to 5 Hours'&& data.workers === '3'?<>$225</>:null}
-          {data.hours === '3 to 5 Hours'&& data.workers === '4'?<>$300</>:null}
-
-          {data.hours === '6 to 8 Hours'&& data.workers === '1'?<>$80</>:null}
-          {data.hours === '6 to 8 Hours'&& data.workers === '2'?<>$160</>:null}
-          {data.hours === '6 to 8 Hours'&& data.workers === '3'?<>$240</>:null}
-          {data.hours === '6 to 8 Hours'&& data.workers === '4'?<>$320</>:null}
-
-
-
-
+const unitPriceId = price.length > 0 ? price[`${index}`].id :''
+{/**conditional price data upon form information */}
+{/**set job details with forum details */}
 const getForum = async () =>{
   // const userEmail = (await getSession()).user.email
   const username = await getSession()
@@ -123,11 +90,6 @@ const getForum = async () =>{
   setData(forumData)
 }
 {/**set job details with forum details */}
-
-
-
-
-
 {/**DATE CONVERSION FUNCTION vvvv*/}
 function formatDateString(dateString) {
   const date = new Date(dateString);
@@ -142,47 +104,16 @@ function formatDateString(dateString) {
 }
 {/**DATE CONVERSION FUNCTION ^^^^*/}
 
-
-const paymentBody = {
-  "line_items": {
-    "0": {
-      "quantity": "1",
-      "price": "price_1OxxItP1EBjezyR2rRIPR51C"
-    }
-  },
-  "phone_number_collection": {
-    "enabled": "true"
-  },
-  "allow_promotion_codes": "false",
-  "billing_address_collection": "required",
-  "automatic_tax": {
-    "enabled": "false"
-  },
-  "after_completion": {
-    "type": "hosted_confirmation"
-  },
-  "consent_collection": {
-    "terms_of_service": "none"
-  },
-  "tax_id_collection": {
-    "enabled": "false"
-  },
-  "submit_type": "auto",
-  "invoice_creation": {
-    "enabled": "false"
-  }
-}
-
-
 const payNow = async () =>{
-  const res = await fetch('/api/webhook',{
+  const res = await fetch(`/api/checkout_session?priceId=${unitPriceId}`,{
     method:'POST',
     headers:{'Content-Type':'application/json'},
-    body: JSON.stringify(paymentBody)
   })
   if(!res.ok){
-   throw new Error(`Failed to fetch user forum, status: ${res.status}`)
+   throw new Error(`Failed to post payment, status: ${res.status}`)
   }
+  const data = await res.json();
+  window.location.href = data.url;
   console.log('payment POST success!',res)
 }
 
@@ -328,8 +259,8 @@ const payNow = async () =>{
         </span>
 
 
-        <div>
-
+        <div className="flex flex-col bg-indigo-400 rounded-md items-center cursor-pointer hover:bg-indigo-300" onClick={payNow}>
+        Book Now
         </div>
 {/*       
 
