@@ -22,8 +22,7 @@ const page = () => {
   const [customerZip, setCustomerZip] = useState('');
   const [customerEmail, setCustomerEmail] = useState('');
 const [customerPhone,setCustomerPhone]= useState('');
-
-
+const paid = false
 
 
   const handleSubmit = async (e) => {
@@ -50,6 +49,7 @@ const [customerPhone,setCustomerPhone]= useState('');
           customerEmail,
           customerPhone,
           customerId,
+          paid
         },),
       })
         

@@ -1,5 +1,6 @@
 
 import mongoose,{Schema,models} from 'mongoose'
+
 const forumSchema = new Schema({
     job:{
         type:String,
@@ -51,6 +52,10 @@ const forumSchema = new Schema({
     },
     customerId:{
         type:String,
+        required:true
+    },
+    paid:{
+        type:Boolean,
         required:true
     }
 },
