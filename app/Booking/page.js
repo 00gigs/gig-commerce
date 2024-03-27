@@ -5,7 +5,7 @@ import Navbar from "../component/Navbar";
 import  {useState}  from "react";
 import { useRouter } from 'next/navigation';
 import { getSession } from 'next-auth/react';
-import PriceBox from '../component/PriceBox';
+
 const page = () => {
   const notifySubmit = () => toast('Forum submitted.',{icon:'✅',style:{background:'#90EE90'}});
   const missingFields = () => toast('Please fill out all fields',{icon:'❌',style:{background:'#F08080'}});

@@ -1,49 +1,30 @@
-import Stripe from 'stripe'
+
 
 import {NextResponse} from 'next/server'
 
 
 
-const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+
 export async function POST(req){
-
-    const payload = await req.text()
-    const response = JSON.parse(payload)
-
-    const signature = req.headers.get('Stripe-Signature')
-
-    const dateTime = new Date(response?.created * 1000).toLocaleDateString()
-    const timeString = new Date(response?.created * 1000).toLocaleDateString()
-
+    // const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+    // const endpointSecret = "whsec_43a236b0ea3cd16f75c1ebf78cd3920f4fd7d5588327def73d427c6364c6665a"
+    const payload =  await req.json()
+    // const signature = req.headers.get('stripe-signature')
     try {
-        let event = stripe.webhooks.constructEvent(payload,
-            signature,
-            process.env.STRIPE_WEBHOOK_SECRET)
-            console.log('event',event.type)
-            switch (event.type) {
-                case 'charge.failed':
-                  const chargeFailed = event.data.object;
-                  // Then define and call a function to handle the event charge.failed
-                  console.log('chargeFailed',chargeFailed)
-                  break;
-                case 'charge.pending':
-                  const chargePending = event.data.object;
-                  // Then define and call a function to handle the event charge.pending
-                  console.log('chargePending',chargePending)
-                  break;
-                case 'charge.succeeded':
-                  const chargeSucceeded = event.data.object;
-                  // Then define and call a function to handle the event charge.succeeded
-                  console.log('chargeSucceeded',chargeSucceeded)
-                  break;
-                // ... handle other event types
-                default:
-                  console.log(`Unhandled event type ${event.type}`);
-              }
-return NextResponse.json({event:event.type, status:'success'})
+        
+        console.log('post hit for webhook')
+        console.log('payload',payload)
+
+        if(payload.type === 'payment_intent.succeeded'){
+            console.log('success ')
+
+//create paymentIntent model and send payload data to mongo DB to see if user paid or not.
+
+
+        }
+            return NextResponse.json({status:'succeeded',payload})
     } catch (error) {
         return NextResponse.json({status:'failed',error})
     }
-
-
 }
+

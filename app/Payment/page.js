@@ -105,7 +105,9 @@ function formatDateString(dateString) {
 {/**DATE CONVERSION FUNCTION ^^^^*/}
 
 const payNow = async () =>{
-  const res = await fetch(`/api/checkout_session?priceId=${unitPriceId}`,{
+  const username = await getSession()
+  const currentUser = username.user.email
+  const res = await fetch(`/api/checkout_session?priceId=${unitPriceId}&userID=${currentUser}`,{
     method:'POST',
     headers:{'Content-Type':'application/json'},
   })
@@ -115,6 +117,8 @@ const payNow = async () =>{
   const data = await res.json();
   window.location.href = data.url;
   console.log('payment POST success!',res)
+  
+
 }
 
 

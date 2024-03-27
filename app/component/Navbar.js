@@ -64,7 +64,7 @@ const Navbar = () => {
         <button
           className="text-xs ml-2 border-2 p-1 rounded-lg bg-slate-800 hover:bg-slate-400"
           onClick={() =>
-            signOut({ callbackUrl: "http://localhost:3000/Login" })
+            signOut({ callbackUrl: "http://localhost:3001/Login" })
           }
         >
           SignOut

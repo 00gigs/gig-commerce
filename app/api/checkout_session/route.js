@@ -1,3 +1,4 @@
+
 import {NextResponse} from 'next/server'
 import Stripe from 'stripe'
 
@@ -5,7 +6,12 @@ export async function POST(req) {
 const stripe = Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET)
 const url = new URL(req.url)
 const id = url.searchParams.get('priceId')
+const userId = url.searchParams.get('userID')
 console.log(id)
+
+const customer = await stripe.customers.create({
+  email:userId
+})
     try {
       const session = await stripe.checkout.sessions.create({
         line_items: [
@@ -16,6 +22,7 @@ console.log(id)
           },
         ],
         mode: 'payment',
+        customer_email:customer.email,
         success_url:'http://localhost:3001/ThankYou' ,
         cancel_url: 'http://localhost:3001/Payment'
       });
