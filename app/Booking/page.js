@@ -2,9 +2,10 @@
 import toast, { Toaster } from 'react-hot-toast';
 import React from "react";
 import Navbar from "../component/Navbar";
-import  {useState}  from "react";
+import  {useState,useEffect}  from "react";
 import { useRouter } from 'next/navigation';
 import { getSession } from 'next-auth/react';
+
 
 const page = () => {
   const notifySubmit = () => toast('Forum submitted.',{icon:'✅',style:{background:'#90EE90'}});
@@ -13,8 +14,8 @@ const page = () => {
   const [job, setJob] = useState('');
   const [workers, setWorkers] = useState('');
   const [hours, setHours] = useState('');
-  const [time, setTime] = useState('');
   const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
   const [description, setDescription] = useState('');
   const [customerName, setCustomerName] = useState('');
   const [customerAddress, setCustomerAddress] = useState('');
@@ -22,15 +23,51 @@ const page = () => {
   const [customerZip, setCustomerZip] = useState('');
   const [customerEmail, setCustomerEmail] = useState('');
 const [customerPhone,setCustomerPhone]= useState('');
+const [unavailableDates, setUnavailableDates] = useState([]);
+  const [selectedDate, setSelectedDate] = useState('');
+  const today = new Date().toISOString().split('T')[0];
 const paid = false
-const today = new Date().toISOString().split('T')[0];
+
+{/**-------------------------------- */}
+
+  
+  useEffect(()=>{
+    const getBookedDates=async()=>{
+      const res = await fetch('/api/BookedDates', {
+          method: 'GET',
+          headers: {"Content-Type": "application/json"},
+      });
+      if (!res.ok) {
+          throw new Error(`Failed to fetch user forum, status: ${res.status}`);
+      }
+      const data = await res.json()
+      const mappedDates = data.map(dateObj => dateObj.date);
+      setUnavailableDates(mappedDates)
+      
+    }
+    getBookedDates()
+  },[])
+  
+  const handleDateChange=(e)=>{
+    const newDate = e.target.value;
+    if (!unavailableDates.includes(newDate)) {
+      setSelectedDate(newDate);
+      setDate(newDate)
+    } else {
+      alert('This date is unavailable for booking.');
+    }
+  }
+
+{/**-------------------------------- */}
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
   {/*get user to identify forum for get methods*/}
     const user = await getSession()
    const customerId = user.user.email
-    if(!job||!workers||!hours||!time||!date||!description||!customerName||!customerAddress||!customerCity||!customerZip||!customerEmail||!customerPhone||workers==='Select below'||hours==='Select below'){
+    if(!job||!workers||!hours||!time||!setSelectedDate||!description||!customerName||!customerAddress||!customerCity||!customerZip||!customerEmail||!customerPhone||workers==='Select below'||hours==='Select below'){
       missingFields()
     }else{
       const res = await fetch("/api/form", {
@@ -132,7 +169,7 @@ const handleJobChange = (e) =>{
                 </label>
                 <label className="text-[19px] m-2">
                   Appointment date
-                  <input type="date" name="date" min={today} onChange={(e)=>setDate(e.target.valueAsDate)} value={date.date} required/>
+                  <input type='date' min={today} value={selectedDate} onChange={handleDateChange} required/>
                 </label>
                 <label className="text-[19px] m-2">
                   Job description

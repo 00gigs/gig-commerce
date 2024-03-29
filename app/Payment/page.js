@@ -208,7 +208,7 @@ const page = () => {
           <span className="grid">
             Address
             <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[20px]">
-              {data.customerAddressss}
+              {data.customerAddress}
             </span>
           </span>
           <span className="grid">
