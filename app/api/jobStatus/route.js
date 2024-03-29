@@ -1,4 +1,3 @@
-//get forum by most recent of user 
 import { mongoDB } from "@/lib/mongodb";
 import { NextResponse } from "next/server";
 import forum from "@/models/forum";
@@ -9,7 +8,7 @@ export async function GET(req) {
       const url = new URL(req.url);
 // Extract query parameters from the request URL
 const id = url.searchParams.get('userId');
-      const forumInfo = await forum.findOne({ customerId: `${id}` }).sort({ createdAt: -1 });
+      const forumInfo = await forum.find({ customerId: `${id}` })
       return NextResponse.json(forumInfo, { status: 201 });
     } catch (error) {
       console.error("Error in GET:", error);

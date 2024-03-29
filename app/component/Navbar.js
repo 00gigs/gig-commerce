@@ -5,9 +5,10 @@ import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 import Link from 'next/link'
+import { useRouter } from "next/navigation";
 const Navbar = () => {
   const { data: session } = useSession();
-
+const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle =()=>{
@@ -52,12 +53,15 @@ const Navbar = () => {
           </div>
       </div>
       <div className="flex items-center">{/**user&signOut*/}
-        <span className=" text-xs flex items-center mx-5">
+        <span className=" text-xs flex items-center mx-5" title="click profile image to view jobs">
           <img
+          className=""
+          onClick={()=>router.push('/Jobs')}
             width="24"
             height="24"
             src="https://img.icons8.com/material-rounded/24/user.png"
             alt="user"
+            title="My Jobs"
           />
           {session?.user?.email}
         </span>

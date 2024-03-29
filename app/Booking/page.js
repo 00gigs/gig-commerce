@@ -23,7 +23,7 @@ const page = () => {
   const [customerEmail, setCustomerEmail] = useState('');
 const [customerPhone,setCustomerPhone]= useState('');
 const paid = false
-
+const today = new Date().toISOString().split('T')[0];
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -132,7 +132,7 @@ const handleJobChange = (e) =>{
                 </label>
                 <label className="text-[19px] m-2">
                   Appointment date
-                  <input type="date" name="date" onChange={(e)=>setDate(e.target.valueAsDate)} value={date.date} required/>
+                  <input type="date" name="date" min={today} onChange={(e)=>setDate(e.target.valueAsDate)} value={date.date} required/>
                 </label>
                 <label className="text-[19px] m-2">
                   Job description

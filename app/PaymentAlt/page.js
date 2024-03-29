@@ -8,7 +8,8 @@ import { useEffect } from "react";
 import { getSession } from "next-auth/react";
 
 const page = () => {
-  const [data, setData] = useState("");
+  const [iddata, setIdData] = useState("");
+  const [id, setId] = useState("");
 
   {
     /**dynamic job details(forum information destructor) state */
@@ -18,7 +19,7 @@ const page = () => {
   }
   useEffect(() => {
     const fetchData = async () => {
-      await getForum();
+      await getForumId();
       await getPrice();
     };
     fetchData();
@@ -47,70 +48,65 @@ const page = () => {
     /**conditional price data */
   }
   let index = 0;
-  if (data.hours === "2 or Less Hours" && data.workers === "1") {
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "1") {
     index = 12;
   }
-  if (data.hours === "2 or Less Hours" && data.workers === "2") {
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "2") {
     index = 10;
   }
-  if (data.hours === "2 or Less Hours" && data.workers === "3") {
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "3") {
     index = 9;
   }
-  if (data.hours === "2 or Less Hours" && data.workers === "4") {
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "4") {
     index = 8;
   }
-  if (data.hours === "3 to 5 Hours" && data.workers === "1") {
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "1") {
     index = 7;
   }
-  if (data.hours === "3 to 5 Hours" && data.workers === "2") {
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "2") {
     index = 6;
   }
-  if (data.hours === "3 to 5 Hours" && data.workers === "3") {
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "3") {
     index = 5;
   }
-  if (data.hours === "3 to 5 Hours" && data.workers === "4") {
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "4") {
     index = 4;
   }
-  if (data.hours === "6 to 8 Hours" && data.workers === "1") {
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "1") {
     index = 3;
   }
-  if (data.hours === "6 to 8 Hours" && data.workers === "2") {
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "2") {
     index = 2;
   }
-  if (data.hours === "6 to 8 Hours" && data.workers === "3") {
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "3") {
     index = 1;
   }
-  if (data.hours === "6 to 8 Hours" && data.workers === "4") {
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "4") {
     index = 0;
   }
-
   const unitAmount = price.length > 0 ? price[`${index}`].unit_amount / 100 : 0;
   const unitPriceId = price.length > 0 ? price[`${index}`].id : "";
   {
-    /**conditional price data upon form information */
+    /**conditional price iddata upon form information */
   }
+
   {
     /**set job details with forum details */
   }
-
-  const getForum = async () => {
-    // const userEmail = (await getSession()).user.email
-    const username = await getSession();
-    const currentUser = username.user.email;
-    console.log(currentUser);
-    const res = await fetch(
-      `/api/confirmation?userId=${encodeURIComponent(currentUser)}`,
-      {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-      }
-    );
+  const getForumId = async () => {
+    const myURL = new URL(window.location.href);
+    const forumID = myURL.searchParams.get("forumId");
+    setId(forumID);
+    const res = await fetch(`/api/idforum?forumId=${forumID}`, {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    });
     if (!res.ok) {
       throw new Error(`Failed to fetch user forum, status: ${res.status}`);
     }
-    const forumData = await res.json();
-    console.log("this is forum ->", forumData);
-    setData(forumData);
+    const forumDataId = await res.json();
+    console.log("this is forum ID->", forumDataId);
+    setIdData(forumDataId);
   };
   {
     /**set job details with forum details */
@@ -152,7 +148,6 @@ const page = () => {
     console.log("payment POST success!", res);
   };
 
-
   return (
     <div>
       <Navbar />
@@ -166,73 +161,73 @@ const page = () => {
           <span className="grid">
             job
             <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[20px]">
-              {data.job}{" "}
+              {iddata.job}
             </span>
           </span>
           <span className="grid">
             workers
             <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
-              {data.workers}{" "}
+              {iddata.workers}
             </span>
           </span>
           <span className="grid">
             hours
             <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
-              {data.hours}{" "}
+              {iddata.hours}
             </span>
           </span>
           <span className="grid">
             time
             <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-bold text-[20px]">
-              {data.time}{" "}
+              {iddata.time}
             </span>
           </span>
           <span className="grid">
             date
             <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-bold text-[20px]">
-              {data ? formatDateString(data.date) : null}
+              {iddata ? formatDateString(iddata.date) : null}
             </span>
           </span>
           <span className="grid">
             description
             <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[17px]">
-              {data.description}{" "}
+              {iddata.description}
             </span>
           </span>
           <span className="grid">
             Name
             <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
-              {data.customerName}
+              {iddata.customerName}
             </span>
           </span>
           <span className="grid">
             Address
             <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[20px]">
-              {data.customerAddressss}
+              {iddata.customerAddress}
             </span>
           </span>
           <span className="grid">
             City
             <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
-              {data.customerCity}
+              {iddata.customerCity}
             </span>
           </span>
           <span className="grid">
             Zip
             <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
-              {data.customerZip}{" "}
+              {iddata.customerZip}
             </span>
           </span>
           <span className="grid">
             Email
             <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[17px]">
-              {data.customerEmail}
+              {iddata.customerEmail}
             </span>
           </span>
           <span className="grid">
             Phone
             <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
-              {data.customerPhone}
+              {iddata.customerPhone}
             </span>
           </span>
         </div>
@@ -242,118 +237,118 @@ const page = () => {
         <div className=" flex flex-col mb-5 border-2 rounded-lg border-black p-5 max-sm:min-h-screen ">
           <span>
             Deposit due now:
-            {data.hours === "2 or Less Hours" && data.workers === "1" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "1" ? (
               <>${unitAmount}</>
             ) : null}
-            {data.hours === "2 or Less Hours" && data.workers === "2" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "2" ? (
               <>${unitAmount}</>
             ) : null}
-            {data.hours === "2 or Less Hours" && data.workers === "3" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "3" ? (
               <>${unitAmount}</>
             ) : null}
-            {data.hours === "2 or Less Hours" && data.workers === "4" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "4" ? (
               <>${unitAmount}</>
             ) : null}
-            {data.hours === "3 to 5 Hours" && data.workers === "1" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "1" ? (
               <>${unitAmount}</>
             ) : null}
-            {data.hours === "3 to 5 Hours" && data.workers === "2" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "2" ? (
               <>${unitAmount}</>
             ) : null}
-            {data.hours === "3 to 5 Hours" && data.workers === "3" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "3" ? (
               <>${unitAmount}</>
             ) : null}
-            {data.hours === "3 to 5 Hours" && data.workers === "4" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "4" ? (
               <>${unitAmount}</>
             ) : null}
-            {data.hours === "6 to 8 Hours" && data.workers === "1" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "1" ? (
               <>${unitAmount}</>
             ) : null}
-            {data.hours === "6 to 8 Hours" && data.workers === "2" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "2" ? (
               <>${unitAmount}</>
             ) : null}
-            {data.hours === "6 to 8 Hours" && data.workers === "3" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "3" ? (
               <>${unitAmount}</>
             ) : null}
-            {data.hours === "6 to 8 Hours" && data.workers === "4" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "4" ? (
               <>${unitAmount}</>
             ) : null}
           </span>
           <span>
             Total due to Worker(s):
-            {data.hours === "2 or Less Hours" && data.workers === "1" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "1" ? (
               <>$50</>
             ) : null}
-            {data.hours === "2 or Less Hours" && data.workers === "2" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "2" ? (
               <>$100</>
             ) : null}
-            {data.hours === "2 or Less Hours" && data.workers === "3" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "3" ? (
               <>$150</>
             ) : null}
-            {data.hours === "2 or Less Hours" && data.workers === "4" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "4" ? (
               <>$200</>
             ) : null}
-            {data.hours === "3 to 5 Hours" && data.workers === "1" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "1" ? (
               <>$100</>
             ) : null}
-            {data.hours === "3 to 5 Hours" && data.workers === "2" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "2" ? (
               <>$200</>
             ) : null}
-            {data.hours === "3 to 5 Hours" && data.workers === "3" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "3" ? (
               <>$300</>
             ) : null}
-            {data.hours === "3 to 5 Hours" && data.workers === "4" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "4" ? (
               <>$400</>
             ) : null}
-            {data.hours === "6 to 8 Hours" && data.workers === "1" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "1" ? (
               <>$160</>
             ) : null}
-            {data.hours === "6 to 8 Hours" && data.workers === "2" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "2" ? (
               <>$320</>
             ) : null}
-            {data.hours === "6 to 8 Hours" && data.workers === "3" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "3" ? (
               <>$480</>
             ) : null}
-            {data.hours === "6 to 8 Hours" && data.workers === "4" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "4" ? (
               <>$640</>
             ) : null}
           </span>
           <span>
             Total job cost:
-            {data.hours === "2 or Less Hours" && data.workers === "1" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "1" ? (
               <>$100</>
             ) : null}
-            {data.hours === "2 or Less Hours" && data.workers === "2" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "2" ? (
               <>$200</>
             ) : null}
-            {data.hours === "2 or Less Hours" && data.workers === "3" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "3" ? (
               <>$300</>
             ) : null}
-            {data.hours === "2 or Less Hours" && data.workers === "4" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "4" ? (
               <>$400</>
             ) : null}
-            {data.hours === "3 to 5 Hours" && data.workers === "1" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "1" ? (
               <>$175</>
             ) : null}
-            {data.hours === "3 to 5 Hours" && data.workers === "2" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "2" ? (
               <>$350</>
             ) : null}
-            {data.hours === "3 to 5 Hours" && data.workers === "3" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "3" ? (
               <>$525</>
             ) : null}
-            {data.hours === "3 to 5 Hours" && data.workers === "4" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "4" ? (
               <>$700</>
             ) : null}
-            {data.hours === "6 to 8 Hours" && data.workers === "1" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "1" ? (
               <>$240</>
             ) : null}
-            {data.hours === "6 to 8 Hours" && data.workers === "2" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "2" ? (
               <>$480</>
             ) : null}
-            {data.hours === "6 to 8 Hours" && data.workers === "3" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "3" ? (
               <>$720</>
             ) : null}
-            {data.hours === "6 to 8 Hours" && data.workers === "4" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "4" ? (
               <>$960</>
             ) : null}
           </span>

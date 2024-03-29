@@ -17,7 +17,6 @@ export async function POST(req){
 //UPDATE method on  forum to set paid to be true (conditional)
             await mongoDB()
             const paidBoolean = await forum.findOne({customerId:payload.customer}).sort({createdAt:-1}).updateOne({paid:true})
-            
             console.log(paidBoolean.paid)
         }
             return NextResponse.json({status:'succeeded',payload})

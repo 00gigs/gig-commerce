@@ -23,8 +23,8 @@ const customer = await stripe.customers.create({
         ],
         mode: 'payment',
         customer_email:customer.email,
-        success_url:'http://localhost:3001/ThankYou' ,
-        cancel_url: 'http://localhost:3001/Payment'
+        success_url:'http://localhost:3000/ThankYou' ,
+        cancel_url: 'http://localhost:3000/Payment'
       });
       return new NextResponse(JSON.stringify({ url: session.url }), {
         status: 200, // Use 200 OK status when successfully creating a session
