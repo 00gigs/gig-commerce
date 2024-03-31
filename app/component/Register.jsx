@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-
+import { AiOutlineLoading } from 'react-icons/ai';
 const Register = () => {
   const router = useRouter();
-
+  const [loading, setLoading] = useState(false);
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,7 +16,7 @@ const Register = () => {
       setError("Please fill all fields");
       return;
     }
-
+    setLoading(true);
     try {
       const res1 = await fetch("/api/userExist", {
         method: "POST",
@@ -45,10 +45,13 @@ const Register = () => {
 
       if (res.ok) {
         const form = e.target;
+        setLoading(false);
         form.reset();
         router.push("http://localhost:3000/Login");
       } else {
         console.log("user registration failed");
+        setError('Make sure Email is valid')
+        setLoading(false);
       }
     } catch (error) {
       console.log("error during registration", error);
@@ -86,13 +89,15 @@ const Register = () => {
           />
           <button className="w-fit  hover:text-green-300">Register</button>
         </form>
-        <a className="text-xs underline" href="/Login">
+        <a className="text-xs underline mb-1" href="/Login">
           Log in here
         </a>
 
-        {error && (
-          <div className="bg-red-500 m-4 text-sm rounded-md p-2">{error}</div>
-        )}
+        {loading ? (
+          <AiOutlineLoading className="icon-spinning" /> // Placeholder for your loading indicator
+) : error ? (
+  <div className="bg-red-500 m-4 text-sm rounded-md p-2">{error}</div>
+) : null}
       </div>
     </div>
   );

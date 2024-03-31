@@ -91,3 +91,18 @@ body {
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
+
+.icon-spinning {
+  animation: spin 1s linear infinite;
+  margin-top: 5px;
+  color: yellowgreen;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
