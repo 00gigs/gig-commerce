@@ -31,7 +31,7 @@ const handleSubmit = async (e)=>{
           return
          }
 
-         router.replace("http://localhost:3001/")
+         router.replace("http://localhost:3000/")
    } catch (error) {
      console.log('error during log in', error)
    }
