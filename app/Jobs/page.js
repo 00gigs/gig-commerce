@@ -38,6 +38,19 @@ const getForum = async () => {
 
 };
 
+const deleteJob =async()=>{
+    const username = await getSession();
+    const currentUser = username.user.email;
+    const res = await fetch(`/api/jobStatus?userId=${encodeURIComponent(currentUser)}`,{
+        method:'DELETE'
+    })
+    if(!res.ok){
+        throw new Error('Error deleting job')
+    }
+    alert('job deleted')
+}
+
+
 
 //map the forum and pass date through this function to get days away for each job
 const calculateDaysTill = (date) => {
@@ -79,8 +92,10 @@ const calculateDaysTill = (date) => {
                 <tbody key = {index}>
                     <tr>
                     <td className="border-r-4 border-b-4 border-l-4 border-black p-1">
-                       
-              {item.paid ? <p className=" bg-green-700 rounded-lg p-[3px] text-[23px]">PAID</p> : <button onClick={()=>idForum(item._id)} className="cursor-pointer bg-yellow-400 rounded-lg p-[3px] text-[23px] hover:bg-yellow-300">Pay Now</button>}
+                       <div className=" flex gap-[10px]">
+              {item.paid  ? null: <img className="cursor-pointer" onClick={deleteJob} width="30" height="25" src="https://img.icons8.com/fluency-systems-regular/48/trash--v1.png" alt="trash--v1"/>}
+              {item.paid ? <p className=" bg-green-700 rounded-lg p-[3px] text-[23px]">PAID</p> : <button onClick={()=>idForum(item._id)} className="cursor-pointer bg-yellow-400 rounded-lg p-[3px] w-[150px] text-[23px] hover:bg-yellow-300">Pay Now</button>}
+                       </div>
               {/**make unpaid a link that takes the forum id to be used in pay page */}
                     </td>
                         <td className=" border-r-4 border-b-4 border-black">

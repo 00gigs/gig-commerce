@@ -15,3 +15,19 @@ const id = url.searchParams.get('userId');
       return NextResponse.json({ error: "Error retrieving forum info" }, { status: 500 });
     }
   }
+
+  
+export async function DELETE(req) {
+    try {
+      console.log("hit DELETE");
+      await mongoDB();
+      const url = new URL(req.url);
+// Extract query parameters from the request URL
+const id = url.searchParams.get('userId');
+      const forumInfo = await forum.deleteOne({ customerId: `${id}` })
+      return NextResponse.json(forumInfo, { status: 201 });
+    } catch (error) {
+      console.error("Error in DELETE:", error);
+      return NextResponse.json({ error: "Error DELETING forum info" }, { status: 500 });
+    }
+  }
