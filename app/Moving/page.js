@@ -7,7 +7,7 @@ const Page = () => {
     <div className='h-100 bg-slate-200'>
         <Navbar/>
         <div className='text-black'>
-         <p className="italic underline text-indigo-200 font-bold tracking-widest text-center m-2 text-xl	">Hanz</p>
+         <p className="italic  bg-clip-text text-transparent bg-gradient-to-l from-amber-200 via-teal-300 to-amber-200   font-bold tracking-widest text-center m-2 text-xl	">Hanz</p>
           <Link href='/Booking' className="shadow-xl p-3 border-black flex justify-center bg-amber-600 font-bold w-full  mt-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold " >
         
              <span className="moving-text">Book Moving services today </span>

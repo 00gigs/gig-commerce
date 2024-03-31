@@ -7,7 +7,7 @@ const Page = () => {
     <div className="h-100 bg-slate-200">
       <Navbar />
       <div className="text-black">
-        <p className="italic underline text-indigo-200 font-bold tracking-widest text-center m-2 text-xl	">
+        <p className="italic  bg-clip-text text-transparent bg-gradient-to-l from-amber-200 via-teal-300 to-amber-200   font-bold tracking-widest text-center m-2 text-xl	">
           Hanz
         </p>
         <Link

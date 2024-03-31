@@ -9,7 +9,7 @@ const page = () => {
         <h1 className='mt-2 opacity-40'>ABOUT PAGE</h1>
       <div className='mt-3 flex justify-end mr-5'>{/**headBanner  */}
       <div className='flex items-center gap-2'>
-      <p className="italic underline text-indigo-200 font-bold tracking-widest">Hanz</p> -
+      <p className="italic underline bg-clip-text text-transparent bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200  font-bold tracking-widest">Hanz</p> -
       </div>
           <h1 className=" flex text-[22px] font-bold italic tracking-wide"> "Bringing Homes and Hearts Together"</h1>
         </div>{/**headBanner  */}
