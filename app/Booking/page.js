@@ -5,7 +5,7 @@ import Navbar from "../component/Navbar";
 import  {useState,useEffect}  from "react";
 import { useRouter } from 'next/navigation';
 import { getSession } from 'next-auth/react';
-import { set } from 'mongoose';
+
 
 
 const page = () => {
@@ -30,6 +30,7 @@ const page = () => {
 const [customerPhone,setCustomerPhone]= useState('');
 const [unavailableDates, setUnavailableDates] = useState([]);
   const [selectedDate, setSelectedDate] = useState('');
+  const [tools,setTools] = useState(false)
   const today = new Date().toISOString().split('T')[0];
 const paid = false
 
@@ -76,6 +77,7 @@ const paid = false
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    console.log(tools)
   {/*get user to identify forum for get methods*/}
     const user = await getSession()
    const customerId = user.user.email
@@ -98,8 +100,9 @@ const paid = false
           customerEmail,
           customerPhone,
           customerId,
-          paid
-        },),
+          tools,
+          paid,
+        }),
       })
         
   if(!res.ok){
@@ -146,6 +149,7 @@ settoggle(false)
 setCustomerCity(AddressDetcity)
 setCustomerZip(AddressDetzip)
 }
+
 
 
   return (
@@ -218,6 +222,10 @@ setCustomerZip(AddressDetzip)
                 <label className="text-[19px] m-2">
                   Job description
                   <textarea minLength={10} maxLength={200} name="description" onChange={(e)=>setDescription(e.target.value)} value={description} required/>
+                </label>
+                <label className="text-[19px] m-2">
+                 Check if  Tools Needed , list in job description
+                    <input type='checkbox' checked={tools}  onChange={(e)=>setTools(e.target.checked)}/>
                 </label>
               </div>
               <hr />

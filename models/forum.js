@@ -57,7 +57,11 @@ const forumSchema = new Schema({
     paid:{
         type:Boolean,
         required:true
-    }
+    },
+    tools:{
+        type:Boolean,
+        required:true
+    },
 },
 {timestamps:true} 
 )

@@ -86,6 +86,7 @@ const page = () => {
 
   const unitAmount = price.length > 0 ? price[`${index}`].unit_amount / 100 : 0;
   const unitPriceId = price.length > 0 ? price[`${index}`].id : "";
+  console.log(price)
   {
     /**conditional price data upon form information */
   }
