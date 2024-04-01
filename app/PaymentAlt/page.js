@@ -49,41 +49,78 @@ const page = () => {
   }
   let index = 0;
   if (iddata.hours === "2 or Less Hours" && iddata.workers === "1") {
-    index = 12;
+    index = 24;
+  }
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "1" && iddata.tools==true) {
+    index = 11;
   }
   if (iddata.hours === "2 or Less Hours" && iddata.workers === "2") {
+    index = 22;
+  }
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "2" && iddata.tools==true) {
     index = 10;
   }
   if (iddata.hours === "2 or Less Hours" && iddata.workers === "3") {
+    index = 21;
+  }
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "3" && iddata.tools==true) {
     index = 9;
   }
   if (iddata.hours === "2 or Less Hours" && iddata.workers === "4") {
+    index = 20;
+  }
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "4" && iddata.tools==true) {
     index = 8;
   }
   if (iddata.hours === "3 to 5 Hours" && iddata.workers === "1") {
+    index = 19;
+  }
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "1" && iddata.tools==true) {
     index = 7;
   }
   if (iddata.hours === "3 to 5 Hours" && iddata.workers === "2") {
+    index = 18;
+  }
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "2" && iddata.tools==true) {
     index = 6;
   }
   if (iddata.hours === "3 to 5 Hours" && iddata.workers === "3") {
+    index = 17;
+  }
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "3" && iddata.tools==true) {
     index = 5;
   }
   if (iddata.hours === "3 to 5 Hours" && iddata.workers === "4") {
+    index = 16;
+  }
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "4" && iddata.tools==true) {
     index = 4;
   }
   if (iddata.hours === "6 to 8 Hours" && iddata.workers === "1") {
+    index = 15;
+  }
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "1" && iddata.tools==true) {
     index = 3;
   }
   if (iddata.hours === "6 to 8 Hours" && iddata.workers === "2") {
+    index = 14;
+  }
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "2" && iddata.tools==true) {
     index = 2;
   }
   if (iddata.hours === "6 to 8 Hours" && iddata.workers === "3") {
+    index = 13;
+  }
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "3" && iddata.tools==true) {
     index = 1;
   }
   if (iddata.hours === "6 to 8 Hours" && iddata.workers === "4") {
+    index = 12;
+  }
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "4" && iddata.tools==true) {
     index = 0;
   }
+
   const unitAmount = price.length > 0 ? price[`${index}`].unit_amount / 100 : 0;
   const unitPriceId = price.length > 0 ? price[`${index}`].id : "";
   {
@@ -276,80 +313,152 @@ const page = () => {
           </span>
           <span>
             Total due to Worker(s):
-            {iddata.hours === "2 or Less Hours" && iddata.workers === "1" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "1" && iddata.tools==false ? (
               <>$50</>
             ) : null}
-            {iddata.hours === "2 or Less Hours" && iddata.workers === "2" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "1"  && iddata.tools==true ? (
+              <>$105</>
+            ) : null}
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "2" && iddata.tools==false ? (
               <>$100</>
             ) : null}
-            {iddata.hours === "2 or Less Hours" && iddata.workers === "3" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "2" && iddata.tools==true ? (
+              <>$155</>
+            ) : null}
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "3" && iddata.tools==false ? (
               <>$150</>
             ) : null}
-            {iddata.hours === "2 or Less Hours" && iddata.workers === "4" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "3" && iddata.tools==true ? (
+              <>$205</>
+            ) : null}
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "4" && iddata.tools==false ? (
               <>$200</>
             ) : null}
-            {iddata.hours === "3 to 5 Hours" && iddata.workers === "1" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "4" && iddata.tools==true ? (
+              <>$255</>
+            ) : null}
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "1" && iddata.tools==false ? (
               <>$100</>
             ) : null}
-            {iddata.hours === "3 to 5 Hours" && iddata.workers === "2" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "1" && iddata.tools==true ? (
+              <>$155</>
+            ) : null}
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "2" && iddata.tools==false ? (
               <>$200</>
             ) : null}
-            {iddata.hours === "3 to 5 Hours" && iddata.workers === "3" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "2" && iddata.tools==true ? (
+              <>$255</>
+            ) : null}
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "3" && iddata.tools==false ? (
               <>$300</>
             ) : null}
-            {iddata.hours === "3 to 5 Hours" && iddata.workers === "4" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "3" && iddata.tools==false ? (
+              <>$355</>
+            ) : null}
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "4" && iddata.tools==false ? (
               <>$400</>
             ) : null}
-            {iddata.hours === "6 to 8 Hours" && iddata.workers === "1" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "4" && iddata.tools==false ? (
+              <>$455</>
+            ) : null}
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "1" && iddata.tools==false ? (
               <>$160</>
             ) : null}
-            {iddata.hours === "6 to 8 Hours" && iddata.workers === "2" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "1" && iddata.tools==true ? (
+              <>$215</>
+            ) : null}
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "2" && iddata.tools==false ? (
               <>$320</>
             ) : null}
-            {iddata.hours === "6 to 8 Hours" && iddata.workers === "3" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "2" && iddata.tools==true ? (
+              <>$375</>
+            ) : null}
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "3" && iddata.tools==false ? (
               <>$480</>
             ) : null}
-            {iddata.hours === "6 to 8 Hours" && iddata.workers === "4" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "3" && iddata.tools==true ? (
+              <>$535</>
+            ) : null}
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "4" && iddata.tools==false ? (
               <>$640</>
+            ) : null}
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "4" && iddata.tools==true ? (
+              <>$695</>
             ) : null}
           </span>
           <span>
             Total job cost:
-            {iddata.hours === "2 or Less Hours" && iddata.workers === "1" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "1"  && iddata.tools==false ? (
               <>$100</>
             ) : null}
-            {iddata.hours === "2 or Less Hours" && iddata.workers === "2" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "1"  && iddata.tools==true ? (
               <>$200</>
             ) : null}
-            {iddata.hours === "2 or Less Hours" && iddata.workers === "3" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "2"  && iddata.tools==false ? (
+              <>$200</>
+            ) : null}
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "2"  && iddata.tools==true ? (
               <>$300</>
             ) : null}
-            {iddata.hours === "2 or Less Hours" && iddata.workers === "4" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "3"  && iddata.tools==false ? (
+              <>$300</>
+            ) : null}
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "3"  && iddata.tools==true ? (
               <>$400</>
             ) : null}
-            {iddata.hours === "3 to 5 Hours" && iddata.workers === "1" ? (
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "4"  && iddata.tools==false ? (
+              <>$400</>
+            ) : null}
+            {iddata.hours === "2 or Less Hours" && iddata.workers === "4"  && iddata.tools==true ? (
+              <>$500</>
+            ) : null}
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "1"  && iddata.tools==false ? (
               <>$175</>
             ) : null}
-            {iddata.hours === "3 to 5 Hours" && iddata.workers === "2" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "1"  && iddata.tools==true ? (
+              <>$275</>
+            ) : null}
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "2"  && iddata.tools==false ? (
               <>$350</>
             ) : null}
-            {iddata.hours === "3 to 5 Hours" && iddata.workers === "3" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "2"  && iddata.tools==true ? (
+              <>$450</>
+            ) : null}
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "3"  && iddata.tools==false ? (
               <>$525</>
             ) : null}
-            {iddata.hours === "3 to 5 Hours" && iddata.workers === "4" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "3"  && iddata.tools==true ? (
+              <>$625</>
+            ) : null}
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "4"  && iddata.tools==false ? (
               <>$700</>
             ) : null}
-            {iddata.hours === "6 to 8 Hours" && iddata.workers === "1" ? (
+            {iddata.hours === "3 to 5 Hours" && iddata.workers === "4"  && iddata.tools==true ? (
+              <>$800</>
+            ) : null}
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "1"  && iddata.tools==false ? (
               <>$240</>
             ) : null}
-            {iddata.hours === "6 to 8 Hours" && iddata.workers === "2" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "1"  && iddata.tools==true ? (
+              <>$340</>
+            ) : null}
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "2"  && iddata.tools==false ? (
               <>$480</>
             ) : null}
-            {iddata.hours === "6 to 8 Hours" && iddata.workers === "3" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "2"  && iddata.tools==true ? (
+              <>$580</>
+            ) : null}
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "3"  && iddata.tools==false ? (
               <>$720</>
             ) : null}
-            {iddata.hours === "6 to 8 Hours" && iddata.workers === "4" ? (
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "3"  && iddata.tools==true ? (
+              <>$820</>
+            ) : null}
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "4"  && iddata.tools==false ? (
               <>$960</>
+            ) : null}
+            {iddata.hours === "6 to 8 Hours" && iddata.workers === "4"  && iddata.tools==true ? (
+              <>$1060</>
             ) : null}
           </span>
 
