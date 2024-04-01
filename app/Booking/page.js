@@ -5,13 +5,18 @@ import Navbar from "../component/Navbar";
 import  {useState,useEffect}  from "react";
 import { useRouter } from 'next/navigation';
 import { getSession } from 'next-auth/react';
+import { set } from 'mongoose';
 
 
 const page = () => {
   const notifySubmit = () => toast('Forum submitted.',{icon:'✅',style:{background:'#90EE90'}});
   const missingFields = () => toast('Please fill out all fields',{icon:'❌',style:{background:'#F08080'}});
   const router = useRouter()
+  const[AddressDetcity,setaddressDetcity] = useState('');
+  const[AddressDetzip,setaddressDetzip] = useState('');
+  const [toggle, settoggle] = useState(false);
   const [job, setJob] = useState('');
+  const [addyAuto, setAddyAuto] = useState('');
   const [workers, setWorkers] = useState('');
   const [hours, setHours] = useState('');
   const [date, setDate] = useState('');
@@ -45,8 +50,15 @@ const paid = false
       setUnavailableDates(mappedDates)
       
     }
+
+
+    
     getBookedDates()
   },[])
+
+
+
+
   
   const handleDateChange=(e)=>{
     const newDate = e.target.value;
@@ -103,6 +115,38 @@ const paid = false
 const handleJobChange = (e) =>{
   setJob(e.target.name)
 }
+
+useEffect(() => {
+  const autocomplete =async()=>{
+    const response = await fetch(`https://api.geoapify.com/v1/geocode/autocomplete?text=${customerAddress}&lang=en&format=json&apiKey=${process.env.NEXT_PUBLIC_GEOAPIFY_KEY}`);
+    const data = await response.json(); 
+    if(data.results && data.results.length > 0 ){
+      const firstChoice  = data.results[0]
+      const addyChoice = firstChoice.formatted
+      console.log(addyChoice)
+  setAddyAuto(addyChoice)
+  setaddressDetcity(firstChoice.city)
+  setaddressDetzip(firstChoice.postcode)
+    }
+    
+  }
+autocomplete()
+}, [customerAddress])
+
+function splitAtFirstComma(address) {
+  const commaIndex = address.indexOf(',');
+  return address.substring(0, commaIndex);
+}
+
+
+const addysetAuto=()=>{
+const splitAddy = splitAtFirstComma(addyAuto)
+  setCustomerAddress(splitAddy)
+settoggle(false)
+setCustomerCity(AddressDetcity)
+setCustomerZip(AddressDetzip)
+}
+
 
   return (
     <div>
@@ -196,14 +240,21 @@ const handleJobChange = (e) =>{
                   name="address"
                     placeholder="Address"
                     className="mx-2 bg-transparent border-b-2"
-                    onChange={(e)=>setCustomerAddress(e.target.value)}
+                    onChange={(e)=>{setCustomerAddress(e.target.value);
+                    settoggle(true)
+                    }}
+                    value={customerAddress}
                     required
                   />
+                  <div onClick={addysetAuto}>
+                    {toggle?<p className='bg-slate-100 text-black my-2 rounded-lg flex shadow-2xl border-black border-4 cursor-pointer'>{addyAuto}</p>:null}
+                  </div>
                   <input
                   name="city"
                     placeholder="City"
                     className="mx-2 bg-transparent border-b-2"
                     onChange={(e)=>setCustomerCity(e.target.value)}
+                    value={customerCity}
                     required
                   />
                   <input
@@ -213,6 +264,7 @@ const handleJobChange = (e) =>{
                     className="mx-2 bg-transparent border-b-2"
                     onChange={(e)=>setCustomerZip(e.target.value)}
                     maxLength={5}
+                    value={customerZip}
                     required
                   />
                 </label>
