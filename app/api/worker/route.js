@@ -4,7 +4,7 @@ import {NextResponse} from 'next/server'
 
 
 export async function POST(req){
-
+    let mongoDBDoc;
     try {
         const workerInfo = await req.json()
         await mongoDB()

@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 
+
 const Page = () => {
   const notifySubmit = () =>
     toast("A Hanz associate will contact you soon.", { icon: "✅", style: { background: "#90EE90" } });
-
   const [zip, setZip] = useState("");
   const [city, setCity] = useState("");
   const [email, setEmail] = useState("");
@@ -17,26 +17,43 @@ const Page = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(zip);
-    const res = await fetch("/api/worker", {
-      method: "POST",
-      headers: { "Content-Type": "application" },
-      body: JSON.stringify({
-        zip,
-        city,
-        email,
-        number,
-        firstName,
-        lastName,
-      }),
-    });
-    if (!res.ok) {
-      throw new Error("Failed to post worker info", res);
-    } else {
-      console.log("success worker forum");
-      notifySubmit()
-      e.target.reset();
+
+    const zipvalid = await fetch(`https://api.zipcodestack.com/v1/search?codes=${zip}&country=US&apikey=${process.env.NEXT_PUBLIC_ZIP_API}`,{
+      method:'GET',
+      // body:JSON.stringify({
+      //   zip
+      // })
+    })
+    const data = await zipvalid.json()
+    if(!zipvalid.ok||data.results.length === 0){
+      alert('invalid zip please try again')
+      throw new Error("Failed to verify zip", zipvalid);
+    }else{
+     console.log(data)
+
+     const res = await fetch("/api/worker", {
+       method: "POST",
+       headers: { "Content-Type": "application/json" },
+       body: JSON.stringify({
+         zip,
+         city,
+         email,
+         number,
+         firstName,
+         lastName,
+       }),
+     });
+     if (!res.ok) {
+       throw new Error("Failed to post worker info", res);
+     } else {
+       console.log("success worker forum");
+       notifySubmit()
+       e.target.reset();
+     }
     }
+    
+
+
   };
 
   return (
@@ -57,6 +74,7 @@ const Page = () => {
                 required
                 onChange={(e) => setZip(e.target.value)}
                 maxLength={5}
+                minLength={5}
               />
             </label>
             <label className="text-white">
@@ -74,7 +92,7 @@ const Page = () => {
               Contact
               <input
                 className="ml-3 bg-transparent border-b border-black"
-                type="text"
+                type="email"
                 placeholder="email"
                 required
                 onChange={(e) => setEmail(e.target.value)}
@@ -83,11 +101,12 @@ const Page = () => {
             <label className="text-white">
               <input
                 className="bg-transparent border-b border-black"
-                type="text"
-                placeholder="number"
+                type="tel"
+                placeholder="Phone number"
                 required
                 onChange={(e) => setNumber(e.target.value)}
                 maxLength={10}
+                minLength={10}
               />
             </label>
           </div>
