@@ -369,7 +369,7 @@ const page = () => {
                     placeholder="Phone"
                     type="text"
                     className="mx-2 bg-transparent border-b-2"
-                    min={10}
+                    minLength={10}
                     maxLength={10}
                     onChange={(e) => setCustomerPhone(e.target.value)}
                     required
