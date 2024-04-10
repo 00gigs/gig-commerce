@@ -1,21 +1,23 @@
 "use client";
-import { set } from "mongoose";
+
 import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+
 
 const Page = () => {
+  const notifySubmit = () =>
+    toast("A Hanz associate will contact you soon.", { icon: "✅", style: { background: "#90EE90" } });
 
-
-const [zip, setZip] = useState('')
-const [city, setCity] = useState('')
-const [email, setEmail] = useState('')
-const [number, setNumber] = useState('')
-const [firstName, setFirstName] = useState('')
-const [lastName, setLastName] = useState('')
-
+  const [zip, setZip] = useState("");
+  const [city, setCity] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    console.log(zip)
+    e.preventDefault();
+    console.log(zip);
     const res = await fetch("/api/worker", {
       method: "POST",
       headers: { "Content-Type": "application" },
@@ -28,21 +30,23 @@ const [lastName, setLastName] = useState('')
         lastName,
       }),
     });
-    if(!res.ok){
-      throw new Error('Failed to post worker info',res)
-    }else{
-      console.log('success worker forum')
-      e.target.reset()
+    if (!res.ok) {
+      throw new Error("Failed to post worker info", res);
+    } else {
+      console.log("success worker forum");
+      notifySubmit()
+      e.target.reset();
     }
   };
 
-  
-
   return (
     <div className="flex min-h-screen justify-center items-center text-black bg-slate-100 ">
-      <form onSubmit={handleSubmit} className="text-center bg-[#3fb5afc5] w-[40rem] p-10 rounded-xl shadow-2xl">
+      <form
+        onSubmit={handleSubmit}
+        className="text-center bg-[#3fb5afc5] w-[40rem] p-10 rounded-xl shadow-2xl"
+      >
         <fieldset>
-          <legend className="font-mono">Worker SignOn Forum</legend>
+          <legend className="font-mono bg-slate-200 rounded-lg p-3 mb-4">Job dispatch sign-on forum</legend>
           <div className="my-3">
             <label className="mr-3 text-white font-mono">
               Location
@@ -51,7 +55,7 @@ const [lastName, setLastName] = useState('')
                 type="text"
                 placeholder="zip"
                 required
-                onChange={(e)=>setZip(e.target.value)}
+                onChange={(e) => setZip(e.target.value)}
                 maxLength={5}
               />
             </label>
@@ -61,7 +65,7 @@ const [lastName, setLastName] = useState('')
                 type="text"
                 placeholder="city"
                 required
-                onChange={(e)=>setCity(e.target.value)}
+                onChange={(e) => setCity(e.target.value)}
               />
             </label>
           </div>
@@ -73,16 +77,16 @@ const [lastName, setLastName] = useState('')
                 type="text"
                 placeholder="email"
                 required
-                onChange={(e)=>setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </label>
-            <label  className="text-white">
+            <label className="text-white">
               <input
                 className="bg-transparent border-b border-black"
                 type="text"
                 placeholder="number"
                 required
-                onChange={(e)=>setNumber(e.target.value)}
+                onChange={(e) => setNumber(e.target.value)}
                 maxLength={10}
               />
             </label>
@@ -95,33 +99,36 @@ const [lastName, setLastName] = useState('')
                 type="text"
                 placeholder="First Name"
                 required
-                onChange={(e)=>setFirstName(e.target.value)}
+                onChange={(e) => setFirstName(e.target.value)}
               />
             </label>
-            <label  className="text-white"> 
+            <label className="text-white">
               <input
                 className="ml-3 bg-transparent border-b border-black"
                 type="text"
                 placeholder="Last Name"
                 required
-                onChange={(e)=>setLastName(e.target.value)}
+                onChange={(e) => setLastName(e.target.value)}
               />
             </label>
           </div>
           <div className="my-3">
-            <label >
+            <label>
               Do you agree to terms and conditions
               <input type="checkbox" />
             </label>
           </div>
           <div className="my-3">
             <label>
-              Do you agree to liability agreement
+              Do you agree to the liability agreement
               <input type="checkbox" />
             </label>
           </div>
         </fieldset>
-        <button type="submit" className="bg-blue-400 uppercase p-2 mt-3 font-semibold rounded-xl hover:text-xl">
+        <button
+          type="submit"
+          className="bg-blue-400 uppercase p-2 mt-3 font-semibold rounded-xl hover:text-xl"
+        >
           Submit
         </button>
         <div>
@@ -131,6 +138,20 @@ const [lastName, setLastName] = useState('')
           </p>
         </div>
       </form>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        toastOptions={{
+          // Default options for specific types
+          success: {
+            duration: 4000,
+            theme: {
+              primary: "green",
+              secondary: "black",
+            },
+          },
+        }}
+      />
     </div>
   );
 };
