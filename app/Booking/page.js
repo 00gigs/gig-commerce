@@ -86,7 +86,7 @@ const page = () => {
       !hours ||
       !time ||
       !setSelectedDate ||
-      !description ||
+      !description||
       !customerName ||
       !customerAddress ||
       !customerCity ||
@@ -168,10 +168,10 @@ const page = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex min-h-screen justify-center items-center text-black bg-slate-100">
+      <div className="flex min-h-screen justify-center items-center text-black bg-[#D1CAC2]">
         <div className="bg-slate-300 rounded-md h-full my-5 w-fit bg-blend-darken">
           <h1 className="text-center mt-1 font-extrabold">BOOK NOW</h1>
-          <div className="flex justify-center bg-slate-500 w-[35rem] h-[25rem] m-4 rounded-sm shadow-2xl overflow-y-scroll border-4">
+          <div className="flex justify-center bg-[#ebd48f80] w-[35rem] h-[25rem] m-4 rounded-sm shadow-2xl overflow-y-scroll border-4">
             <form name="forumSub">
               <p className="text-[19px] font-bold my-2 text-center m-4">
                 what type of service do you need ? Please choose one

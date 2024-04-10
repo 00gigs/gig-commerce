@@ -17,7 +17,7 @@ const Navbar = () => {
     setIsOpenalt(!isOpenalt);
   };
   return (
-    <div className="bg-slate-600 w-screen h-10 p-3 flex justify-end">
+    <div className="bg-amber-400 w-screen h-14 p-3 flex justify-end">
       {/**main*/}
       <div className="flex items-center w-screen justify-start">
         <div>

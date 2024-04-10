@@ -193,7 +193,7 @@ const page = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col min-h-screen justify-center items-center text-black bg-slate-100">
+      <div className="flex flex-col min-h-screen justify-center items-center text-black bg-[#d1cac260]">
         <h1 className="mt-1 font-medium italic mb-4 text-[30px]">
           ' Only a few clicks away before you can sit back and let Hanz do the
           job '

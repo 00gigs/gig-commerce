@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="bg-slate-100 w-screen">
+    <div className="bg-[#D1CAC2]  w-screen">
       {/**homepage whole */}
       <Navbar />
       <div className="grid text-center min-h-screen  text-black bg-slate-100 mx-6 p-2 border-4">  {/**content whole */}
@@ -18,7 +18,7 @@ export default function Home() {
       <Link href='/Booking' className=" p-3 flex justify-center bg-green-200 rounded-xl shadow-xl font-bold w-1/3  m-3 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold" > "BOOK TODAY" </Link>
       </div> */}
 
-<div className=" flex justify-center bg-gradient-to-r from-teal-200 via-slate-200 to-amber-200 mx-48 rounded-md">
+<div className=" flex justify-center bg-gradient-to-r from-teal-200 via-slate-200 to-amber-400 mx-48 rounded-md">
       <Link className="bouncing-div bg-opacity-60 p-3 flex justify-center  rounded-xl shadow-2xl font-bold  m-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold"  href='/Booking'>
           <span className="block whitespace-nowrap">BOOK TODAY</span>
       </Link>
