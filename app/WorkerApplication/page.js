@@ -7,7 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 const Page = () => {
   const notifySubmit = () =>
-    toast("A Hanz associate will contact you soon.", { icon: "✅", style: { background: "#90EE90" } });
+    toast("A Hanz labor force agent will contact you soon.", { icon: "✅", style: { background: "#90EE90" } });
   const [zip, setZip] = useState("");
   const [city, setCity] = useState("");
   const [email, setEmail] = useState("");

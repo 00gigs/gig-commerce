@@ -109,7 +109,7 @@ const page = () => {
                           />
                         )}
                         {item.paid ? (
-                          <p className=" bg-green-700 rounded-lg p-[3px] text-[23px]">
+                          <p className=" bg-green-400 ml-7 rounded-lg p-[5px] text-[23px]">
                             PAID
                           </p>
                         ) : (

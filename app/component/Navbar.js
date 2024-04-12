@@ -68,7 +68,10 @@ const Navbar = () => {
                   <Link href={"/Contact"}>- Leave a review</Link>{" "}
                 </li>
                 <li className="hover:cursor-pointer my-2 noto-sans-mono">
-                  <Link href={"/Contact"}>- Talk to a team member</Link>{" "}
+                  <a href='tel:+1234567890'>- Talk to a team member</a>{" "}
+                </li>
+                <li className="hover:cursor-pointer my-2 noto-sans-mono">
+                  <Link href={"/"}>- View Reviews</Link>{" "}
                 </li>
               </ul>
             </div>
