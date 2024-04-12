@@ -23,7 +23,7 @@ const Navbar = () => {
         <div>
           {/**drawer menu*/}
           <button
-            className="p-1 m-1 hover:bg-slate-800 hover:shadow-xl rounded"
+            className="p-1 m-1 hover:bg-amber-300 hover:shadow-2xl rounded"
             onClick={toggle}
           >
             {/** open drawer menu*/}
@@ -47,18 +47,28 @@ const Navbar = () => {
               {/**drawer menu items*/}
               <h1 className="text-xl font-bold my-3 ml-1">Services</h1>
               <ul className="mx-3">
-                <li className="hover:cursor-pointer my-2">
+                <li className="hover:cursor-pointer my-2 noto-sans-mono">
                   {" "}
                   <Link href={"/landscaping"}> - landscaping</Link>{" "}
                 </li>
-                <li className="hover:cursor-pointer my-2">
+                <li className="hover:cursor-pointer my-2 noto-sans-mono">
                   <Link href={"/GeneralContract"}>- Handy Man</Link>
                 </li>
-                <li className="hover:cursor-pointer my-2">
+                <li className="hover:cursor-pointer my-2 noto-sans-mono">
                   <Link href={"/Cleaning"}>- Cleaning Services</Link>{" "}
                 </li>
-                <li className="hover:cursor-pointer my-2">
+                <li className="hover:cursor-pointer my-2 noto-sans-mono">
                   <Link href={"/Moving"}>- Moving Help</Link>{" "}
+                </li>
+                <h1 className="text-xl font-bold my-3 ml-1">Account</h1>
+                <li className="hover:cursor-pointer my-2 noto-sans-mono">
+                  <Link href={"/Jobs"}>- My Jobs</Link>{" "}
+                </li>
+                <li className="hover:cursor-pointer my-2 noto-sans-mono">
+                  <Link href={"/Contact"}>- Leave a review</Link>{" "}
+                </li>
+                <li className="hover:cursor-pointer my-2 noto-sans-mono">
+                  <Link href={"/Contact"}>- Talk to a team member</Link>{" "}
                 </li>
               </ul>
             </div>
@@ -80,11 +90,11 @@ const Navbar = () => {
           </h1>
         </a>
         <div className="mx-2 flex gap-3">
-          <Link className="text-[10px]" href={"/Contact"}>
+          <Link className="text-[12px] noto-sans-mono underline hover:text-[14px]" href={"/Contact"}>
             {" "}
             Contact
           </Link>
-          <Link className="text-[10px]" href={"/About"}>
+          <Link className="text-[12px] underline noto-sans-mono hover:text-[14px]" href={"/About"}>
             {" "}
             About
           </Link>
@@ -106,18 +116,18 @@ const Navbar = () => {
             title="View my Jobs"
           />
           {isOpenalt && 
-          <div className=" shadow-2xl absolute top-9 right-[199px] rounded-xl border-4 p-1 text-black font-semibold bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200  hover:bg-gradient-to-r from-teal-100 via-slate-100 to-amber-100 ">
+          <div className=" shadow-2xl absolute top-11 right-[199px] rounded-xl border-4 p-1 text-black font-semibold bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200  hover:bg-gradient-to-r from-teal-100 via-slate-100 to-amber-100 ">
             <JobModal />
           </div>}
           {session?.user?.email}
         </span>
         <button
-          className="text-xs ml-2 border-2 p-1 rounded-lg bg-slate-800 hover:bg-slate-400"
+          className="text-sm w-24 ml-2 border-2 p-1 rounded-lg bg-slate-600 hover:bg-slate-400 noto-sans-mono"
           onClick={() =>
             signOut({ callbackUrl: "http://localhost:3000/Login" })
           }
         >
-          SignOut
+          Sign Out
         </button>
       </div>
       {/**user&signOut*/}
