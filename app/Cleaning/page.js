@@ -16,7 +16,7 @@ const Page = () => {
         >
           <span className="moving-text">
             {" "}
-            Book HouseKeeping services today{" "}
+            Request HouseKeeping Services Today{" "}
           </span>
         </Link>
         <div className=" border-black mx-8  p-3 text-center mt-4">
@@ -26,16 +26,10 @@ const Page = () => {
               src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
             <h1 className="font-bold text-sm mb-4">
-              "HANZ OFFERS PREMIUM CLEANING SERVICES, EMBRACING UNMATCHED
-              DEDICATION TO THOROUGHNESS AND EXCELLENCE."
+            "HANZ OFFERS DETAILED CLEANING SERVICES, FOCUSING ON THOROUGHNESS AND CARE."
             </h1>
             <p className="font-light text-[26px]">
-              Transform your home with Hanz, your elite choice for maid
-              services. From thorough dusting to sparkling floors, our expertise
-              in domestic tidiness and order brings unparalleled cleanliness to
-              your living spaces. Trust Hanz to rejuvenate your home into a
-              flawless, inviting sanctuary. Let us fulfill your cleaning desires
-              with meticulous attention and zeal.
+            Refresh your home or office with Hanz, your trusted choice for cleaning services. From dusting and vacuuming to deep cleaning kitchens and bathrooms, our experienced team takes care of your space with high-levels of attention. Trust Hanz to bring a renewed sense of cleanliness and comfort to your environment.
             </p>
           </div>
         </div>
@@ -46,40 +40,30 @@ const Page = () => {
           >
             <span className="moving-text">
               {" "}
-              Book HouseKeeping services today{" "}
+              Request HouseKeeping Services Today{" "}
             </span>
           </Link>
         </div>
         <div className="border-b-4 mb-2 mt-2 text-center h-screen mx-8 py-2  border-black">
           <h1 className="font-bold text-sm mb-4">
-            "EXPERT CLEANING TEAMS PROVIDE AFFORDABLE, HIGH-QUALITY SERVICES FOR
-            YOUR HOME OR OFFICE."
+          "SKILLED CLEANING TEAMS DELIVER COST-EFFECTIVE, QUALITY CLEANING SERVICES FOR YOUR HOME OR OFFICE."
           </h1>
           <p className="font-light text-[26px]">
-            At Hanz, we bridge the gap between you and unparalleled residential
-            and commercial cleaning excellence. Our dedicated team of
-            professional cleaners and maids is ready to tackle any cleaning
-            challenge, ensuring your living and working environments are not
-            just cleaned, but transformed into pristine, welcoming spaces. Our
-            services include:
+          At Hanz, we connect you with dedicated residential and commercial cleaning teams who excel in transforming your spaces. Our cleaners tackle every job with care, ensuring your home or office is not just cleaned, but rejuvenated into a welcoming space. Our services include:
           </p>
           <img
             className="float-left w-48 h-52 object-cover mx-3 my-2 border-4 border-black rounded"
             src="https://images.unsplash.com/photo-1686828751885-040f0a0fb77a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
           <ul className="text-[20px] italic">
-            <li>- Thorough cleaning and sanitization </li>
-            <li>- Expert maid and janitorial services</li>
-            <li>- Deep cleaning for homes and offices</li>
-            <li>- Eco-friendly cleaning solutions</li>
-            <li>- Specialized carpet and upholstery cleaning </li>
-            <li>- Window washing and blind cleaning </li>
-            <li>- Detailed kitchen and bathroom cleaning ...and much more!</li>
+            <li>- Deep Cleaning: Thorough cleaning of kitchens, bathrooms, and other areas.</li>
+            <li>- Eviction Cleaning: Cleaning and sanitizing properties after a tenant moves out.</li>
+            <li>- Basic Home Upkeep: Routine cleaning of living spaces, including dusting and vacuuming.</li>
+            <li>- Carpet and Upholstery Cleaning: Deep cleaning of carpets and upholstery to remove stains and odors.</li>
+            <li>- Window Cleaning: Cleaning windows inside and out for a clear, streak-free finish. </li>
           </ul>
           <p className="font-medium text-lg">
-            Let Hanz connect you with the cleaning expertise you need to
-            maintain immaculate environments, reflecting your high standards and
-            preferences.
+          "Let Hanz provide you with the cleaning expertise you need to maintain a spotless, comfortable environment. Let us handle the work, so you can enjoy a cleaner, more organized space."
           </p>
         </div>
       </div>

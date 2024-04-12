@@ -5,7 +5,7 @@ const router = useRouter()
   return (
     <div className=''>
         <button  onClick={()=>router.push('/Jobs')}>
-        Click to view Jobs
+       view my jobs
         </button>
         </div>
   )

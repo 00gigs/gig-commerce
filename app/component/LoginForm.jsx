@@ -40,7 +40,7 @@ const handleSubmit = async (e)=>{
 
   return (
     <div>
-      <div className="flex items-center justify-center min-h-screen bg-slate-800">
+      <div className="flex items-center justify-center min-h-screen bg-[#D1CAC2]">
         <div className="rounded-lg shadow-lg text-center border-t-4  border-yellow-300 flex-col flex p-3 items-center max-w-72  bg-slate-700">
           <h1>Login</h1>
           <form

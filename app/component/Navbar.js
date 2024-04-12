@@ -49,16 +49,16 @@ const Navbar = () => {
               <ul className="mx-3">
                 <li className="hover:cursor-pointer my-2">
                   {" "}
-                  <Link href={"/landscaping"}> - landscaper</Link>{" "}
+                  <Link href={"/landscaping"}> - landscaping</Link>{" "}
                 </li>
                 <li className="hover:cursor-pointer my-2">
-                  <Link href={"/GeneralContract"}>- General contractor</Link>
+                  <Link href={"/GeneralContract"}>- Handy Man</Link>
                 </li>
                 <li className="hover:cursor-pointer my-2">
-                  <Link href={"/Cleaning"}>- Cleaning Contractor</Link>{" "}
+                  <Link href={"/Cleaning"}>- Cleaning Services</Link>{" "}
                 </li>
                 <li className="hover:cursor-pointer my-2">
-                  <Link href={"/Moving"}>- Moving Contractor</Link>{" "}
+                  <Link href={"/Moving"}>- Moving Help</Link>{" "}
                 </li>
               </ul>
             </div>
@@ -75,7 +75,7 @@ const Navbar = () => {
         </div>
         {/**drawer menu*/}
         <a href="/">
-          <h1 className="text-xl italic bg-clip-text text-transparent bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200 font-bold tracking-wide hover:tracking-widest duration-300">
+          <h1 className=" text-2xl italic bg-clip-text text-transparent bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200 font-bold tracking-wide hover:tracking-widest duration-300">
             Hanz
           </h1>
         </a>
@@ -106,7 +106,7 @@ const Navbar = () => {
             title="View my Jobs"
           />
           {isOpenalt && 
-          <div className=" shadow-2xl absolute top-8 right-[199px] rounded-xl border-4 p-1 text-black font-semibold bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200  hover:bg-gradient-to-r from-teal-100 via-slate-100 to-amber-100 ">
+          <div className=" shadow-2xl absolute top-9 right-[199px] rounded-xl border-4 p-1 text-black font-semibold bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200  hover:bg-gradient-to-r from-teal-100 via-slate-100 to-amber-100 ">
             <JobModal />
           </div>}
           {session?.user?.email}
