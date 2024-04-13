@@ -76,7 +76,8 @@ const page = () => {
           {data.length === 0 ? "You currently have no jobs booked. Please book a service and come back here to view details." : null}
         </div>
         <section className="text-center flex justify-center items-center mb-5">
-          <table className="bg-[#D1CAC2] h-[135px] w-[425px] ">
+          <div className="flex justify-center w-full">
+          <table className="bg-[#D1CAC2] w-fit max-w-screen-md mx-auto ">
             <thead>
               <tr className="border-4 border-black">
                 <th className=" border-r-4 border-black">paid status</th>
@@ -115,7 +116,7 @@ const page = () => {
                         ) : (
                           <button
                             onClick={() => idForum(item._id)}
-                            className="cursor-pointer bg-yellow-400 rounded-lg p-[3px] w-[150px] text-[23px] hover:bg-yellow-300"
+                            className="cursor-pointer   bg-yellow-400 rounded-lg p-[3px] w-[150px] text-[23px] hover:bg-yellow-300 "
                           >
                             Pay Now
                           </button>
@@ -138,6 +139,7 @@ const page = () => {
               );
             })}
           </table>
+          </div>
         </section>
       </div>
     </div>
