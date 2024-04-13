@@ -194,89 +194,89 @@ const page = () => {
     <div>
       <Navbar />
       <div className="flex flex-col min-h-screen justify-center items-center text-black bg-[#d1cac260]">
-        <h1 className="mt-1 font-medium italic mb-4 text-[30px]">
-          ' Only a few clicks away before you can sit back and let Hanz do the
-          job '
+        <h1 className="mt-1 font-medium italic mb-4 text-[24px] sm:text-[30px] text-center">
+          'Only a few clicks away before you can sit back and let Hanz do the
+          job'
         </h1>
-        <h1 className="mt-1 font-extrabold underline">Job Details</h1>
-        <div className="grid grid-cols-3 gap-5 p-2 m-2 border-4 h-[25rem] w-[30rem] border-slate bg-gradient-to-b from-cyan-100 to-neutral-200 max-sm:flex flex-col max-sm:h-[40rem] text-center">
-          <span className="grid">
+        <h1 className="mt-1 font-extrabold underline text-lg sm:text-xl text-center">Job Details</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 m-2 border-4 rounded-lg shadow-lg w-full max-w-[95%] lg:max-w-[35rem] bg-gradient-to-b from-cyan-100 to-neutral-200">
+          <span className="text-center grid">
             job
-            <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[20px]">
+            <span className="text-center bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[20px]">
               {data.job}{" "}
             </span>
           </span>
-          <span className="grid">
+          <span className="grid text-center">
             workers
-            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
+            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px] text-center">
               {data.workers}{" "}
             </span>
           </span>
-          <span className="grid">
+          <span className="grid text-center">
             hours
-            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
+            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px] text-center">
               {data.hours}{" "}
             </span>
           </span>
-          <span className="grid">
+          <span className="grid text-center">
             time
-            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-bold text-[20px]">
+            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-bold text-[20px] text-center">
               {data.time}{" "}
             </span>
           </span>
-          <span className="grid">
+          <span className="grid text-center">
             date
-            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-bold text-[20px]">
+            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-bold text-[20px] text-center">
               {data ? formatDateString(data.date) : null}
             </span>
           </span>
-          <span className="grid">
+          <span className="grid text-center">
             description
-            <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[17px]">
+            <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[17px] text-center">
               {data.description}{" "}
             </span>
           </span>
-          <span className="grid">
+          <span className="grid text-center">
             Name
-            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
+            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px] text-center">
               {data.customerName}
             </span>
           </span>
-          <span className="grid">
+          <span className="grid text-center">
             Address
-            <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[20px]">
+            <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[20px] text-center">
               {data.customerAddress}
             </span>
           </span>
-          <span className="grid">
+          <span className="grid text-center">
             City
-            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
+            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px] text-center">
               {data.customerCity}
             </span>
           </span>
-          <span className="grid">
+          <span className="grid text-center">
             Zip
-            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
+            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px] text-center">
               {data.customerZip}{" "}
             </span>
           </span>
-          <span className="grid">
+          <span className="grid text-center">
             Email
-            <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[17px]">
+            <span className="bg-slate-100 bg-opacity-50 rounded-lg font-thin text-[17px] text-center">
               {data.customerEmail}
             </span>
           </span>
-          <span className="grid">
+          <span className="grid text-center">
             Phone
-            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px]">
+            <span className="bg-slate-100 bg-opacity-50 rounded-lg  font-thin text-[20px] text-center">
               {data.customerPhone}
             </span>
           </span>
         </div>
-        <h1 className="text-center mt-1 font-extrabold underline">
+        <h1 className="text-center mt-1 font-extrabold underline text-lg sm:text-xl">
           Booking Payment
         </h1>
-        <div className=" flex flex-col mb-5 border-2 rounded-lg border-black p-5 max-sm:min-h-screen ">
+        <div className=" flex flex-col mb-5 border-2 rounded-lg border-black p-5 lg:p-4 bg-slate-100 max-w-screen-sm lg:max-w-lg mx-auto max-h-[80vh] lg:max-h-[50vh] overflow-y-auto ">
           <span>
             Deposit due now:
             {data.hours === "2 or Less Hours" && data.workers === "1" ? (
@@ -468,7 +468,7 @@ const page = () => {
           </span>
 
           <div
-            className="flex flex-col bg-indigo-400 rounded-md items-center cursor-pointer hover:bg-indigo-300"
+            className="mt-4 p-2 bg-indigo-400 rounded-md text-center text-white font-bold cursor-pointer hover:bg-indigo-300 hover:text-green-300"
             onClick={payNow}
           >
             Book Now

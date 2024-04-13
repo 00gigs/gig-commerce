@@ -168,13 +168,13 @@ const page = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex min-h-screen justify-center items-center text-black bg-[#D1CAC2]">
-        <div className="bg-slate-300 rounded-md h-full my-5 w-fit bg-blend-darken">
+      <div className="flex min-h-screen justify-center items-center text-black bg-[#D1CAC2] p-4 md:p-8 lg:p-12">
+        <div className="w-full max-w-md bg-slate-100 shadow-lg rounded-md p-6 md:max-w-lg lg:max-w-xl ">
           <h1 className="text-center mt-1 font-extrabold">BOOK NOW</h1>
-          <div className="flex justify-center bg-[#ebd48f80] w-[35rem] h-[25rem] m-4 rounded-sm shadow-2xl overflow-y-scroll border-4">
+          <div className="flex justify-center bg-[#ebd48f80] w-full max-w-[35rem] h-full max-h-[25rem] md:max-w-[30rem] lg:max-w-[35rem] p-4 m-2 rounded-sm shadow-xl overflow-y-auto border-4 border-gray-300">
             <form name="forumSub">
               <p className="text-[19px] font-bold my-2 text-center m-4">
-                what type of service do you need ? Please choose one
+                what type of service do you need? Please choose one.
               </p>
               <div className="grid  gap-3  text-center font-medium">
                 {/**checkbox services*/}
