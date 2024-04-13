@@ -17,13 +17,13 @@ const Navbar = () => {
     setIsOpenalt(!isOpenalt);
   };
   return (
-    <div className="bg-amber-400 w-screen h-14 p-3 flex justify-end">
+    <div className="bg-amber-400 w-full h-14 flex justify-between items-center p-3">
       {/**main*/}
-      <div className="flex items-center w-screen justify-start">
+      <div className="flex items-center">
         <div>
           {/**drawer menu*/}
           <button
-            className="p-1 m-1 hover:bg-amber-300 hover:shadow-2xl rounded"
+            className="p-1 m-1 w-7  sm:w-9 sm:h-9  hover:bg-amber-300 hover:shadow-2xl rounded"
             onClick={toggle}
           >
             {/** open drawer menu*/}
@@ -31,8 +31,7 @@ const Navbar = () => {
               ""
             ) : (
               <img
-                width="30"
-                height="30"
+                
                 src="https://img.icons8.com/ios/50/menu--v1.png"
                 alt="menu--v1"
               />
@@ -119,13 +118,13 @@ const Navbar = () => {
             title="View my Jobs"
           />
           {isOpenalt && 
-          <div className=" shadow-2xl absolute top-11 right-[199px] rounded-xl border-4 p-1 text-black font-semibold bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200  hover:bg-gradient-to-r from-teal-100 via-slate-100 to-amber-100 ">
+          <div className=" shadow-2xl absolute top-11 right-[145px] rounded-xl border-4 p-1 text-black font-semibold bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200  hover:bg-gradient-to-r from-teal-100 via-slate-100 to-amber-100 sm:right-[199px] ">
             <JobModal />
           </div>}
           {session?.user?.email}
         </span>
         <button
-          className="text-sm w-24 ml-2 border-2 p-1 rounded-lg bg-slate-600 hover:bg-slate-400 noto-sans-mono"
+          className="text-[10px] w-24  border-2 p-1 rounded-lg bg-slate-600 hover:bg-slate-400 noto-sans-mono sm:text-sm"
           onClick={() =>
             signOut({ callbackUrl: "http://localhost:3000/Login" })
           }

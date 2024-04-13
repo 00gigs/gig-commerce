@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="bg-[#D1CAC2]  w-screen">
+    <div className="bg-[#D1CAC2]  w-full">
       {/**homepage whole */}
       <Navbar />
-      <div className="grid text-center min-h-screen  text-black bg-slate-100 mx-6 p-2 border-4">  {/**content whole */}
+      <div className="min-h-screen text-black bg-slate-100 mx-6 sm:mx-2 md:mx-6 lg:mx-8 xl:mx-auto max-w-7xl border-4 p-2 sm:p-4 lg:p-6 xl:p-8 text-center">  {/**content whole */}
         <div>{/**headBanner  */}
           <div className="text-[22px] font-bold italic tracking-wide">
             {/* <h2 className="italic underline text-indigo-200 font-bold tracking-widest">Hanz</h2> */}
@@ -18,16 +18,19 @@ export default function Home() {
       <Link href='/Booking' className=" p-3 flex justify-center bg-green-200 rounded-xl shadow-xl font-bold w-1/3  m-3 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold" > "BOOK TODAY" </Link>
       </div> */}
 
-<div className=" flex justify-center bg-gradient-to-r from-teal-200 via-slate-200 to-amber-400 mx-48 rounded-md">
-      <Link className="bouncing-div bg-opacity-60 p-3 flex justify-center  rounded-xl shadow-2xl font-bold  m-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold"  href='/Booking'>
-          <span className="block whitespace-nowrap">BOOK TODAY</span>
-      </Link>
-    </div>
+<div className="bouncing-div flex justify-center items-center my-4 sm:my-6 lg:my-8">
+    <Link
+        href="/Booking"
+        className="bg-gradient-to-r from-teal-200 via-slate-200 to-amber-400 p-3 w-full max-w-md rounded-xl shadow-2xl font-bold duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold"
+    >
+        <span className="block text-center">BOOK TODAY</span>
+    </Link>
+</div>
         <div className="m-3">{/**text content  */}
           <p className="text-[24px] leading-relaxed italic tracking-wide noto-sans-indic">In today's fast-paced world, managing property maintenance and home care needs can be a daunting task for homeowners. Fortunately, We offer seamless solutions with Our comprehensive range of home services. From landscaping and Handy-Man needs to thorough cleaning and hassle-free moving, Hanz is your go-to platform for all-in-one home solutions. We ensure every service is delivered with unmatched quality and a personal touch.</p>
           <h1 className="font-bold text-[22px] mt-2 underline">Transform Your Outdoors with Hanz Landscaping</h1>
-          <img className=' float-right w-48 h-44 object-cover mx-3 my-2 border-2 border-black rounded' src='https://img.freepik.com/free-photo/unrecognizable-man-psushing-wheelbarrow-full-seedling_329181-20532.jpg?t=st=1710693774~exp=1710697374~hmac=c24e0cf1561ec782642004107a10258b4b92a064543fe993fd79e551d4aadb31&w=2000'/>
-          <p className="font-light text-[24px] text-p[18px] tracking-tight noto-znamenny">Envisioning a beautiful garden or a customized outdoor living space? Look no further than Hanz for your landscaping needs. Our skilled local providers excel at a range of services, including mowing lawns, trimming trees, planting, mulching, and more. Let us help your outdoor space flourish. Explore our Landscaping page to learn how we can bring your vision to life.</p>
+          <img className=' float-right w-48 h-44 object-cover mx-auto ml-4 my-2 border-2 border-black rounded' src='https://img.freepik.com/free-photo/unrecognizable-man-psushing-wheelbarrow-full-seedling_329181-20532.jpg?t=st=1710693774~exp=1710697374~hmac=c24e0cf1561ec782642004107a10258b4b92a064543fe993fd79e551d4aadb31&w=2000'/>
+          <p className="font-light text-[24px] text-p[18px]  tracking-tight noto-znamenny">Envisioning a beautiful garden or a customized outdoor living space? Look no further than Hanz for your landscaping needs. Our skilled local providers excel at a range of services, including mowing lawns, trimming trees, planting, mulching, and more. Let us help your outdoor space flourish. Explore our Landscaping page to learn how we can bring your vision to life.</p>
           <h1 className="font-bold text-[22px] mt-2 underline">Build Your Vision with Hanz Handy-Man Experts</h1>
           <p className="font-light text-p[18px]  text-[24px]  tracking-tight noto-znamenny">From minor repairs to transforming your space, Hanz's handyman services are here to meet your needs with attention to detail. Our skilled local workers handle tasks such as painting, door and window repairs, drywall patching, minor plumbing, and hanging and mounting. Visit our Handyman page to see how we can enhance your home</p>
           <h1 className="font-bold text-[22px] mt-2 underline">Keep Your Home Spotless with Hanz Cleaning Services</h1>
@@ -66,14 +69,17 @@ export default function Home() {
     </div>
         <div className="p-2 m-4 space-y-4">
         <p  className="font-light text-p[18px] tracking-tight text-[24px] noto-znamenny italic">"At Hanz, we connect you with reliable local providers for your home maintenance and improvement projects. Our platform bridges the gap between you and the skilled services you need, offering quality, efficiency, and satisfaction. Trust Hanz to handle your property care so you can focus on enjoying your home to the fullest."</p>
-        <img className='float-right w-52 h-48 object-cover mx-3 my-2 border-2 border-black rounded' src='https://img.freepik.com/free-photo/husband-wife-moving-new-apartment-together-unpacking-furniture-decorate-household-enjoying-relocation-after-buying-first-house-start-new-beginnings-celebrate-life-event_482257-49831.jpg?t=st=1710694409~exp=1710698009~hmac=55369a1b6542e48bcbbf2ddb3f84ab116557727bbda05370207c26a8d0d6e2cf&w=996'/>
-          <p  className="font-light text-p[18px] tracking-tight text-[24px] noto-znamenny italic">"Explore how Hanz can simplify your home maintenance and improvement tasks today. Let us be your partner in creating a home that reflects your style and meets your needs."</p>
+        <img className='w-52 h-48 object-cover  my-2 border-2 float-right   border-black rounded  ' src='https://img.freepik.com/free-photo/husband-wife-moving-new-apartment-together-unpacking-furniture-decorate-household-enjoying-relocation-after-buying-first-house-start-new-beginnings-celebrate-life-event_482257-49831.jpg?t=st=1710694409~exp=1710698009~hmac=55369a1b6542e48bcbbf2ddb3f84ab116557727bbda05370207c26a8d0d6e2cf&w=996'/>
+          <p  className="font-light text-p[18px] tracking-tight text-[24px] noto-znamenny italic ">"Explore how Hanz can simplify your home maintenance and improvement tasks today. Let us be your partner in creating a home that reflects your style and meets your needs."</p>
         </div>
-        <div className=" flex justify-center bg-gradient-to-r from-teal-200 via-slate-200 to-amber-200 mx-48 rounded-md">
-      <Link className="bouncing-div bg-opacity-60 p-3 flex justify-center  rounded-xl shadow-2xl font-bold  m-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold"  href='/Booking'>
-          <span className="block whitespace-nowrap">BOOK TODAY</span>
-      </Link>
-    </div>
+        <div className="bouncing-div flex justify-center items-center my-4 sm:my-6 lg:my-8">
+    <Link
+        href="/Booking"
+        className="bg-gradient-to-r from-teal-200 via-slate-200 to-amber-400 p-3 w-full max-w-md rounded-xl shadow-2xl font-bold duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold"
+    >
+        <span className="block text-center">BOOK TODAY</span>
+    </Link>
+</div>
       </div>
       {/**homepage whole */}
     </div>
