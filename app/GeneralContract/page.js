@@ -4,7 +4,7 @@ import Navbar from "../component/Navbar";
 import Link from "next/link"; // Import Link from Next.js
 const Page = () => {
   return (
-    <div className="h-screen bg-slate-200">
+    <div className="h-full bg-slate-100">
       <Navbar />
       <div className="text-black">
         <p className="italic  bg-clip-text text-transparent bg-gradient-to-l from-amber-200 via-teal-300 to-amber-200   font-bold tracking-widest text-center m-2 text-xl	">

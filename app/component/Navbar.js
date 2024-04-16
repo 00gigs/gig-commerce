@@ -23,7 +23,7 @@ const Navbar = () => {
         <div>
           {/**drawer menu*/}
           <button
-            className="p-1 m-1 w-7  sm:w-9 sm:h-9  hover:bg-amber-300 hover:shadow-2xl rounded"
+            className="p-1 m-1 w-6  sm:w-9 sm:h-9  hover:bg-amber-300 hover:shadow-2xl rounded"
             onClick={toggle}
           >
             {/** open drawer menu*/}
@@ -105,11 +105,11 @@ const Navbar = () => {
       <div className="flex items-center">
         {/**user&signOut*/}
         <span
-          className=" text-xs flex items-center mx-5"
+          className=" text-xs flex items-center mx-2 sm:mx-5"
           title="click profile image to view jobs"
         >
           <img
-            className="cursor-pointer"
+            className="cursor-pointer w-4 sm:w-6"
             onClick={toggle2}
             width="24"
             height="24"
@@ -121,10 +121,12 @@ const Navbar = () => {
           <div className=" shadow-2xl absolute top-11 right-[145px] rounded-xl border-4 p-1 text-black font-semibold bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200  hover:bg-gradient-to-r from-teal-100 via-slate-100 to-amber-100 sm:right-[199px] ">
             <JobModal />
           </div>}
+          <div className="text-[11px] mr-3 sm:text-sm sm:mr-0"> 
           {session?.user?.email}
+          </div>
         </span>
         <button
-          className="text-[10px] w-24  border-2 p-1 rounded-lg bg-slate-600 hover:bg-slate-400 noto-sans-mono sm:text-sm"
+          className="text-[10px]   border-2 p-1 rounded-lg bg-slate-600 hover:bg-slate-400 noto-sans-mono sm:text-sm sm:w-24"
           onClick={() =>
             signOut({ callbackUrl: "http://localhost:3000/Login" })
           }
