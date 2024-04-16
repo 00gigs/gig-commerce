@@ -92,11 +92,11 @@ const Navbar = () => {
           </h1>
         </a>
         <div className="mx-2 flex gap-3">
-          <Link className="text-[12px] noto-sans-mono underline hover:text-[14px]" href={"/Contact"}>
+          <Link className="text-[9px] noto-sans-mono underline hover:text-[14px] sm:text-[12px]" href={"/Contact"}>
             {" "}
             Contact
           </Link>
-          <Link className="text-[12px] underline noto-sans-mono hover:text-[14px]" href={"/About"}>
+          <Link className="text-[9px] underline noto-sans-mono hover:text-[14px] sm:text-[12px]" href={"/About"}>
             {" "}
             About
           </Link>
@@ -126,7 +126,7 @@ const Navbar = () => {
           </div>
         </span>
         <button
-          className="text-[10px]   border-2 p-1 rounded-lg bg-slate-600 hover:bg-slate-400 noto-sans-mono sm:text-sm sm:w-24"
+          className="text-[9px]   border-2 p-1 rounded-lg bg-slate-600 hover:bg-slate-400 noto-sans-mono sm:text-sm sm:w-24"
           onClick={() =>
             signOut({ callbackUrl: "http://localhost:3000/Login" })
           }
