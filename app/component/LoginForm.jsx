@@ -31,7 +31,7 @@ const handleSubmit = async (e)=>{
           return
          }
 
-         router.replace("https://gig-commerce.vercel.app/")
+         router.replace("/")
    } catch (error) {
      console.log('error during log in', error)
    }

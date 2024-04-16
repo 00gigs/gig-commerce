@@ -13,3 +13,13 @@ export async function POST(req){
     }
 
 }
+export async function GET(){
+    try { 
+        await mongoDB()
+        const getReviews = await Reviews.find()
+      return NextResponse.json(getReviews,{status:200})
+    } catch (error) {
+        return NextResponse.json({message:'error while fetching Review',error:error},{status:500})
+    }
+
+}
