@@ -4,6 +4,8 @@ import React from 'react'
 import { useState } from 'react';
 import Navbar from '../component/Navbar'
 import { FaStar } from "react-icons/fa";
+import { getSession } from "next-auth/react";
+
 const page = () => {
 const star = Array(5).fill(0)
 const [starz, setCurrentValue] = useState(0)
@@ -25,14 +27,20 @@ const handleMouseLeave = value =>{
   setHoverValue(undefined)
 }
 
+
+
 const handlesubmit =async(e)=>{
   e.preventDefault()
+  const user = await getSession();
+const username = user.user.email;
+
   const res = await fetch('/api/review',{
     method:'POST',
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({
       starz,
-      comment
+      comment,
+      username
     })
   })
   if(!res.ok){

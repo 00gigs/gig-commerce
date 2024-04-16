@@ -8,8 +8,14 @@ const ReviewSchema = new Schema({
     comment:{
         type:String,
         required:true
-    }
-})
+    },
+    username:{
+        type:String,
+        required:true
+    },
+},
+{timestamps:true} 
+)
 
 const Reviews = models.Reviews || mongoose.model('Reviews',ReviewSchema)
 
