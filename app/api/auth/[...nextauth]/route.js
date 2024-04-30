@@ -42,7 +42,7 @@ const authOptions = {
     },
     secret:process.env.NEXTAUTH_SECRET,
     pages:{
-        signIn:'https://gig-commerce.vercel.app/',
+        signIn:'https://www.hanzhomesolutions.com/',
     },
 }
 

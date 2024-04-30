@@ -47,7 +47,7 @@ const Register = () => {
         const form = e.target;
         setLoading(false);
         form.reset();
-        router.push("http://localhost:3000/Login");
+        router.push("https://www.hanzhomesolutions.com/Login");
       } else {
         console.log("user registration failed");
         setError('Make sure Email is valid')

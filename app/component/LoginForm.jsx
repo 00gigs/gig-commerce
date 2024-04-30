@@ -31,7 +31,7 @@ const handleSubmit = async (e)=>{
           return
          }
 
-         router.replace("/")
+         router.replace("https://www.hanzhomesolutions.com/")
    } catch (error) {
      console.log('error during log in', error)
    }
