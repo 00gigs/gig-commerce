@@ -1,3 +1,3 @@
 export {default} from 'next-auth/middleware'
 
-export const config = {matcher: ['https://www.hanzhomesolutions.com/']};
+export const config = {matcher: ["https://www.hanzhomesolutions.com/"]};
