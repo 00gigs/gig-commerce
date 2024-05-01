@@ -23,7 +23,7 @@ const handleSubmit = async (e)=>{
         const res =  await  signIn('credentials',{
           username,
           password,
-          redirect:'/',
+          redirect:'https://www.hanzhomesolutions.com/Booking',
          })
  
          if(res.error){
