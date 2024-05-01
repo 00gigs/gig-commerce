@@ -23,7 +23,7 @@ const handleSubmit = async (e)=>{
         const res =  await  signIn('credentials',{
           username,
           password,
-          redirect:false,
+          redirect:true,
          })
  
          if(res.error){
@@ -31,7 +31,7 @@ const handleSubmit = async (e)=>{
           return
          }
 
-         router.push("/")
+        //  router.replace("/")
    } catch (error) {
      console.log('error during log in', error)
    }
