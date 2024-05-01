@@ -23,7 +23,7 @@ const handleSubmit = async (e)=>{
         const res =  await  signIn('credentials',{
           username,
           password,
-          redirect:true,
+          redirect:false,
          })
  
          if(res.error){
