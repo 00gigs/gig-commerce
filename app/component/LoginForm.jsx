@@ -23,7 +23,7 @@ const handleSubmit = async (e)=>{
         const res =  await  signIn('credentials',{
           username,
           password,
-          redirect:'https://www.hanzhomesolutions.com/Booking',
+          redirect:false,
          })
  
          if(res.error){
@@ -31,7 +31,7 @@ const handleSubmit = async (e)=>{
           return
          }
 
-        //  router.replace("/")
+         router.replace("https://www.hanzhomesolutions.com/Booking")
    } catch (error) {
      console.log('error during log in', error)
    }
