@@ -34,7 +34,7 @@ const page = () => {
   }
 
   const getPrice = async () => {
-    const res = await fetch(`https://www.hanzhomesolutions.com/api/getProducts`, {
+    const res = await fetch(`/api/getProducts`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
