@@ -1,16 +1,13 @@
-const { NextResponse } = require('next/server');
-const { getSession } = require('next-auth/react');
-
-module.exports = async (request) => {
-    const session = await getSession({ req: request });
-
-    // Check if there is an active session
-    if (session) {
-        // Redirect authenticated users to the homepage
-        return NextResponse.redirect('/');
-    }
-
-    // If there is no active session, allow the request to proceed
-    return null;
-};
-
+export const config = {
+    matcher: [
+      /*
+       * Match the homepage and allow only authenticated users to access it
+       */
+      {
+        source: '/',
+        has: [{ type: 'header', key: 'cookie', value: 'session' }], // Check if the request has a session cookie
+        missing: [{ type: 'header', key: 'cookie', value: 'session' }], // Redirect if the request does not have a session cookie
+      },
+    ],
+  };
+  
