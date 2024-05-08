@@ -18,7 +18,7 @@ const customer = await stripe.customers.create({
         line_items: [
           {
             
-            priceprice_data:{
+            price_data:{
               currency: 'usd',
               unit_amount: id,
              } ,
