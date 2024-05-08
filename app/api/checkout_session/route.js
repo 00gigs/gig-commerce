@@ -17,7 +17,7 @@ const customer = await stripe.customers.create({
         line_items: [
           {
             
-            price: id,
+            price: id[0],
             quantity: 1,
           },
         ],
