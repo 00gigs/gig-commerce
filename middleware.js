@@ -1,18 +1,17 @@
 // middleware.js
 
-import { getSession } from 'next-auth/react';
 import { NextResponse } from 'next/server';
 
-// Middleware function to check if user is authenticated
-export async function requireAuth(request) {
-  // Get the user session
+// Middleware function to redirect authenticated users to homepage
+export async function redirectAuthenticatedToHomepage(request) {
+  // Check if user is authenticated
   const session = await getSession({ req: request });
 
-  // If user is authenticated, allow the request to proceed
+  // If user is authenticated, redirect to the homepage
   if (session) {
-    return null; // Allow the request to proceed
+    return NextResponse.redirect(new URL('/', request.url));
   }
 
-  // If user is not authenticated, redirect to the login page or show an error message
-  return NextResponse.redirect(new URL('/Login', request.url));
+  // If user is not authenticated, allow the request to proceed
+  return null;
 }
