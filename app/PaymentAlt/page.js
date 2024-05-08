@@ -41,6 +41,7 @@ const page = () => {
     if (!res.ok) {
       throw new Error(`Failed to fetch product price, status: ${res.status}`);
     }
+    console.log('price set')
     const priceData = await res.json();
     setPrice(priceData.data);
   };
