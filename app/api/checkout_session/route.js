@@ -6,7 +6,7 @@ export async function POST(req) {
 const stripe = Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET)
 const url = new URL(req.url)
 const id = url.searchParams.get('priceId')
-const numId = parseInt(id)
+
 const userId = url.searchParams.get('userID')
 console.log(id)
 
@@ -18,7 +18,10 @@ const customer = await stripe.customers.create({
         line_items: [
           {
             
-            price: numId,
+            priceprice_data:{
+              currency: 'usd',
+              unit_amount: id,
+             } ,
             quantity: 1,
           },
         ],
