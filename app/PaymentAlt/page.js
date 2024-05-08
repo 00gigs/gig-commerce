@@ -21,8 +21,6 @@ const page = () => {
     const fetchData = async () => {
       await getForumId();
       await getPrice();
-      setIdData(forumIdData.data);
-        setPrice(priceData.data);
     };
     fetchData();
     const intervalId = setInterval(fetchData, 5000); // REFRESH EVERY interval
@@ -45,7 +43,7 @@ const page = () => {
     }
     console.log('price set')
     const priceData = await res.json();
-    return priceData;
+    setPrice(priceData.data);
   };
   {
     /**conditional price data */
@@ -146,7 +144,7 @@ const page = () => {
     }
     const forumDataId = await res.json();
     console.log("this is forum ID->", forumDataId);
-    return forumDataId;
+    setIdData(forumDataId);
   };
   {
     /**set job details with forum details */
