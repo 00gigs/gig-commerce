@@ -33,7 +33,7 @@ const page = () => {
   }
 
   const getPrice = async () => {
-    const res = await fetch(`/api/getProducts`, {
+    const res = await fetch(`https://www.hanzhomesolutions.com/api/getProducts`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
@@ -136,7 +136,7 @@ const page = () => {
     const currentUser = username.user.email;
     console.log(currentUser);
     const res = await fetch(
-      `/api/confirmation?userId=${encodeURIComponent(currentUser)}`,
+      `https://www.hanzhomesolutions.com/api/confirmation?userId=${encodeURIComponent(currentUser)}`,
       {
         method: "GET",
         headers: { "Content-Type": "application/json" },
@@ -175,7 +175,7 @@ const page = () => {
     const username = await getSession();
     const currentUser = username.user.email;
     const res = await fetch(
-      `/api/checkout_session?priceId=${unitPriceId}&userID=${currentUser}`,
+      `https://www.hanzhomesolutions.com/api/checkout_session?priceId=${unitPriceId}&userID=${currentUser}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
