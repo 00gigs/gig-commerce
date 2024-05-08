@@ -21,8 +21,8 @@ const page = () => {
     const fetchData = async () => {
       await getForumId();
       await getPrice();
-      setIdData(forumIdData);
-        setPrice(priceData);
+      setIdData(forumIdData.data);
+        setPrice(priceData.data);
     };
     fetchData();
     const intervalId = setInterval(fetchData, 5000); // REFRESH EVERY interval
