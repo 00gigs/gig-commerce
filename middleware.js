@@ -1,5 +1,5 @@
 // middleware.js
-
+import { getSession } from 'next-auth/react';
 import { NextResponse } from 'next/server';
 
 // Middleware function to redirect authenticated users to homepage
