@@ -48,7 +48,7 @@ const page = () => {
   }
   let index = 0;
   if (data.hours === "2 or Less Hours" && data.workers === "1") {
-    index = 24;
+    index = 23;
   }
   if (data.hours === "2 or Less Hours" && data.workers === "1" && data.tools==true) {
     index = 11;
