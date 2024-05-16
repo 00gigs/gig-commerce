@@ -50,7 +50,7 @@ const page = () => {
   }
   let index = 0;
   if (iddata.hours === "2 or Less Hours" && iddata.workers === "1") {
-    index = 24;
+    index = 23;
   }
   if (iddata.hours === "2 or Less Hours" && iddata.workers === "1" && iddata.tools==true) {
     index = 11;
