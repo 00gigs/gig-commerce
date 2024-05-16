@@ -20,7 +20,7 @@ const customer = await stripe.customers.create({
             
             price_data:{
               currency: 'usd',
-              unit_amount: parseInt(id),
+              unit_amount: id,
              } ,
             quantity: 1,
           },
