@@ -87,7 +87,7 @@ const Navbar = () => {
         </div>
         {/**drawer menu*/}
         <a href="https://www.hanzhomesolutions.com/">
-          <h1 className=" text-2xl italic bg-clip-text text-transparent bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200 font-bold tracking-wide hover:tracking-widest duration-300">
+          <h1 className="  text-lg italic bg-clip-text text-transparent bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200 font-bold tracking-wide hover:tracking-widest duration-300">
             Hanz
           </h1>
         </a>
