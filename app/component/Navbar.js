@@ -92,11 +92,11 @@ const Navbar = () => {
           </h1>
         </a>
         <div className="mx-2 flex gap-3">
-          <Link className="text-[9px] noto-sans-mono underline hover:text-[14px] sm:text-[12px]" href={"/Contact"}>
+          <Link className="text-[7px] noto-sans-mono underline hover:text-[14px] sm:text-[10px]" href={"/Contact"}>
             {" "}
             Contact
           </Link>
-          <Link className="text-[9px] underline noto-sans-mono hover:text-[14px] sm:text-[12px]" href={"/About"}>
+          <Link className="text-[7px] underline noto-sans-mono hover:text-[14px] sm:text-[10px]" href={"/About"}>
             {" "}
             About
           </Link>
