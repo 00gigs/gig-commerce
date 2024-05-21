@@ -46,7 +46,9 @@ const page = () => {
     console.log('price set',price)
   };
   {
-    /**conditional price data */
+    /**conditional price data PRICES WORK FOR 
+     * PAYMENTALT PAGE BUT NOT PAYMENT PAGE ????? 
+     * AND payNow function is not working */
   }
   let index = 0;
   if (iddata.hours === "2 or Less Hours" && iddata.workers === "1") {
