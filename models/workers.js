@@ -25,7 +25,9 @@ const workerInfo = new Schema({
          type:String,
         required:true
     },
-})
+
+},{timestamps:true}
+)
 
 const workerInfoForum = models.workerInfoForum || mongoose.model('workerInfoForum',workerInfo) 
 export default workerInfoForum
