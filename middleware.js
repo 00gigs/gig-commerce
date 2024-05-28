@@ -18,7 +18,7 @@ export const config = {
 return NextResponse.redirect(new URL('/Login', request.url))
     };
 
-    if(!hasSession && pathname === '/Login'){
+    if(hasSession && pathname === '/Login'){
 return NextResponse.next()
     };
 
