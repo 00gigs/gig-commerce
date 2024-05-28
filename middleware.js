@@ -1,21 +1,28 @@
+import { headers } from "next/headers";
+import { NextResponse } from "next/server";
+
 export const config = {
     matcher: [
-      /*
-       * Match the homepage and allow only authenticated users to access it
-       */
-      {
-        source: '/Login',
-        has: [
-          { type: 'header', key: 'cookie', value: 'session' }
-        ], // Check if the request has a session cookie // Redirect if the request does not have a session cookie
-      },
-      {
-        source: '/',
-        missing: [
-          { type: 'header', key: 'cookie', value: 'session' }
-        ], // Check if the request has a session cookie // Redirect if the request does not have a session cookie
-      },
-
+      '/Login',
+      '/'
     ],
   };
+
+  export function middleware(request){
+    const {pathname} = request.nextUrl;
+    const cookie = request.headers.get('cookie');
+    const hasSession = cookie && cookie.includes('session');
+
+
+    if(!hasSession && pathname === '/'){
+return NextResponse.redirect(new URL('/Login', request.url))
+    };
+
+    if(!hasSession && pathname === '/Login'){
+return NextResponse.next()
+    };
+
+return NextResponse.next()
+  }
+
   
