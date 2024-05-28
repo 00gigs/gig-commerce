@@ -5,11 +5,17 @@ export const config = {
        */
       {
         source: '/',
-        has: [{ type: 'header', key: 'cookie', value: 'session' }], // Check if the request has a session cookie
-        missing: [{ type: 'header', key: 'cookie', value: 'session' }],
-        destination:'https://www.hanzhomesolutions.com/Login',
-        permanent:false, // Redirect if the request does not have a session cookie
+        has: [
+          { type: 'header', key: 'cookie', value: 'session' }
+        ], // Check if the request has a session cookie // Redirect if the request does not have a session cookie
       },
+      {
+        source: '/Login',
+        missing: [
+          { type: 'header', key: 'cookie', value: 'session' }
+        ], // Check if the request has a session cookie // Redirect if the request does not have a session cookie
+      },
+
     ],
   };
   
