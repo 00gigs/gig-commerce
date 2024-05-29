@@ -43,7 +43,7 @@ const handleSubmit = async (e)=>{
       <div className="flex flex-col items-center justify-center min-h-screen bg-[#D1CAC2]">
   {/**logo 👇🏻 */}
 <Image 
-src={'/public/logo.png'}
+src={"https://i.ibb.co/b25sfJt/hanzLogo.png"}
 width={100}
 height={100}
 alt='Hanz Logo'
