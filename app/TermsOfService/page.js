@@ -4,7 +4,7 @@ const page = () => {
 
     return (
         <div className=' grid justify-items-center border-2 py-5 border-black text-black min-h-screen'>
-            <h1 className='text-center font-extrabold mb-4'>HanzHomeSolutions Freelancer Terms of Service <br />This Freelancer Terms of Service ("Agreement") is entered into between HanzHomeSolutions LLC ("HanzHomeSolutions" or "Company"), and the Freelancer ("Contractor" or "You") as of the date of acceptance of this Agreement.</h1>
+            <h1 className='text-center font-extrabold'>HanzHomeSolutions Freelancer Terms of Service </h1> <p className='font-bold mb-3'><br />This Freelancer Terms of Service ("Agreement") is entered into between HanzHomeSolutions LLC ("HanzHomeSolutions" or "Company"), and the Freelancer ("Contractor" or "You") as of the date of acceptance of this Agreement.</p>
             <br />
             <br />
             <h1 className='font-bold'>1. Scope of Work:</h1>
