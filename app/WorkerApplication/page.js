@@ -1,5 +1,5 @@
 "use client";
-
+import toast, { Toaster } from "react-hot-toast";
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -8,16 +8,25 @@ import toast, { Toaster } from "react-hot-toast";
 const Page = () => {
   const notifySubmit = () =>
     toast("A Hanz labor force agent will contact you soon.", { icon: "✅", style: { background: "#90EE90" } });
+    const missingFields = () =>
+    toast("Please fill out all fields", {
+      icon: "❌",
+      style: { background: "#F08080" },
+    });
   const [zip, setZip] = useState("");
   const [city, setCity] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [termsChecked, setTermsChecked] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+if(!zip||!city||!email||!number|!firstName||!lastName||!termsChecked){
+  missingFields()
+}
     const zipvalid = await fetch(`https://api.zipcodestack.com/v1/search?codes=${zip}&country=US&apikey=${process.env.NEXT_PUBLIC_ZIP_API}`,{
       method:'GET',
       // body:JSON.stringify({
@@ -134,13 +143,11 @@ const Page = () => {
           <div className="my-3">
             <label>
               Do you agree to <a href="/TermsOfService" className="underline">terms and conditions</a>
-              <input type="checkbox" />
-            </label>
-          </div>
-          <div className="my-3">
-            <label>
-              Do you agree to the liability agreement
-              <input type="checkbox" />
+              <input type="checkbox"
+              name="terms"
+              required
+              onChange={(e) => setTermsChecked(e.target.checked)}
+              />
             </label>
           </div>
         </fieldset>
