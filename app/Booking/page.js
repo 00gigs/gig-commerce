@@ -287,6 +287,7 @@ const page = () => {
                     minLength={10}
                     maxLength={200}
                     name="description"
+                    placeholder="10 character min"
                     onChange={(e) => setDescription(e.target.value)}
                     value={description}
                     required
