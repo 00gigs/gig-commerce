@@ -3,7 +3,7 @@ import React from 'react'
 const page = () => {
 
     return (
-        <div className='border-2 border-black'>
+        <div className='flex items-center justify-center border-2 border-black text-black '>
             <h1>HanzHomeSolutions Freelancer Terms of Service <br />This Freelancer Terms of Service ("Agreement") is entered into between HanzHomeSolutions LLC ("HanzHomeSolutions" or "Company"), and the Freelancer ("Contractor" or "You") as of the date of acceptance of this Agreement.</h1>
             <br />
             <h1 className='bold'>1. Scope of Work:</h1>
