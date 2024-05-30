@@ -14,7 +14,7 @@ export const config = {
     const hasSession = cookie && cookie.includes('session');
 
 
-    if(!hasSession && pathname === '/'){
+    if(!hasSession && pathname !== '/Login'){
 return NextResponse.redirect(new URL('/Login', request.url))
     };
 
