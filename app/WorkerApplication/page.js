@@ -133,7 +133,7 @@ const Page = () => {
           </div>
           <div className="my-3">
             <label>
-              Do you agree to <a href="hanzhomesolutions.com/TermsOfService" className="underline">terms and conditions</a>
+              Do you agree to <a href="/TermsOfService" className="underline">terms and conditions</a>
               <input type="checkbox" />
             </label>
           </div>
