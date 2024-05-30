@@ -1,13 +1,14 @@
 "use client";
 import toast, { Toaster } from "react-hot-toast";
 import React, { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+
 
 
 
 const Page = () => {
   const notifySubmit = () =>
     toast("A Hanz labor force agent will contact you soon.", { icon: "✅", style: { background: "#90EE90" } });
+
     const missingFields = () =>
     toast("Please fill out all fields", {
       icon: "❌",
