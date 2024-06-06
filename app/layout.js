@@ -33,6 +33,10 @@ export default function RootLayout({ children , session }) {
 <meta property='og:image:height' content='627' />
 <meta property="og:type" content="website" />
 <link rel="icon" href="https://i.ibb.co/NFj4cNV/logo.png" />
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/NFj4cNV/logo.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="https://i.ibb.co/NFj4cNV/logo.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/NFj4cNV/logo.png" />
       </Head>
       <body className={inter.className}>
   
