@@ -23,6 +23,7 @@ export async function DELETE(req) {
       await mongoDB();
       const url = new URL(req.url);
 // Extract query parameters from the request URL
+
 const id = url.searchParams.get('userId');
       const forumInfo = await forum.deleteOne({ customerId: `${id}` })
       return NextResponse.json(forumInfo, { status: 201 });
