@@ -39,6 +39,8 @@ export default function RootLayout({ children, session }) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap"
         />
+        <link rel="icon" href="/hanzLogo.ico" sizes="any" />
+        
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content="Hanz Home solutions" />
         <meta property="og:image" content="https://i.ibb.co/NFj4cNV/logo.png" />
@@ -50,7 +52,6 @@ export default function RootLayout({ children, session }) {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />
         <meta property="og:type" content="website" />
-       <link rel="icon" href="/hanzLogo.ico" sizes="any" />
       </Head>
       <body className={inter.className}>
         <AuthProvider>{children}</AuthProvider>
