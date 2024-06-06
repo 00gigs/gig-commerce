@@ -50,7 +50,7 @@ export default function RootLayout({ children, session }) {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />
         <meta property="og:type" content="website" />
-       <link rel="icon" href="/hanzLogo.ico" sizes="32x32" />
+       <link rel="icon" href="/hanzLogo.ico" sizes="any" />
       </Head>
       <body className={inter.className}>
         <AuthProvider>{children}</AuthProvider>
