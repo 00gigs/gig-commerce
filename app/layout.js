@@ -39,7 +39,7 @@ export default function RootLayout({ children, session }) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap"
         />
-        <link rel="icon" href="/public/hanzLogo.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="/hanzLogo.ico" sizes="any" />
         
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content="Hanz Home solutions" />
