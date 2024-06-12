@@ -68,7 +68,7 @@ const Page = () => {
             <label className="mr-3 text-white font-mono">
               Location
               <input
-                className="ml-3 mt-3 bg-transparent border-b border-black"
+                className="ml-3 bg-slate-200 border-b border-black"
                 type="text"
                 placeholder="zip"
                 required
@@ -79,7 +79,7 @@ const Page = () => {
             </label>
             <label className="text-white">
               <input
-                className="bg-transparent mb-3 border-b  border-black"
+                className="bg-slate-200 border-b  border-black"
                 type="text"
                 placeholder="city"
                 required
@@ -88,10 +88,10 @@ const Page = () => {
             </label>
           </div>
           <div className="my-3 ">
-            <label className="mr-3  text-white  font-mono">
+            <label className="mr-3 text-white  font-mono">
               Contact
               <input
-                className="ml-3  bg-transparent border-b border-black"
+                className="ml-3 bg-slate-200 border-b border-black"
                 type="email"
                 placeholder="email"
                 required
@@ -100,7 +100,7 @@ const Page = () => {
             </label>
             <label className="text-white">
               <input
-                className="bg-transparent mt-3 border-b border-black"
+                className="bg-slate-200 border-b border-black"
                 type="tel"
                 placeholder="Phone number"
                 required
@@ -111,10 +111,10 @@ const Page = () => {
             </label>
           </div>
           <div>
-            <label className="text-white font-mono ">
+            <label className="text-white font-mono">
               Name
               <input
-                className="ml-3  bg-transparent border-b border-black"
+                className="ml-3 bg-slate-200 border-b border-black"
                 type="text"
                 placeholder="First Name"
                 required
@@ -123,7 +123,7 @@ const Page = () => {
             </label>
             <label className="text-white">
               <input
-                className="ml-3 bg-transparent border-b mt-3 border-black"
+                className="ml-3 bg-slate-200 border-b border-black"
                 type="text"
                 placeholder="Last Name"
                 required
@@ -151,7 +151,7 @@ const Page = () => {
         <div>
           <p className="text-[10px] mt-3">
             ' After forum submission a Hanz Larbor force agent will contact you
-            within 72 hours '
+            within 72 hours. '
           </p>
         </div>
       </form>
