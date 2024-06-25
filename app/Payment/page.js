@@ -48,76 +48,76 @@ const page = () => {
   }
   let index = 0;
   if (data.hours === "2 or Less Hours" && data.workers === "1") {
-    index = 23;
+    index = 24;
   }
   if (data.hours === "2 or Less Hours" && data.workers === "1" && data.tools==true) {
-    index = 11;
-  }
-  if (data.hours === "2 or Less Hours" && data.workers === "2") {
-    index = 22;
-  }
-  if (data.hours === "2 or Less Hours" && data.workers === "2" && data.tools==true) {
-    index = 10;
-  }
-  if (data.hours === "2 or Less Hours" && data.workers === "3") {
-    index = 21;
-  }
-  if (data.hours === "2 or Less Hours" && data.workers === "3" && data.tools==true) {
-    index = 9;
-  }
-  if (data.hours === "2 or Less Hours" && data.workers === "4") {
-    index = 20;
-  }
-  if (data.hours === "2 or Less Hours" && data.workers === "4" && data.tools==true) {
-    index = 8;
-  }
-  if (data.hours === "3 to 5 Hours" && data.workers === "1") {
-    index = 19;
-  }
-  if (data.hours === "3 to 5 Hours" && data.workers === "1" && data.tools==true) {
-    index = 7;
-  }
-  if (data.hours === "3 to 5 Hours" && data.workers === "2") {
-    index = 18;
-  }
-  if (data.hours === "3 to 5 Hours" && data.workers === "2" && data.tools==true) {
-    index = 6;
-  }
-  if (data.hours === "3 to 5 Hours" && data.workers === "3") {
-    index = 17;
-  }
-  if (data.hours === "3 to 5 Hours" && data.workers === "3" && data.tools==true) {
-    index = 5;
-  }
-  if (data.hours === "3 to 5 Hours" && data.workers === "4") {
-    index = 16;
-  }
-  if (data.hours === "3 to 5 Hours" && data.workers === "4" && data.tools==true) {
-    index = 4;
-  }
-  if (data.hours === "6 to 8 Hours" && data.workers === "1") {
-    index = 15;
-  }
-  if (data.hours === "6 to 8 Hours" && data.workers === "1" && data.tools==true) {
-    index = 3;
-  }
-  if (data.hours === "6 to 8 Hours" && data.workers === "2") {
-    index = 14;
-  }
-  if (data.hours === "6 to 8 Hours" && data.workers === "2" && data.tools==true) {
-    index = 2;
-  }
-  if (data.hours === "6 to 8 Hours" && data.workers === "3") {
-    index = 13;
-  }
-  if (data.hours === "6 to 8 Hours" && data.workers === "3" && data.tools==true) {
-    index = 1;
-  }
-  if (data.hours === "6 to 8 Hours" && data.workers === "4" ) {
     index = 12;
   }
+  if (data.hours === "2 or Less Hours" && data.workers === "2") {
+    index = 23;
+  }
+  if (data.hours === "2 or Less Hours" && data.workers === "2" && data.tools==true) {
+    index = 11;
+  }
+  if (data.hours === "2 or Less Hours" && data.workers === "3") {
+    index = 22;
+  }
+  if (data.hours === "2 or Less Hours" && data.workers === "3" && data.tools==true) {
+    index = 10;
+  }
+  if (data.hours === "2 or Less Hours" && data.workers === "4") {
+    index = 21;
+  }
+  if (data.hours === "2 or Less Hours" && data.workers === "4" && data.tools==true) {
+    index = 9;
+  }
+  if (data.hours === "3 to 5 Hours" && data.workers === "1") {
+    index = 20;
+  }
+  if (data.hours === "3 to 5 Hours" && data.workers === "1" && data.tools==true) {
+    index = 8;
+  }
+  if (data.hours === "3 to 5 Hours" && data.workers === "2") {
+    index = 19;
+  }
+  if (data.hours === "3 to 5 Hours" && data.workers === "2" && data.tools==true) {
+    index = 7;
+  }
+  if (data.hours === "3 to 5 Hours" && data.workers === "3") {
+    index = 18;
+  }
+  if (data.hours === "3 to 5 Hours" && data.workers === "3" && data.tools==true) {
+    index = 6;
+  }
+  if (data.hours === "3 to 5 Hours" && data.workers === "4") {
+    index = 17;
+  }
+  if (data.hours === "3 to 5 Hours" && data.workers === "4" && data.tools==true) {
+    index = 5;
+  }
+  if (data.hours === "6 to 8 Hours" && data.workers === "1") {
+    index = 16;
+  }
+  if (data.hours === "6 to 8 Hours" && data.workers === "1" && data.tools==true) {
+    index = 4;
+  }
+  if (data.hours === "6 to 8 Hours" && data.workers === "2") {
+    index = 15;
+  }
+  if (data.hours === "6 to 8 Hours" && data.workers === "2" && data.tools==true) {
+    index = 3;
+  }
+  if (data.hours === "6 to 8 Hours" && data.workers === "3") {
+    index = 14;
+  }
+  if (data.hours === "6 to 8 Hours" && data.workers === "3" && data.tools==true) {
+    index = 2;
+  }
+  if (data.hours === "6 to 8 Hours" && data.workers === "4" ) {
+    index = 13;
+  }
   if (data.hours === "6 to 8 Hours" && data.workers === "4" && data.tools==true) {
-    index = 0;
+    index = 1;
   }
 
   const unitAmount = price.length > 0 ? price[`${index}`].unit_amount / 100 : 0;
