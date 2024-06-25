@@ -5,7 +5,7 @@ const stripe = Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET)
 
 export async function GET(){
     try {
-        const products = await stripe.prices.list({limit:25})
+        const products = await stripe.prices.list({limit:24})
         console.log('success',products)
        return NextResponse.json(products,{status:200})
         
