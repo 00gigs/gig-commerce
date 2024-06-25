@@ -52,76 +52,76 @@ const page = () => {
   }
   let index = 0;
   if (iddata.hours === "2 or Less Hours" && iddata.workers === "1") {
-    index = 23;
+    index = 24;
   }
   if (iddata.hours === "2 or Less Hours" && iddata.workers === "1" && iddata.tools==true) {
-    index = 11;
-  }
-  if (iddata.hours === "2 or Less Hours" && iddata.workers === "2") {
-    index = 22;
-  }
-  if (iddata.hours === "2 or Less Hours" && iddata.workers === "2" && iddata.tools==true) {
-    index = 10;
-  }
-  if (iddata.hours === "2 or Less Hours" && iddata.workers === "3") {
-    index = 21;
-  }
-  if (iddata.hours === "2 or Less Hours" && iddata.workers === "3" && iddata.tools==true) {
-    index = 9;
-  }
-  if (iddata.hours === "2 or Less Hours" && iddata.workers === "4") {
-    index = 20;
-  }
-  if (iddata.hours === "2 or Less Hours" && iddata.workers === "4" && iddata.tools==true) {
-    index = 8;
-  }
-  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "1") {
-    index = 19;
-  }
-  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "1" && iddata.tools==true) {
-    index = 7;
-  }
-  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "2") {
-    index = 18;
-  }
-  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "2" && iddata.tools==true) {
-    index = 6;
-  }
-  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "3") {
-    index = 17;
-  }
-  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "3" && iddata.tools==true) {
-    index = 5;
-  }
-  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "4") {
-    index = 16;
-  }
-  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "4" && iddata.tools==true) {
-    index = 4;
-  }
-  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "1") {
-    index = 15;
-  }
-  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "1" && iddata.tools==true) {
-    index = 3;
-  }
-  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "2") {
-    index = 14;
-  }
-  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "2" && iddata.tools==true) {
-    index = 2;
-  }
-  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "3") {
-    index = 13;
-  }
-  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "3" && iddata.tools==true) {
-    index = 1;
-  }
-  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "4") {
     index = 12;
   }
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "2") {
+    index = 23;
+  }
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "2" && iddata.tools==true) {
+    index = 11;
+  }
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "3") {
+    index = 22;
+  }
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "3" && iddata.tools==true) {
+    index = 10;
+  }
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "4") {
+    index = 21;
+  }
+  if (iddata.hours === "2 or Less Hours" && iddata.workers === "4" && iddata.tools==true) {
+    index = 9;
+  }
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "1") {
+    index = 20;
+  }
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "1" && iddata.tools==true) {
+    index = 8;
+  }
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "2") {
+    index = 19;
+  }
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "2" && iddata.tools==true) {
+    index = 7;
+  }
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "3") {
+    index = 18;
+  }
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "3" && iddata.tools==true) {
+    index = 6;
+  }
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "4") {
+    index = 17;
+  }
+  if (iddata.hours === "3 to 5 Hours" && iddata.workers === "4" && iddata.tools==true) {
+    index = 5;
+  }
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "1") {
+    index = 16;
+  }
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "1" && iddata.tools==true) {
+    index = 4;
+  }
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "2") {
+    index = 15;
+  }
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "2" && iddata.tools==true) {
+    index = 3;
+  }
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "3") {
+    index = 14;
+  }
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "3" && iddata.tools==true) {
+    index = 2;
+  }
+  if (iddata.hours === "6 to 8 Hours" && iddata.workers === "4") {
+    index = 13;
+  }
   if (iddata.hours === "6 to 8 Hours" && iddata.workers === "4" && iddata.tools==true) {
-    index = 0;
+    index = 1;
   }
 
   const unitAmount = price.length > 0 ? price[`${index}`].unit_amount / 100 : 0;
