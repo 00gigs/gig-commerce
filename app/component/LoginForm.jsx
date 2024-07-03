@@ -71,7 +71,7 @@ const handleSubmit = async (e)=>{
           <a className="text-xs underline" href="/register">
             Register here
           </a>
-          <a className="text-xs underline mb-1" href="https://www.privacypolicyonline.com/live.php?token=DF2O66e7n8qTOOfvcsM2TOM5OOGDRISz">
+          <a className="text-[9px] underline mb-1" href="https://www.privacypolicyonline.com/live.php?token=DF2O66e7n8qTOOfvcsM2TOM5OOGDRISz">
         Privacy Policy
         </a>
 
