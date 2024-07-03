@@ -95,7 +95,10 @@ const Register = () => {
         <a className="text-xs underline mb-1" href="/Login">
           Log in here
         </a>
-
+        <a className="text-xs underline mb-1" href="https://www.privacypolicyonline.com/live.php?token=DF2O66e7n8qTOOfvcsM2TOM5OOGDRISz">
+        Privacy Policy
+        </a>
+        
         {loading ? (
           <AiOutlineLoading className="icon-spinning" /> // Placeholder for your loading indicator
 ) : error ? (

@@ -385,6 +385,9 @@ const page = () => {
                 >
                   Confirm Booking 👉
                 </button>
+                <a href="https://www.hanzhomesolutions.com/sms">
+                SMS disclaimer
+                </a>
               </div>
               <Toaster
                 position="top-center"

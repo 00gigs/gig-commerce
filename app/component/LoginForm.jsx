@@ -71,6 +71,9 @@ const handleSubmit = async (e)=>{
           <a className="text-xs underline" href="/register">
             Register here
           </a>
+          <a className="text-xs underline mb-1" href="https://www.privacypolicyonline.com/live.php?token=DF2O66e7n8qTOOfvcsM2TOM5OOGDRISz">
+        Privacy Policy
+        </a>
 
           {error && (
             <div className="bg-red-500 m-4 text-sm rounded-md p-2">{error}</div>

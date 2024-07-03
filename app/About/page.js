@@ -28,7 +28,6 @@ const page = () => {
           <p className="font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny">As we continue to grow and serve more families across the Northeast, our pledge remains the same: to provide exceptional home services while enriching the community fabric. The future is bright with Hanz, as we continue to innovate, expand, and deepen our community roots.</p>
         </div>{/**text content  */}
         <div className="p-2 m-4 space-y-4">
-    
           <p  className="font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny">At Hanz, your home is our passion, and your community is our family. Join us in this journey of transformation, and let's create spaces that inspire, comfort, and bring us all closer together.</p>
         </div>
       </div>
