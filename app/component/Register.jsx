@@ -64,7 +64,7 @@ const Register = () => {
              <h1 className="  text-xl italic bg-clip-text text-transparent bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200 font-bold tracking-wide hover:tracking-widest duration-300">
             Hanz
           </h1>
-      <div className="rounded-lg shadow-lg text-center border-t-4 border-yellow-300 flex-col flex p-3 items-center max-w-72 bg-slate-700 mb-[400px]">
+      <div className="rounded-lg shadow-lg text-center border-t-4 border-yellow-300 flex-col flex p-3 items-center max-w-72 bg-slate-700 mb-[500px]">
         <h1>Register</h1>
         <form onSubmit={handleSubmit} name="userRegister">
           <input
@@ -104,7 +104,7 @@ const Register = () => {
   <div className="bg-red-500 m-4 text-sm rounded-md p-2">{error}</div>
 ) : null}
       </div>
-      <Footer className='bottom-0' />
+      <Footer  />
     </div>
   );
 };
