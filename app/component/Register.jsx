@@ -104,7 +104,7 @@ const Register = () => {
   <div className="bg-red-500 m-4 text-sm rounded-md p-2">{error}</div>
 ) : null}
       </div>
-      <Footer className='mt-96' />
+      <Footer className='bottom-0' />
     </div>
   );
 };
