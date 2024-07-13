@@ -387,11 +387,6 @@ const page = () => {
                   Confirm Booking 👉
                 </button>
               </div>
-              <div className="text-center">
-                <a  className='underline text-[9px]' href="https://www.hanzhomesolutions.com/sms">
-                SMS disclaimer
-                </a>
-              </div>
               <Toaster
                 position="top-center"
                 reverseOrder={false}

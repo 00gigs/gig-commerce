@@ -1,6 +1,15 @@
 import React from 'react'
 
 const page = () => {
+
+  const getCurrentDate = () => {
+    const today = new Date();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    const year = String(today.getFullYear()).slice(-2);
+    return `${month}/${day}/${year}`;
+  };
+
   return (
     <div className='grid justify-items-center border-2 py-5 border-black text-black min-h-screen'>
       <p className=' font-extrabold '>
@@ -25,7 +34,7 @@ Policy Changes:
 
 We may update our privacy policy from time to time. Any changes will be communicated to you, and your continued use of our services implies your acceptance of the updated policy. By using our services, you agree to the terms outlined in this privacy policy. 
 
-Last updated: 07/03/2024 
+Last updated:{getCurrentDate()}
       </p>
     </div>
   )
