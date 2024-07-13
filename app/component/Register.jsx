@@ -60,7 +60,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-slate-800">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-slate-800 mt-32">
              <h1 className="  text-xl italic bg-clip-text text-transparent bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200 font-bold tracking-wide hover:tracking-widest duration-300">
             Hanz
           </h1>
