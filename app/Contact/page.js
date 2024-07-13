@@ -55,7 +55,7 @@ const username = user.user.email;
 
 
   return (
-    <div className="bg-slate-100 w-screen min-h-screen ">
+    <div className="bg-slate-100 w-screen min-h-screen flex flex-col">
       <Navbar/>
       <div className=' text-black text-center'>
        <div className='noto-znamenny text-xl mb-52 mt-9'>
