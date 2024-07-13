@@ -86,7 +86,7 @@ const username = user.user.email;
               
             ))}
           </div>
-          <button type='submit' className='bg-orange-300 noto-znamenny rounded-xl p-2 hover:cursor-pointer uppercase mb-56'>Submit Review</button>
+          <button type='submit' className='bg-orange-300 noto-znamenny rounded-xl p-2 hover:cursor-pointer uppercase mb-60'>Submit Review</button>
           </form>
         </div>
       <Footer />
