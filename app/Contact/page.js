@@ -90,6 +90,7 @@ const username = user.user.email;
           </form>
         </div>
       </div>
+      <Footer />
       <Toaster
                 position="top-center"
                 reverseOrder={false}
@@ -104,7 +105,6 @@ const username = user.user.email;
                   },
                 }}
               />
-              <Footer />
     </div>
   )
 }
