@@ -1,7 +1,7 @@
 'use client'
 import Navbar from "./component/Navbar";
 import Link from 'next/link'; 
-
+import Footer from './component/Footer'
 export default function Home() {
   return (
     <div className="bg-[#D1CAC2]  w-full">
@@ -82,6 +82,7 @@ export default function Home() {
 </div>
       </div>
       {/**homepage whole */}
+      <Footer />
     </div>
   );
 }
