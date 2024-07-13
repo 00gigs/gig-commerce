@@ -89,8 +89,8 @@ const username = user.user.email;
           <button type='submit' className='bg-orange-300 noto-znamenny rounded-xl p-2 hover:cursor-pointer uppercase'>Submit Review</button>
           </form>
         </div>
-      </div>
       <Footer />
+      </div>
       <Toaster
                 position="top-center"
                 reverseOrder={false}
