@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="bg-amber-400 w-full h-14 grid-rows-2 text-center p-3">
+    <div className="bg-amber-400 w-full h-14 grid-rows-6 text-center p-3">
       <ul className='mx-3'>
         <li className="hover:cursor-pointer my-2 noto-sans-mono">item 1</li>
         <li className="hover:cursor-pointer my-2 noto-sans-mono">item 2</li>
