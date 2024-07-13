@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Navbar from '../component/Navbar'
 import { FaStar } from "react-icons/fa";
 import { getSession } from "next-auth/react";
+import Footer from "../component/Footer";
 
 const page = () => {
 const star = Array(5).fill(0)
@@ -103,6 +104,7 @@ const username = user.user.email;
                   },
                 }}
               />
+              <Footer />
     </div>
   )
 }
