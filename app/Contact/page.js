@@ -57,7 +57,7 @@ const username = user.user.email;
   return (
     <div className="bg-slate-100 w-screen min-h-screen flex flex-col">
       <Navbar/>
-      <div className='flex-grow text-black text-center'>
+      <div className='flex-grow flex flex-col justify-center items-center text-black text-center'>
        <div className='noto-znamenny text-xl mb-52 mt-9'>
        Need more help booking ? Speak with a representative. To get started  click " Call Now " 📞<a className=' bg-orange-300 rounded-xl p-2 hover:cursor-pointer' href='tel:+2406967197'>Call Now</a>
         </div>
