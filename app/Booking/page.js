@@ -5,6 +5,7 @@ import Navbar from "../component/Navbar";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { getSession } from "next-auth/react";
+import Footer from "../component/Footer";
 
 const page = () => {
   const notifySubmit = () =>
@@ -409,6 +410,7 @@ const page = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

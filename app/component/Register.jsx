@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { AiOutlineLoading } from 'react-icons/ai';
+import Footer from "./Footer";
 const Register = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -105,6 +106,7 @@ const Register = () => {
   <div className="bg-red-500 m-4 text-sm rounded-md p-2">{error}</div>
 ) : null}
       </div>
+      <Footer />
     </div>
   );
 };

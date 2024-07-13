@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../component/Navbar'
+import Footer from '../component/Footer'
 
 const page = () => {
   return (
@@ -31,6 +32,7 @@ const page = () => {
           <p  className="font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny">At Hanz, your home is our passion, and your community is our family. Join us in this journey of transformation, and let's create spaces that inspire, comfort, and bring us all closer together.</p>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
