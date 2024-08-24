@@ -287,6 +287,7 @@ const page = () => {
                   <textarea
                     minLength={10}
                     maxLength={200}
+                    className=" w-full"
                     name="description"
                     placeholder="10 character min"
                     onChange={(e) => setDescription(e.target.value)}
