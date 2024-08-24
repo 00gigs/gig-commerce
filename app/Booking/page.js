@@ -170,7 +170,7 @@ const page = () => {
     <div>
       <Navbar />
       <div className="flex min-h-screen justify-center items-center text-black bg-[#D1CAC2] p-4 md:p-8 lg:p-12">
-        <div className="w-full max-w-md bg-slate-100 shadow-lg rounded-md p-6 md:max-w-lg lg:max-w-xl ">
+        <div className="w-full max-w-md bg-slate-100 shadow-lg rounded-md p-6 md:max-w-lg lg:max-w-xl mx-auto">
           <h1 className="text-center mt-1 font-extrabold">BOOK NOW</h1>
           <div className="flex box-border overflow-y-scroll overflow-x-hidden justify-center bg-[#ebd48f80] w-full max-w-[35rem] h-full max-h-[25rem] md:max-w-[30rem] lg:max-w-[35rem] p-4 m-2 rounded-sm shadow-xl border-4 border-gray-300">
             <form name="forumSub">
