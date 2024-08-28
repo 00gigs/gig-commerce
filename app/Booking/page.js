@@ -172,7 +172,7 @@ const page = () => {
       <div className="flex w-full min-h-screen justify-center items-center text-black bg-[#D1CAC2] p-4 md:p-8 lg:p-12">
         <div className="w-full max-w-md bg-slate-100 shadow-lg rounded-md p-6 md:max-w-lg lg:max-w-xl mx-auto">
           <h1 className="text-center mt-1 font-extrabold">BOOK NOW</h1>
-          <div className="flex box-border overflow-y-scroll overflow-x-hidden justify-center bg-[#ebd48f80] w-full max-w-[40rem] h-full max-h-[25rem] md:max-w-[34rem] lg:max-w-[38rem] p-4 m-2 rounded-sm shadow-xl border-4 border-gray-300">
+          <div className="pl-3 flex box-border overflow-y-scroll overflow-x-hidden justify-center bg-[#ebd48f80] w-full max-w-[40rem] h-full max-h-[25rem] md:max-w-[34rem] lg:max-w-[38rem] p-4 m-2 rounded-sm shadow-xl border-4 border-gray-300">
             <form name="forumSub">
               <p className=" pl-7 text-[19px] font-bold my-2 text-center m-4">
                 what type of service do you need? Please choose one.
