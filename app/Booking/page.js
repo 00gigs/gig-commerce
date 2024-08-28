@@ -379,7 +379,7 @@ const page = () => {
                   />
                 </label>
               </div>
-              <div className="p-3">
+              <div className="p-3 ml-3">
                 <button
                   className="ml-3 font-bold rounded-md shadow-xl w-full border-t-4 mt-2 p-5 bg-slate-300  duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold "
                   type="button"
