@@ -174,7 +174,7 @@ const page = () => {
           <h1 className="text-center mt-1 font-extrabold">BOOK NOW</h1>
           <div className="flex box-border overflow-y-scroll overflow-x-hidden justify-center bg-[#ebd48f80] w-full max-w-[40rem] h-full max-h-[25rem] md:max-w-[34rem] lg:max-w-[38rem] p-4 m-2 rounded-sm shadow-xl border-4 border-gray-300">
             <form name="forumSub">
-              <p className="text-[19px] font-bold my-2 text-center m-4">
+              <p className=" pl-7 text-[19px] font-bold my-2 text-center m-4">
                 what type of service do you need? Please choose one.
               </p>
               <div className="grid  gap-3  text-center font-medium">
