@@ -287,7 +287,7 @@ const page = () => {
                   <textarea
                     minLength={10}
                     maxLength={200}
-                    className=" w-full"
+                    className=" w-full pl-3"
                     name="description"
                     placeholder="10 character min"
                     onChange={(e) => setDescription(e.target.value)}
@@ -381,7 +381,7 @@ const page = () => {
               </div>
               <div className="p-3">
                 <button
-                  className="font-bold rounded-md shadow-xl w-full border-t-4 mt-2 p-3 bg-slate-300  duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold "
+                  className="pl-3 font-bold rounded-md shadow-xl w-full border-t-4 mt-2 p-3 bg-slate-300  duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold "
                   type="button"
                   onClick={handleSubmit}
                 >
