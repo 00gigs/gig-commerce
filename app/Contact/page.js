@@ -59,7 +59,7 @@ const username = user.user.email;
       <Navbar/>
       <div className='flex-grow flex flex-col justify-center items-center text-black text-center'>
        <div className='noto-znamenny text-xl mb-52 mt-9'>
-       Need more help booking ? Speak with a representative. To get started  click " Call Now " 📞<a className=' bg-orange-300 rounded-xl p-2 hover:cursor-pointer' href='tel:+2406967197'>Call Now</a>
+       Need more help booking ? Speak with a representative. To get started  click " Call Now " 📞<a className=' bg-orange-300 rounded-xl p-2 hover:cursor-pointer' href='tel:+8446945262'>Call Now</a>
         </div>
 
         <div className='flex flex-col justify-center items-center'>
