@@ -55,14 +55,6 @@ export default function RootLayout({ children, session }) {
         <meta property="og:type" content="website" />
       </Head>
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G273KV5KZ1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)}
-  gtag('js', new Date());
-
-  gtag('config', 'G-G273KV5KZ1');
-</script>
       <body className={inter.className}>
         <AuthProvider>{children}</AuthProvider>
       </body>
