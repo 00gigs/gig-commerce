@@ -8,7 +8,7 @@ const Footer = () => {
           className="hover:cursor-pointer my-2 noto-sans-mono text-[7px]
 sm:text-[10px] hover:scale-105"
         >
-          <a href="https://www.hanzhomesolutions.com/sms">SMS disclaimer</a>
+          <a href="https://www.openphone.com/policies/ORe0ElvwEk">SMS disclaimer</a>
         </li>
         <li
           className="hover:cursor-pointer my-2 noto-sans-mono text-[7px]
