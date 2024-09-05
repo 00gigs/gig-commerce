@@ -14,7 +14,7 @@ sm:text-[10px] hover:scale-105"
           className="hover:cursor-pointer my-2 noto-sans-mono text-[7px]
 sm:text-[10px]  hover:scale-105"
         >
-          <a href="https://www.privacypolicyonline.com/live.php?token=DF2O66e7n8qTOOfvcsM2TOM5OOGDRISz">
+          <a href="https://www.openphone.com/policies/ORe0ElvwEk">
             Privacy Policy
           </a>
         </li>
