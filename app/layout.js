@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "./Providers";
 import Head from "next/head";
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -58,6 +58,7 @@ export default function RootLayout({ children, session }) {
       <body className={inter.className}>
         <AuthProvider>{children}</AuthProvider>
       </body>
+        <GoogleAnalytics gaId="G-G273KV5KZ1" />
     </html>
   );
 }
