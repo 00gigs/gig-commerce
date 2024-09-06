@@ -150,8 +150,7 @@ const Page = () => {
         </button>
         <div>
           <p className="text-[10px] mt-3">
-            ' After forum submission a Hanz Larbor force agent will contact you
-            within 72 hours. '
+             "After submitting your request, a Hanz Labor Force agent will contact you. We kindly ask for your patience as we carefully collect the necessary information, ensuring confidentiality and the safety of everyone involved."
           </p>
         </div>
       </form>
