@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.8",
     "@stripe/stripe-js": "^3.0.10",
     "bcryptjs": "^2.4.3",
     "mongoose": "^8.2.1",
