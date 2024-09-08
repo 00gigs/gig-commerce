@@ -20,14 +20,18 @@ const Page = () => {
           </span>
         </Link>
         <div className=" border-black mx-8  p-3 text-center mt-4">
+          <div className="flex">
+            <div className="w-1/2">
+              <img
+                className="float-right w-48 h-40 object-cover mx-3 my-2 border-2 border-black rounded"
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </div>
+          </div>
           <div className="flex-1 mb-8">
-            <img
-              className="float-right w-48 h-40 object-cover mx-3 my-2 border-2 border-black rounded"
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            />
             <h1 className="font-bold text-sm mb-4 noto-sans-indic capitalize">
-              " Hanz offers Professional Cleaning Services for Homes and Offices
-              in Baltimore, MD "
+              "Hanz offers Professional Cleaning Services for Homes and Offices
+              in Baltimore, MD"
             </h1>
             <p className="font-light text-[26px] noto-znamenny">
               At Hanz Home-Solutions, we specialize in delivering high-quality
@@ -51,7 +55,7 @@ const Page = () => {
             </span>
           </Link>
         </div>
-        
+
         <div className=" mb-2 mt-2 text-center  mx-8 py-2 ">
           <h2 className="font-bold text-sm mb-4 noto-sans-indic capitalize">
             " Transform Your Space with Detailed Cleaning Services "
@@ -63,7 +67,9 @@ const Page = () => {
             bathrooms to vacuuming, dusting, and sanitizing, we ensure your
             environment is not only clean but rejuvenated.
           </p>
-          <h3 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#FF7F50] p-2 border-b-4 border-gray-500">Our cleaning services are perfect for</h3>
+          <h3 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#FF7F50] p-2 border-b-4 border-gray-500">
+            Our cleaning services are perfect for
+          </h3>
           <ul>
             <li className=" list-disc my-3 font-light text-[20px]  leading-10   tracking-tight noto-znamenny">
               Homeowners looking to refresh their living spaces{" "}
@@ -80,33 +86,38 @@ const Page = () => {
             className="float-left w-48 h-52 object-cover mx-3 my-2 border-4 border-black rounded"
             src="https://images.unsplash.com/photo-1686828751885-040f0a0fb77a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
-          
-          <h4 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#FF7F50] p-2 border-b-4 border-gray-500">Cleaning Services We Offer</h4>
+
+          <h4 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#FF7F50] p-2 border-b-4 border-gray-500">
+            Cleaning Services We Offer
+          </h4>
           <ul className="text-[20px] italic noto-sans-indic p-2">
             <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-               Deep Cleaning- Thorough cleaning of kitchens, bathrooms, and
+              Deep Cleaning- Thorough cleaning of kitchens, bathrooms, and
               living areas.
             </li>
             <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-               Move-In/Move-Out Cleaning- Perfect for tenants, landlords, and
+              Move-In/Move-Out Cleaning- Perfect for tenants, landlords, and
               property managers.
             </li>
             <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-               Routine Cleaning- Regular upkeep to maintain a clean and healthy
+              Routine Cleaning- Regular upkeep to maintain a clean and healthy
               environment.
             </li>
             <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-               Carpet & Upholstery Cleaning- Remove stains and odors from
-              carpets and furniture.
+              Carpet & Upholstery Cleaning- Remove stains and odors from carpets
+              and furniture.
             </li>
             <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-               Window Cleaning- Streak-free cleaning for interior and exterior
+              Window Cleaning- Streak-free cleaning for interior and exterior
               windows.
             </li>
           </ul>
-        
+
           <div>
-            <h5 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#FF7F50] p-2 border-b-4 border-gray-500"> Why Choose Hanz Home-Solutions for Cleaning? </h5>
+            <h5 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#FF7F50] p-2 border-b-4 border-gray-500">
+              {" "}
+              Why Choose Hanz Home-Solutions for Cleaning?{" "}
+            </h5>
             <p className="p-2">
               Experienced Team: Our cleaning professionals have years of
               experience, ensuring every job is handled with expertise and
@@ -119,7 +130,9 @@ const Page = () => {
             </p>
           </div>
           <div>
-            <h6 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#FF7F50] p-2 border-b-4 border-gray-500">Customer Satisfaction is Our Priority:</h6>
+            <h6 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#FF7F50] p-2 border-b-4 border-gray-500">
+              Customer Satisfaction is Our Priority:
+            </h6>
             <p className="p-2">
               At Hanz Home-Solutions, customer satisfaction is at the heart of
               what we do. We guarantee quality results with every service,
