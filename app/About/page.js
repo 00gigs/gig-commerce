@@ -72,7 +72,7 @@ const page = () => {
           <h2 className="font-extrabold underline text-[24px]  leading-10 mt-2 ">
             Looking Ahead
           </h2>
-          <p className="font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny">
+          <p className="font-light  text-[24px]  leading-10  tracking-tight noto-znamenny">
             As we expand our services across Maryland, our focus remains on
             delivering high-quality home solutions while staying connected to
             our community roots. From landscaping to moving services, Hanz
@@ -86,20 +86,20 @@ const page = () => {
             Why Choose Hanz Home-Solutions?
           </h2>
           <ul className="p-2 m-4 space-y-4">
-            <li className=" my-3 font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny">
+            <li className=" my-3 font-light  leading-10  tracking-tight noto-znamenny">
               Reliable & Professional: Every job is handled with professionalism
               and respect for your home.
             </li>
-            <li className="my-3 font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny"> 
+            <li className="my-3 font-light  leading-10  tracking-tight noto-znamenny"> 
               Wide Range of Services: Whether you need lawn care, handyman
               repairs, or housekeeping, we’ve got you covered.
             </li>
-            <li className="my-3 font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny">
+            <li className="my-3 font-light  leading-10  tracking-tight noto-znamenny">
               Community-Focused: We care about more than just homes; we care
               about building stronger communities.
             </li>
           </ul>
-          <p className="font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny">
+          <p className="font-light  text-[24px]  leading-10  tracking-tight noto-znamenny">
             At Hanz, your home is our passion, and your community is our family.
             Join us in this journey of transformation, and let's create spaces
             that inspire, comfort, and bring us all closer together.
