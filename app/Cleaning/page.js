@@ -63,7 +63,7 @@ const Page = () => {
             bathrooms to vacuuming, dusting, and sanitizing, we ensure your
             environment is not only clean but rejuvenated.
           </p>
-          <h3 className="font-light text-[13px] italic noto-znamenny bg-teal-200 p-3 border-b-2 border-gray-500">Our cleaning services are perfect for</h3>
+          <h3 className="font-light text-[13px] italic max-w-fit rounded-xl noto-znamenny bg-[#FF7F50] p-2 border-b-2 border-gray-500">Our cleaning services are perfect for</h3>
           <ul>
             <li className=" list-disc my-3 font-light text-[20px]  leading-10   tracking-tight noto-znamenny">
               Homeowners looking to refresh their living spaces{" "}
