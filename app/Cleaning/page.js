@@ -7,9 +7,9 @@ const Page = () => {
     <div className="h-full ">
       <Navbar />
       <div className="text-black">
-        <p className="italic  bg-clip-text text-transparent bg-gradient-to-l from-amber-200 via-teal-300 to-amber-200   font-bold tracking-widest text-center m-2 text-xl		">
+        <div className="italic  bg-clip-text text-transparent bg-gradient-to-l from-amber-200 via-teal-300 to-amber-200   font-bold tracking-widest text-center m-2 text-xl		">
           Hanz
-        </p>
+        </div>
         <Link
           href="/Booking"
           className="shadow-xl p-3 border-black flex justify-center bg-teal-200 font-bold w-full  mt-2 duration-200 hover:bg-green-400 hover:text-green-100 hover:font-extrabold"
@@ -40,7 +40,6 @@ const Page = () => {
             </p>
           </div>
         </div>
-        /**intro /what is it ^^*/
         <div>
           <Link
             href="/Booking"
@@ -52,11 +51,11 @@ const Page = () => {
             </span>
           </Link>
         </div>
-        /**main/explain vv*/
+        
         <div className=" mb-2 mt-2 text-center  mx-8 py-2 ">
-          <h1 className="font-bold text-sm mb-4 noto-sans-indic">
-            Transform Your Space with Detailed Cleaning Services
-          </h1>
+          <h2 className="font-bold text-sm mb-4 noto-sans-indic capitalize">
+            "Transform Your Space with Detailed Cleaning Services"
+          </h2>
           <p className="font-light text-[26px] noto-znamenny">
             With Hanz Home-Solutions, you get more than just a surface clean.
             Our skilled team provides thorough cleaning solutions that target
@@ -64,15 +63,15 @@ const Page = () => {
             bathrooms to vacuuming, dusting, and sanitizing, we ensure your
             environment is not only clean but rejuvenated.
           </p>
-          <p>Our cleaning services are perfect for:</p>
+          <h3 className="font-light text-[26px] italic noto-znamenny">Our cleaning services are perfect for:</h3>
           <ul>
-            <li className=" list-disc my-3 font-light  leading-10   tracking-tight noto-znamenny">
+            <li className=" list-disc my-3 font-light text-[20px]  leading-10   tracking-tight noto-znamenny">
               Homeowners looking to refresh their living spaces{" "}
             </li>
-            <li className=" list-disc my-3 font-light  leading-10   tracking-tight noto-znamenny">
+            <li className=" list-disc my-3 font-light text-[20px] leading-10   tracking-tight noto-znamenny">
               Offices in need of regular maintenance or deep cleans{" "}
             </li>
-            <li className=" list-disc my-3 font-light  leading-10   tracking-tight noto-znamenny">
+            <li className=" list-disc my-3 font-light text-[20px] leading-10   tracking-tight noto-znamenny">
               Landlords and property managers needing reliable move-in/move-out
               cleaning
             </li>
@@ -81,8 +80,8 @@ const Page = () => {
             className="float-left w-48 h-52 object-cover mx-3 my-2 border-4 border-black rounded"
             src="https://images.unsplash.com/photo-1686828751885-040f0a0fb77a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
-          /**additional content /details vv*/
-          <p>Cleaning Services We Offer</p>
+          
+          <h4 className="font-light text-[26px] italic noto-znamenny">Cleaning Services We Offer</h4>
           <ul className="text-[20px] italic noto-sans-indic">
             <li>
               - Deep Cleaning: Thorough cleaning of kitchens, bathrooms, and
@@ -105,9 +104,9 @@ const Page = () => {
               windows.
             </li>
           </ul>
-          /**vouching/reinforcer vv*/
-          <div>
-            <h3> Why Choose Hanz Home-Solutions for Cleaning? </h3>
+        
+          <div className=" flex justify-center text-center">
+            <h5 className="font-light text-[26px] italic noto-znamenny"> Why Choose Hanz Home-Solutions for Cleaning? </h5>
             <p>
               Experienced Team: Our cleaning professionals have years of
               experience, ensuring every job is handled with expertise and
@@ -120,7 +119,7 @@ const Page = () => {
             </p>
           </div>
           <div>
-            <h4>Customer Satisfaction is Our Priority:</h4>
+            <h6 className="font-light text-[26px] italic noto-znamenny">Customer Satisfaction is Our Priority:</h6>
             <p>
               At Hanz Home-Solutions, customer satisfaction is at the heart of
               what we do. We guarantee quality results with every service,
@@ -129,7 +128,6 @@ const Page = () => {
               refreshed, sanitized, and welcoming.
             </p>
           </div>
-          /**outro vv*/
           <p className="font-medium text-lg noto-znamenny">
             "Let Hanz provide you with the cleaning expertise you need to
             maintain a spotless, comfortable environment. Let us handle the
