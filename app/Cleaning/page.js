@@ -128,7 +128,7 @@ const Page = () => {
               refreshed, sanitized, and welcoming.
             </p>
           </div>
-          <p className="font-medium text-lg noto-znamenny mt-3 border-black border-4">
+          <p className="p-3 font-medium text-lg noto-znamenny mt-3 border-black border-4">
             "Let Hanz provide you with the cleaning expertise you need to
             maintain a spotless, comfortable environment. Let us handle the
             work, so you can enjoy a cleaner, more organized space."
