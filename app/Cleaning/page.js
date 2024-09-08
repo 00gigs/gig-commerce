@@ -105,7 +105,7 @@ const Page = () => {
             </li>
           </ul>
         
-          <div className=" flex justify-center text-center">
+          <div>
             <h5 className="font-light text-[26px] italic noto-znamenny"> Why Choose Hanz Home-Solutions for Cleaning? </h5>
             <p>
               Experienced Team: Our cleaning professionals have years of
