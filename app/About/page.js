@@ -86,15 +86,15 @@ const page = () => {
             Why Choose Hanz Home-Solutions?
           </h2>
           <ul className="p-2 m-4 space-y-4">
-            <li className="font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny">
+            <li className=" my-3 font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny">
               Reliable & Professional: Every job is handled with professionalism
               and respect for your home.
             </li>
-            <li className="font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny"> 
+            <li className="my-3 font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny"> 
               Wide Range of Services: Whether you need lawn care, handyman
               repairs, or housekeeping, we’ve got you covered.
             </li>
-            <li className="font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny">
+            <li className="my-3 font-light text-p[18px] text-[24px]  leading-10  tracking-tight noto-znamenny">
               Community-Focused: We care about more than just homes; we care
               about building stronger communities.
             </li>
