@@ -27,11 +27,11 @@ const Page = () => {
                 src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               />
             </div>
-          </div>
             <h1 className="font-bold text-sm mb-4 noto-sans-indic capitalize">
               "Hanz offers Professional Cleaning Services for Homes and Offices
               in Baltimore, MD"
             </h1>
+          </div>
           <div className="flex-1 mb-8">
             <p className="font-light text-[26px] noto-znamenny">
               At Hanz Home-Solutions, we specialize in delivering high-quality
