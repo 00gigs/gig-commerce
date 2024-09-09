@@ -21,13 +21,13 @@ const Page = () => {
         </Link>
         <div className=" border-black mx-8  p-3 text-center mt-4">
           <div className="flex">
-            <div className=" w-3/5">
+            <div className=" w-4/5">
               <img
                 className="float-right w-48 h-40 object-cover mx-3 my-2 border-2 border-black rounded"
                 src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               />
             </div>
-            <h1 className="font-bold text-sm mb-4 noto-sans-indic capitalize text-[#cd5225] p-2 border-b-4 border-gray-500">
+            <h1 className=" align-middle font-bold text-sm mb-4 noto-sans-indic capitalize text-[#cd5225] p-2 border-b-4 border-gray-500">
               "Hanz offers Professional Cleaning Services for Homes and Offices
               in Baltimore, MD"
             </h1>

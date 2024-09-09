@@ -23,10 +23,10 @@ const Page = () => {
               src="https://images.unsplash.com/photo-1669170930713-f7c778496177?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
             <h1 className="font-bold text-sm mb-4 noto-sans-indic">
-            "HANZ PROVIDES RELIABLE HANDYMAN SERVICES WITH METICULOUS ATTENTION TO DETAIL."
+            "Reliable Handyman Services for Property Managers, Homeowners, and Renters in Baltimore, MD"
             </h1>
             <p className="font-light text-[26px] noto-znamenny">
-            Tackle your home projects with Hanz, your trusted partner for all handyman services. From painting to minor plumbing, our skilled local providers can manage a variety of tasks to enhance and maintain your space. Trust Hanz to bring quality work to your projects, delivered efficiently and affordably.
+            At Hanz Home-Solutions, we specialize in providing reliable and cost-effective handyman services to property managers, real estate investors, homeowners, and renters in the Baltimore, MD area. Whether you need help with minor repairs, painting, or property maintenance, our skilled local handymen deliver top-notch services to meet your home and property needs.
             </p>
           </div>
         </div>
@@ -43,26 +43,35 @@ const Page = () => {
           </Link>
         </div>
         <div className=" mb-2 mt-2 text-center mx-8 py-2  border-black">
-          <h1 className="font-bold text-sm mb-4 noto-sans-indic">
-          "HANZ DELIVERS COST-EFFECTIVE HANDYMAN SOLUTIONS TO MEET YOUR HOME MAINTENANCE NEEDS."
-          </h1>
+          <h2 className="font-bold text-sm mb-4 noto-sans-indic">
+         " Comprehensive Handyman Services for Property Maintenance and Home Improvement "
+          </h2>
           <p className="font-light text-[26px] noto-znamenny">
-          At Hanz, we connect you with skilled local workers who can handle a range of home improvement and maintenance tasks. Whether you need painting, door and window repairs, drywall patching, minor plumbing fixes, or hanging and mounting, our team is ready to help. Our services include:
+          Our team at Hanz is your go-to solution for property maintenance and home improvement tasks. We handle a wide range of services, including interior and exterior painting, minor plumbing, drywall patching, and window/door repairs. Whether you’re a landlord preparing a rental property or a homeowner looking for seasonal work, we ensure that your space is well-maintained, functional, and visually appealing.
           </p>
           <img
             className="float-left w-48 h-48 object-cover mx-3 my-2 border-4 border-black rounded"
             src="https://images.unsplash.com/photo-1679797870465-b4eda40ead96?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
+          <h3>Handyman Services We Provide</h3>
           <ul className="text-[20px] italic noto-sans-indic">
-            <li>- Painting: Interior and exterior painting of walls, ceilings, and trim. </li>
-            <li>- Door/Window Repairs: Fixing or replacing broken doors and windows.</li>
-            <li>- Drywall Patching/Repair: Repairing holes, cracks, and other damage in drywall.</li>
-            <li>- Minor Plumbing: Fixing leaks, unclogging drains, and replacing fixtures.</li>
-            <li>- Hanging and Mounting: Installing shelves, pictures, and other items on walls. </li>
-            <li>
-              - Comprehensive demolition and debris removal <p className="text-xs">(with can/truck provided)</p>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">Painting Services: Interior and exterior painting for walls, ceilings, and trim to refresh and update your property. </li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">Window/Door Repairs: Fix or replace damaged doors and windows to improve both security and energy efficiency.</li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">Drywall Patching and Repairs: Professional repair of holes, cracks, and other drywall damage to keep your walls looking pristine.</li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">Minor Plumbing: Fixing leaks, unclogging drains, and replacing fixtures to maintain the functionality of your home or rental property.</li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">Hanging and Mounting: Installing shelves, pictures, and wall-mounted units securely and with precision.</li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
+              Comprehensive demolition and debris removal <p className="text-xs">(with can/truck provided)</p>
             </li>
           </ul>
+<h4>Why Property Managers and Homeowners Choose Hanz Home-Solutions</h4>
+<div>
+Reliable Handyman Services- Our experienced handymen provide consistent, high-quality work that meets the specific needs of property managers and real estate investors.
+Affordable Property Maintenance: We offer cost-effective solutions that ensure your property is in top condition without breaking the budget.
+Efficient and On-Time: We respect your time and complete all projects efficiently, making us the perfect partner for rental properties or homes that require quick turnaround times.
+</div>
+<h5>Serving the Baltimore, MD Area</h5>
+<p>Hanz Home-Solutions proudly serves the Baltimore metropolitan area, including surrounding suburbs, to help landlords, homeowners, and real estate professionals maintain their properties with ease. From seasonal handyman services to urgent repairs, our team is ready to tackle your property management needs.</p>
           <p className="font-medium text-lg noto-znamenny">
             "Let Hanz connect you with the expertise you need to transform and
             elevate your spaces, crafting environments that mirror your unique
