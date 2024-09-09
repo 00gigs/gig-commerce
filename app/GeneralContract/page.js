@@ -53,7 +53,7 @@ const Page = () => {
             className="float-left w-48 h-48 object-cover mx-3 my-2 border-4 border-black rounded"
             src="https://images.unsplash.com/photo-1679797870465-b4eda40ead96?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
-          <h3>Handyman Services We Provide</h3>
+          <h3 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#825d46dc] p-2 border-b-4 border-gray-500">Handyman Services We Provide</h3>
           <ul className="text-[20px] italic noto-sans-indic">
             <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">Painting Services: Interior and exterior painting for walls, ceilings, and trim to refresh and update your property. </li>
             <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">Window/Door Repairs: Fix or replace damaged doors and windows to improve both security and energy efficiency.</li>
@@ -64,13 +64,18 @@ const Page = () => {
               Comprehensive demolition and debris removal <p className="text-xs">(with can/truck provided)</p>
             </li>
           </ul>
-<h4>Why Property Managers and Homeowners Choose Hanz Home-Solutions</h4>
+<h4 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#825d46dc] p-2 border-b-4 border-gray-500">Why Property Managers and Homeowners Choose Hanz Home-Solutions</h4>
 <div>
-Reliable Handyman Services- Our experienced handymen provide consistent, high-quality work that meets the specific needs of property managers and real estate investors.
-Affordable Property Maintenance: We offer cost-effective solutions that ensure your property is in top condition without breaking the budget.
-Efficient and On-Time: We respect your time and complete all projects efficiently, making us the perfect partner for rental properties or homes that require quick turnaround times.
+  <ul>
+    <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">Reliable Handyman Services -Our experienced handymen provide consistent, high-quality work that meets the specific needs of property managers and real estate investors.</li>
+    <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">Affordable Property Maintenance -We offer cost-effective solutions that ensure your property is in top condition without breaking the budget.</li>
+    <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">Efficient and On-Time -We respect-your time and complete all projects efficiently, making us the perfect partner for rental properties or homes that require quick turnaround times.</li>
+  </ul>
+
+
+
 </div>
-<h5>Serving the Baltimore, MD Area</h5>
+<h5 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#825d46dc] p-2 border-b-4 border-gray-500">Serving the Baltimore, MD Area</h5>
 <p>Hanz Home-Solutions proudly serves the Baltimore metropolitan area, including surrounding suburbs, to help landlords, homeowners, and real estate professionals maintain their properties with ease. From seasonal handyman services to urgent repairs, our team is ready to tackle your property management needs.</p>
           <p className="font-medium text-lg noto-znamenny">
             "Let Hanz connect you with the expertise you need to transform and
