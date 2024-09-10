@@ -61,11 +61,11 @@ const Register = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-slate-800">
-             <h1 className="  text-xl italic bg-clip-text text-transparent bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200 font-bold tracking-wide hover:tracking-widest duration-300 mt-44">
+             <div className="  text-xl italic bg-clip-text text-transparent bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200 font-bold tracking-wide hover:tracking-widest duration-300 mt-44">
             Hanz
-          </h1>
+          </div>
       <div className="rounded-lg shadow-lg text-center border-t-4  border-yellow-300 flex-col flex p-3 items-center max-w-72 bg-slate-700 mb-[510px]">
-        <h1>Register</h1>
+        <h1 className="capitalize text-orange-100">signup for a Hanz Home-Solutions account today</h1>
         <form onSubmit={handleSubmit} name="userRegister">
         <label className='text-orange-100 block bg-[#64615d] w-fit rounded-2xl mb-1 p-2' htmlFor="email">Email</label>
           <input
@@ -94,9 +94,9 @@ const Register = () => {
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="w-fit  hover:text-green-300">Register</button>
+          <button className="w-fit text-orange-100 block bg-[#64615d] hover:text-green-300">Register</button>
         </form>
-        <a className="text-xs underline mb-1" href="/Login">
+        <a className="text-xs underline mb-1 text-orange-100 hover:scale-105" href="/Login">
           Log in here
         </a>
      
