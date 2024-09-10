@@ -65,7 +65,7 @@ const Register = () => {
             Hanz
           </div>
       <div className="rounded-lg shadow-lg text-center border-t-4  border-yellow-300 flex-col flex p-3 items-center max-w-72 bg-slate-700 mb-[510px]">
-        <h1 className="capitalize text-orange-100 w-full">signup for a Hanz Home-Solutions account today</h1>
+        <h1 className="capitalize text-orange-100 w-full text-nowrap">signup for a Hanz Home-Solutions account today</h1>
         <form onSubmit={handleSubmit} name="userRegister">
         <label className='text-orange-100 block bg-[#64615d] w-fit rounded-2xl mb-1 p-2' htmlFor="email">Email</label>
           <input
