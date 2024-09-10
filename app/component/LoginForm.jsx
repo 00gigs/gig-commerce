@@ -75,7 +75,7 @@ const handleSubmit = async (e)=>{
               placeholder="Password"
                     onChange={(e)=>setPassword(e.target.value)}
             />
-          <button className="w-fit text-orange-100 bg-[#7a8c72a1] rounded-2xl p-2 hover:text-green-300">LogIn</button>
+          <button className="w-full text-orange-100 bg-[#7a8c72a1] rounded-2xl p-2 hover:text-green-300">LogIn</button>
           </form>
           <a className="text-xs mt-2 underline text-orange-100 hover:scale-105" href="/register">
           Create Your Hanz Home-Solutions Account

@@ -76,7 +76,7 @@ const Register = () => {
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label className='text-orange-100 block bg-[#64615d] w-fit rounded-2xl mb-1 p-2' htmlFor="username">Username</label>
+          <label className=' text-orange-100 block bg-[#64615d] w-full rounded-2xl mb-1 p-2' htmlFor="username">Username</label>
           <input
             className="m-2 p-2 rounded-lg border-4 text-black"
             minLength={5}
