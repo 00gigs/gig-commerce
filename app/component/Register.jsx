@@ -67,6 +67,7 @@ const Register = () => {
       <div className="rounded-lg shadow-lg text-center border-t-4  border-yellow-300 flex-col flex p-3 items-center max-w-72 bg-slate-700 mb-[510px]">
         <h1>Register</h1>
         <form onSubmit={handleSubmit} name="userRegister">
+        <label className='text-orange-100 block bg-[#64615d] w-fit rounded-2xl mb-1 p-2' htmlFor="email">Email</label>
           <input
             className="m-2 p-2 rounded-lg  border-4 text-black"
             minLength={5}
@@ -75,6 +76,7 @@ const Register = () => {
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
           />
+          <label className='text-orange-100 block bg-[#64615d] w-fit rounded-2xl mb-1 p-2' htmlFor="username">Username</label>
           <input
             className="m-2 p-2 rounded-lg border-4 text-black"
             minLength={5}
@@ -83,6 +85,7 @@ const Register = () => {
             placeholder="User name"
             onChange={(e) => setUserName(e.target.value)}
           />
+          <label className='text-orange-100 block bg-[#64615d] w-fit rounded-2xl mb-1 p-2' htmlFor="password">Password</label>
           <input
             className="m-2 p-2 rounded-lg border-4 text-black"
             minLength={5}

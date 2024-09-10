@@ -53,11 +53,11 @@ const handleSubmit = async (e)=>{
             Hanz
           </div>
         <div className="rounded-lg shadow-lg text-center border-t-4  border-yellow-300 flex-col flex p-3 items-center max-w-72  bg-slate-700">
-          <h1 className='text-orange-100'>Login to Hanz Home-Solutions</h1>
+          <h1 className='text-orange-100 mb-2'>Login to Hanz Home-Solutions</h1>
           <form
           onSubmit={handleSubmit}
           name="userLogin">
-             <label className='text-orange-100 block bg-[#64615d] w-fit rounded-2xl mb-1' htmlFor="userName">Username</label>
+             <label className='text-orange-100 block bg-[#64615d] w-fit rounded-2xl mb-1 p-2' htmlFor="userName">Username</label>
             <input
               className="m-2 p-2 rounded-lg border-4 text-black"
               minLength={5}
@@ -66,7 +66,7 @@ const handleSubmit = async (e)=>{
               placeholder="User name"
                     onChange={(e)=>setUserName(e.target.value)}
             />
-                <label className='text-orange-100 block bg-[#64615d] w-fit rounded-2xl mb-1' htmlFor="Password">Password</label>
+                <label className='text-orange-100 block bg-[#64615d] w-fit rounded-2xl mb-1 p-2' htmlFor="Password">Password</label>
             <input
               className="m-2 p-2 rounded-lg border-4 text-black"
               minLength={5}
@@ -75,7 +75,7 @@ const handleSubmit = async (e)=>{
               placeholder="Password"
                     onChange={(e)=>setPassword(e.target.value)}
             />
-          <button className="w-fit text-orange-100 bg-[#7a8c72a1] rounded-2xl hover:text-green-300">LogIn</button>
+          <button className="w-fit text-orange-100 bg-[#7a8c72a1] rounded-2xl p-2 hover:text-green-300">LogIn</button>
           </form>
           <a className="text-xs mt-2 underline text-orange-100 hover:scale-105" href="/register">
           Create Your Hanz Home-Solutions Account
