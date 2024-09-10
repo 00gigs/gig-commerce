@@ -76,7 +76,7 @@ const Register = () => {
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label className=' text-orange-100 block bg-[#64615d] w-full rounded-2xl mb-1 p-2' htmlFor="username">Username</label>
+          <label className=' text-orange-100 block bg-[#64615d] w-fit rounded-2xl mb-1 p-2' htmlFor="username">Username</label>
           <input
             className="m-2 p-2 rounded-lg border-4 text-black"
             minLength={5}
@@ -94,7 +94,7 @@ const Register = () => {
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="w-fit text-orange-100 block rounded-2xl p-2 bg-[#64615d] hover:text-green-300">Register</button>
+          <button className="w-full text-orange-100 block rounded-2xl p-2 bg-[#64615d] hover:text-green-300">Register</button>
         </form>
         <a className="text-xs underline mb-1 text-orange-100 hover:scale-105" href="/Login">
           Log in here
