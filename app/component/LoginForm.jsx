@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/navigation';
 import { signIn } from 'next-auth/react';
 import Footer from './Footer';
+import Head from 'next/head';
 
 const LoginForm = () => {
   const router = useRouter();
@@ -40,17 +41,23 @@ const handleSubmit = async (e)=>{
 }
 
   return (
+    <>
+  <Head>
+  <title>My page title</title>
+  <meta name="description" content="Log in to Hanz Home-Solutions to manage your bookings for moving, housekeeping, lawn care, and handyman services. Secure and easy access to your account."></meta>
+  </Head>
     <div>
       <div className="flex flex-col items-center justify-center min-h-screen bg-[#D1CAC2]">
   {/**logo 👇🏻 */}
-  <h1 className="  text-xl italic bg-clip-text text-transparent bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200 font-bold tracking-wide hover:tracking-widest duration-300">
+  <div className="  text-xl italic bg-clip-text text-transparent bg-gradient-to-l from-teal-200 via-slate-200 to-amber-200 font-bold tracking-wide hover:tracking-widest duration-300">
             Hanz
-          </h1>
+          </div>
         <div className="rounded-lg shadow-lg text-center border-t-4  border-yellow-300 flex-col flex p-3 items-center max-w-72  bg-slate-700">
-          <h1>Login</h1>
+          <h1>Login to Hanz Home-Solutions</h1>
           <form
           onSubmit={handleSubmit}
           name="userLogin">
+             <label htmlFor="username">Username</label>
             <input
               className="m-2 p-2 rounded-lg border-4 text-black"
               minLength={5}
@@ -59,6 +66,7 @@ const handleSubmit = async (e)=>{
               placeholder="User name"
                     onChange={(e)=>setUserName(e.target.value)}
             />
+                <label htmlFor="password">Password</label>
             <input
               className="m-2 p-2 rounded-lg border-4 text-black"
               minLength={5}
@@ -70,7 +78,7 @@ const handleSubmit = async (e)=>{
           <button className="w-fit  hover:text-green-300">LogIn</button>
           </form>
           <a className="text-xs underline" href="/register">
-            Register here
+          Create Your Hanz Home-Solutions Account
           </a>
           {error && (
             <div className="bg-red-500 m-4 text-sm rounded-md p-2">{error}</div>
@@ -79,6 +87,8 @@ const handleSubmit = async (e)=>{
       </div>
       <Footer />
     </div>
+    </>
+    
   );
 };
 
