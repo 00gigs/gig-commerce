@@ -76,11 +76,11 @@ const Page = () => {
 
 </div>
 <h5 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#825d46dc] mb-2 p-2 border-b-4 border-gray-500">Serving the Baltimore, MD Area</h5>
-<p>Hanz Home-Solutions proudly serves the Baltimore metropolitan area, including surrounding suburbs, to help landlords, homeowners, and real estate professionals maintain their properties with ease. From seasonal handyman services to urgent repairs, our team is ready to tackle your property management needs.</p>
-          <p className="font-medium text-lg noto-znamenny p-4">
+<p className="p-2">Hanz Home-Solutions proudly serves the Baltimore metropolitan area, including surrounding suburbs, to help landlords, homeowners, and real estate professionals maintain their properties with ease. From seasonal handyman services to urgent repairs, our team is ready to tackle your property management needs.</p>
+          <p className="font-medium text-lg noto-znamenny p-3 border-2 border-black">
             "Let Hanz connect you with the expertise you need to transform and
             elevate your spaces, crafting environments that mirror your unique
-            style and requirements.""
+            style and requirements."
           </p>
         </div>
       </div>

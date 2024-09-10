@@ -24,11 +24,16 @@ const Page = () => {
               src="https://images.unsplash.com/photo-1605117882932-f9e32b03fea9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHNjYXBpbmd8ZW58MHx8MHx8fDA%3D"
             />
             <h1 className="font-bold text-sm mb-4 noto-sans-indic">
-              "HANZ DELIVERS UNMATCHED LANDSCAPE SERVICES WITH A PERSONAL
-              TOUCH."
+              Affordable Landscaping Services for Property Managers, Homeowners,
+              and Renters in Baltimore, MD.
             </h1>
             <p className="font-light text-[26px] noto-znamenny">
-            "Transform your outdoor space with Hanz. Our skilled team offers a range of landscaping services at great value, including mowing lawns, trimming trees and bushes for safety and aesthetics, planting flowers and shrubs, mulching to maintain soil health and enhance appearance, and leaf and debris removal to keep your yard tidy. By booking with us, you'll enjoy quality services and significant savings compared to other companies. Let Hanz help you create the garden you've always wanted."
+              At Hanz Home-Solutions, we specialize in providing affordable and
+              reliable landscaping services to property managers, real estate
+              investors, homeowners, and renters in the Baltimore, MD area.
+              Whether you need lawn maintenance, tree trimming, or garden care,
+              our skilled local landscapers are here to enhance and maintain
+              your outdoor spaces.
             </p>
           </div>
         </div>
@@ -41,23 +46,88 @@ const Page = () => {
           </Link>
         </div>
         <div className=" mb-2 mt-2 text-center  mx-8 py-2  border-black ">
-          <h1 className="font-bold text-sm mb-4 uppercase noto-sans-indic">
-          "Our skilled local providers deliver quality landscaping and garden care services at competitive prices."
-          </h1>
+          <h2 className="font-bold text-sm mb-4 uppercase noto-sans-indic">
+            Transform Your Yard with Affordable and Reliable Landscaping
+            Services
+          </h2>
           <p className="font-light text-[26px] noto-znamenny">
-          At Hanz, we connect you with skilled local providers who offer residential and commercial landscaping services. While our service providers may not be certified professionals, they have the expertise to manage a wide range of tasks. Our dedicated yard work specialists work diligently to maintain and enhance your outdoor spaces. Our services include:
+            Our experienced landscaping team offers a variety of yard
+            maintenance and garden care services designed to beautify and
+            maintain your property’s outdoor areas. From mowing lawns to tree
+            and bush trimming, we provide high-quality services at competitive
+            rates. Whether you're a homeowner preparing for a sale or a property
+            manager looking to maintain your rental properties, Hanz
+            Home-Solutions ensures your yard is always in top shape.
           </p>
           <img
             className="float-left w-48 h-44 object-cover mx-3 my-2 border-4 border-black rounded"
             src="https://images.unsplash.com/photo-1629575063988-881596e38d31?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
           <ul className="text-[20px] italic noto-sans-indic">
-            <li>- Grass Cutting: Mowing and maintaining lawns.  </li>
-            <li>- Tree and Bush Trimming: Pruning trees and bushes for aesthetic and safety reasons. </li>
-            <li>- Gardening and Planting: Planting flowers, shrubs, and other greenery.</li>
-            <li>- Mulching: Spreading mulch to maintain soil health and improve appearance.</li>
-            <li>- Leaf and Debris Removal: Clearing leaves and unwanted debris from lawns and gardens. </li>
+            <li>- Grass Cutting: Mowing and maintaining lawns. </li>
+            <li>
+              - Tree and Bush Trimming: Pruning trees and bushes for aesthetic
+              and safety reasons.{" "}
+            </li>
+            <li>
+              - Gardening and Planting: Planting flowers, shrubs, and other
+              greenery.
+            </li>
+            <li>
+              - Mulching: Spreading mulch to maintain soil health and improve
+              appearance.
+            </li>
+            <li>
+              - Leaf and Debris Removal: Clearing leaves and unwanted debris
+              from lawns and gardens.{" "}
+            </li>
           </ul>
+
+          <h3>
+            {" "}
+            Why Property Managers and Homeowners Choose Hanz Home-Solutions
+          </h3>
+          <ul>
+            <li>
+              Reliable Landscaping Services: Our dedicated team offers
+              consistent, reliable services, perfect for property managers and
+              real estate investors.
+            </li>
+            <li>
+              Affordable Yard Maintenance: We provide cost-effective solutions
+              for maintaining lawns, gardens, and other outdoor areas, ensuring
+              your property always looks its best.
+            </li>
+            <li>
+              Skilled Local Providers: Our team is made up of skilled local
+              workers who are passionate about landscaping and delivering great
+              results.
+            </li>
+          </ul>
+
+          <h4>Landscaping Services We Provide:</h4>
+          <ul>
+            <li>
+              Grass Cutting: Professional mowing and lawn care to keep your yard
+              neat and healthy.
+            </li>
+            <li>
+              ree and Bush Trimming: Pruning and trimming trees and bushes to
+              maintain safety and aesthetics.
+            </li>
+            <li>
+              Gardening and Planting: Planting flowers, shrubs, and other
+              greenery to enhance the beauty of your outdoor space.
+            </li>
+            <li>
+              Mulching: Spreading mulch to improve soil health and the
+              appearance of garden beds.
+            </li>
+            <li></li>
+          </ul>
+         <h4></h4> Serving the Baltimore, MD Area.
+
+<div>Hanz Home-Solutions proudly serves the Baltimore metropolitan area, offering landscaping services that meet the needs of property managers, homeowners, and real estate professionals. Whether it’s seasonal maintenance or weekly yard care, we’re here to keep your outdoor spaces looking their best.</div>
           <p className="font-medium text-lg noto-znamenny">
             "Let Hanz connect you with the expertise you need to transform and
             maintain your outdoor areas, creating spaces that reflect your
