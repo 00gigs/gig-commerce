@@ -53,11 +53,11 @@ const handleSubmit = async (e)=>{
             Hanz
           </div>
         <div className="rounded-lg shadow-lg text-center border-t-4  border-yellow-300 flex-col flex p-3 items-center max-w-72  bg-slate-700">
-          <h1>Login to Hanz Home-Solutions</h1>
+          <h1 className='text-orange-100'>Login to Hanz Home-Solutions</h1>
           <form
           onSubmit={handleSubmit}
           name="userLogin">
-             <label htmlFor="username">Username</label>
+             <label className='text-orange-100 block' htmlFor="userName">Username</label>
             <input
               className="m-2 p-2 rounded-lg border-4 text-black"
               minLength={5}
@@ -66,7 +66,7 @@ const handleSubmit = async (e)=>{
               placeholder="User name"
                     onChange={(e)=>setUserName(e.target.value)}
             />
-                <label htmlFor="password">Password</label>
+                <label className='text-orange-100 block' htmlFor="Password">Password</label>
             <input
               className="m-2 p-2 rounded-lg border-4 text-black"
               minLength={5}
@@ -75,9 +75,9 @@ const handleSubmit = async (e)=>{
               placeholder="Password"
                     onChange={(e)=>setPassword(e.target.value)}
             />
-          <button className="w-fit  hover:text-green-300">LogIn</button>
+          <button className="w-fit text-orange-100 hover:text-green-300">LogIn</button>
           </form>
-          <a className="text-xs underline" href="/register">
+          <a className="text-xs mt-2 underline text-orange-100 hover:scale-105" href="/register">
           Create Your Hanz Home-Solutions Account
           </a>
           {error && (
