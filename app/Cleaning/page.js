@@ -131,7 +131,7 @@ const Page = () => {
           </div>
           <div>
             <h6 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#FF7F50] p-2 border-b-4 border-gray-500">
-              Customer Satisfaction is Our Priority:
+              Customer Satisfaction is Our Priority
             </h6>
             <p className="p-2">
               At Hanz Home-Solutions, customer satisfaction is at the heart of
