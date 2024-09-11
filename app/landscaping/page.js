@@ -63,72 +63,72 @@ const Page = () => {
             className="float-left w-48 h-44 object-cover mx-3 my-2 border-4 border-black rounded"
             src="https://images.unsplash.com/photo-1629575063988-881596e38d31?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
+          <h3 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#8ad7e5] p-2 border-b-4 border-gray-500">Landscaping Services We Provide</h3>
           <ul className="text-[20px] italic noto-sans-indic">
-            <li>- Grass Cutting: Mowing and maintaining lawns. </li>
-            <li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">- Grass Cutting: Mowing and maintaining lawns. </li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
               - Tree and Bush Trimming: Pruning trees and bushes for aesthetic
               and safety reasons.{" "}
             </li>
-            <li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
               - Gardening and Planting: Planting flowers, shrubs, and other
               greenery.
             </li>
-            <li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
               - Mulching: Spreading mulch to maintain soil health and improve
               appearance.
             </li>
-            <li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
               - Leaf and Debris Removal: Clearing leaves and unwanted debris
               from lawns and gardens.{" "}
             </li>
           </ul>
 
-          <h3>
+          <h4 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#8ad7e5] p-2 border-b-4 border-gray-500">
             {" "}
             Why Property Managers and Homeowners Choose Hanz Home-Solutions
-          </h3>
-          <ul>
-            <li>
+          </h4>
+          <ul className='text-[20px] italic noto-sans-indic p-2'>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
               Reliable Landscaping Services: Our dedicated team offers
               consistent, reliable services, perfect for property managers and
               real estate investors.
             </li>
-            <li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
               Affordable Yard Maintenance: We provide cost-effective solutions
               for maintaining lawns, gardens, and other outdoor areas, ensuring
               your property always looks its best.
             </li>
-            <li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
               Skilled Local Providers: Our team is made up of skilled local
               workers who are passionate about landscaping and delivering great
               results.
             </li>
           </ul>
 
-          <h4>Landscaping Services We Provide:</h4>
+          <h5 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#8ad7e5] p-2 border-b-4 border-gray-500">Landscaping Services We Provide:</h5>
           <ul>
-            <li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
               Grass Cutting: Professional mowing and lawn care to keep your yard
               neat and healthy.
             </li>
-            <li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
               ree and Bush Trimming: Pruning and trimming trees and bushes to
               maintain safety and aesthetics.
             </li>
-            <li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
               Gardening and Planting: Planting flowers, shrubs, and other
               greenery to enhance the beauty of your outdoor space.
             </li>
-            <li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
               Mulching: Spreading mulch to improve soil health and the
               appearance of garden beds.
             </li>
-            <li></li>
           </ul>
-         <h4></h4> Serving the Baltimore, MD Area.
+         <h6 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#8ad7e5] p-2 border-b-4 border-gray-500">Serving the Baltimore, MD Area.</h6> 
 
 <div>Hanz Home-Solutions proudly serves the Baltimore metropolitan area, offering landscaping services that meet the needs of property managers, homeowners, and real estate professionals. Whether it’s seasonal maintenance or weekly yard care, we’re here to keep your outdoor spaces looking their best.</div>
-          <p className="font-medium text-lg noto-znamenny">
+          <p className="p-3 font-medium text-lg noto-znamenny mt-3 border-black border-4">
             "Let Hanz connect you with the expertise you need to transform and
             maintain your outdoor areas, creating spaces that reflect your
             aesthetic and functional needs."
