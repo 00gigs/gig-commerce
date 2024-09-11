@@ -65,22 +65,18 @@ const Page = () => {
           />
           <h3 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#8ad7e5] p-2 border-b-4 border-gray-500">Landscaping Services We Provide</h3>
           <ul className="text-[20px] italic noto-sans-indic">
-            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">- Grass Cutting: Mowing and maintaining lawns. </li>
+            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">Grass Cutting: Professional mowing and lawn care to keep your yard neat and healthy. </li>
             <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-              - Tree and Bush Trimming: Pruning trees and bushes for aesthetic
-              and safety reasons.{" "}
+            Tree and Bush Trimming: Pruning and trimming trees and bushes to maintain safety and aesthetics.{" "}
             </li>
             <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-              - Gardening and Planting: Planting flowers, shrubs, and other
-              greenery.
+            Gardening and Planting: Planting flowers, shrubs, and other greenery to enhance the beauty of your outdoor space.
             </li>
             <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-              - Mulching: Spreading mulch to maintain soil health and improve
-              appearance.
+            Mulching: Spreading mulch to improve soil health and the appearance of garden beds.
             </li>
             <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-              - Leaf and Debris Removal: Clearing leaves and unwanted debris
-              from lawns and gardens.{" "}
+            Leaf and Debris Removal: Keeping your lawn free of leaves and debris to maintain a clean and tidy yard.{" "}
             </li>
           </ul>
 
