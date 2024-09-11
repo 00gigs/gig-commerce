@@ -15,8 +15,8 @@ const Page = () => {
 <div className=' border-black mx-8  p-3 text-center mt-4'>
   <div className='flex-1 mb-8'>
 <img className='float-right w-48 h-40 object-cover mx-3 my-2 border-2 border-black rounded' src='https://images.pexels.com/photos/4246266/pexels-photo-4246266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'/>
-  <h1 className='font-bold text-sm mb-4 noto-sans-indic'>"HANZ DELIVERS RELIABLE MOVING SERVICES WITH A FOCUS ON EFFICIENCY AND PRECISION."</h1>
-  <p className='font-light text-[26px] noto-znamenny'>Make your move hassle-free with Hanz, your dependable choice for residential and commercial moving services. From loading and unloading to careful packing and unpacking, our experienced team handles every detail of your move with precision and care. Trust Hanz to manage your relocation smoothly and securely.</p>
+  <h1 className='font-bold text-sm mb-4 noto-sans-indic'>Reliable Moving Services for Property Managers, Homeowners, and Renters in Baltimore, MD</h1>
+  <p className='font-light text-[26px] noto-znamenny'>At Hanz Home-Solutions, we provide dependable and efficient moving services tailored for property managers, homeowners, renters, and real estate investors in the Baltimore, MD area. Whether you’re moving into a new home, relocating an office, or managing tenant move-ins/outs, our experienced team offers affordable, high-quality moving services to make your transition smooth and stress-free.</p>
   </div>
 </div>   
 <div>
@@ -25,18 +25,25 @@ const Page = () => {
 </Link>
 </div>
 <div className='mb-2 mt-2 text-center  mx-8 py-2  border-black'>
-<h1 className='font-bold text-sm mb-4 noto-sans-indic'>"OUR SKILLED MOVERS PROVIDE AFFORDABLE, QUALITY SERVICES FOR YOUR MOVE."</h1>
-<p className='font-light text-[26px] noto-znamenny'>At Hanz, we help make your move seamless and stress-free. Our team of skilled movers expertly manages each step of the process, ensuring your belongings are safely transported and properly settled in your new space. Our comprehensive moving services include:</p>
+<h2 className='font-bold text-sm mb-4 noto-sans-indic'>Hassle-Free Moving Services for Homes and Businesses</h2>
+<p className='font-light text-[26px] noto-znamenny'>Our skilled team at Hanz is here to make your next move as seamless as possible. From loading and unloading to packing and unpacking, we handle every detail of your move with efficiency and care. Whether you’re moving locally or relocating your business, trust Hanz to get your belongings safely from one location to another. We specialize in providing cost-effective, reliable solutions for residential and commercial moving.</p>
   <img className='float-left w-48 h-52 object-cover mx-3 my-2 border-4 border-black rounded' src='https://images.pexels.com/photos/5025512/pexels-photo-5025512.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'/>
+ <h3>Moving Services We Provide</h3> 
   <ul className='text-[20px] italic noto-sans-indic'>
-    <li>- Loading and Unloading: Efficiently moving items onto and off of a truck. </li>
-    <li>- Packing and Unpacking: Carefully packing and unpacking items during a move.</li>
-    <li>- Organizing: Helping arrange items in the new location for ease of access.</li>
-    <li>- Furniture Assembly and Disassembly: Assembling and disassembling furniture for transportation.</li>
-    <li>- Furniture Placement: Helping set up furniture in the new location to the customer's specifications.</li>
+    <li>Loading and Unloading: Expertly moving your items onto and off of the truck with precision.</li>
+    <li>Packing and Unpacking: Careful packing of your items to prevent damage and unpacking them upon arrival.</li>
+    <li>Organizing: Helping arrange items in your new space for convenient access.</li>
+    <li>Furniture Assembly and Disassembly: We handle the assembly and disassembly of your furniture for easy transport.</li>
+    <li>Furniture Placement: Our team ensures your furniture is arranged exactly to your specifications in your new location.</li>
   </ul>
- <p className='font-medium text-lg noto-znamenny'>"Let Hanz provide you with cost-effective, reliable moving solutions that meet your needs and exceed your expectations. Enjoy a smooth and stress-free moving experience with our team."</p>
- 
+<h4>Why Property Managers and Homeowners Choose Hanz Home-Solutions</h4>
+<ul>
+  <li>Efficient Moving Services: We offer a full range of moving services, perfect for property managers needing fast turnover or homeowners moving into new spaces.</li>
+  <li>Affordable Rates: We provide competitive pricing, ensuring that your move is not only smooth but also cost-effective.</li>
+  <li>Skilled and Trustworthy Movers: Our team consists of experienced local movers who are trained to handle your belongings with care.
+</li>
+</ul>
+ <h5 className='font-medium text-lg noto-znamenny'> Let Hanz provide you with cost-effective, reliable moving solutions that meet your needs and exceed your expectations. Enjoy a smooth and stress-free moving experience with our team."</h5>
 </div>
 
             </div>

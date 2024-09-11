@@ -101,26 +101,6 @@ const Page = () => {
               results.
             </li>
           </ul>
-
-          <h5 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#8ad7e5] p-2 border-b-4 border-gray-500">Landscaping Services We Provide:</h5>
-          <ul>
-            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-              Grass Cutting: Professional mowing and lawn care to keep your yard
-              neat and healthy.
-            </li>
-            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-              ree and Bush Trimming: Pruning and trimming trees and bushes to
-              maintain safety and aesthetics.
-            </li>
-            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-              Gardening and Planting: Planting flowers, shrubs, and other
-              greenery to enhance the beauty of your outdoor space.
-            </li>
-            <li className="list-disc my-3 font-light text-[20px] leading-10   tracking-tight">
-              Mulching: Spreading mulch to improve soil health and the
-              appearance of garden beds.
-            </li>
-          </ul>
          <h6 className="font-light text-[16px] italic  rounded-xl noto-znamenny bg-[#8ad7e5] p-2 border-b-4 border-gray-500">Serving the Baltimore, MD Area.</h6> 
 
 <div>Hanz Home-Solutions proudly serves the Baltimore metropolitan area, offering landscaping services that meet the needs of property managers, homeowners, and real estate professionals. Whether it’s seasonal maintenance or weekly yard care, we’re here to keep your outdoor spaces looking their best.</div>
