@@ -107,7 +107,7 @@ export default function RootLayout({ children, session }) {
           height="1"
           width="1"
           style={{ display: "none" }}
-          src={`https://www.facebook.com/tr?id=829980235980500&ev=PageView&noscript=1`}
+          src={`https://www.facebook.com/tr?id=1478447116147772&ev=PageView&noscript=1`}
         />
       </noscript>
       </body>
