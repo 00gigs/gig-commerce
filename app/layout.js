@@ -79,6 +79,7 @@ export default function RootLayout({ children, session }) {
           name="twitter:image"
           content="https://i.ibb.co/NFj4cNV/logo.png"
         />
+          
       </Head>
 
       <body className={inter.className}>
