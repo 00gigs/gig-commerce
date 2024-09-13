@@ -15,7 +15,7 @@ const Page = () => {
 <div className=' border-black mx-8  p-3 text-center mt-4'>
   <div className='flex-1 mb-8'>
 <img className='float-right w-48 h-40 object-cover mx-3 my-2 border-2 border-black rounded' src='https://images.pexels.com/photos/4246266/pexels-photo-4246266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'/>
-  <h1 className='align-middle font-bold text-sm mb-4 noto-sans-indic capitalize text-[#43d445d4] p-2 border-b-4 border-gray-500'>Reliable Moving Services for Property Managers, Homeowners, and Renters in Baltimore, MD</h1>
+  <h1 className='align-middle font-bold text-sm mb-4 noto-sans-indic capitalize text-[#31ad33d4] p-2 border-b-4 border-gray-500'>Reliable Moving Services for Property Managers, Homeowners, and Renters in Baltimore, MD</h1>
   <p className='font-light text-[26px] noto-znamenny'>At Hanz Home-Solutions, we provide dependable and efficient moving services tailored for property managers, homeowners, renters, and real estate investors in the Baltimore, MD area. Whether you’re moving into a new home, relocating an office, or managing tenant move-ins/outs, our experienced team offers affordable, high-quality moving services to make your transition smooth and stress-free.</p>
   </div>
 </div>   

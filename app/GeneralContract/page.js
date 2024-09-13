@@ -22,7 +22,7 @@ const Page = () => {
               className="float-right w-48 h-40 object-cover mx-3 my-2 border-2 border-black rounded"
               src="https://images.unsplash.com/photo-1669170930713-f7c778496177?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
-            <h1 className="font-bold text-sm mb-4 noto-sans-indic">
+            <h1 className="font-bold text-sm mb-4 noto-sans-indic capitalize text-[#825d46dc]">
             "Reliable Handyman Services for Property Managers, Homeowners, and Renters in Baltimore, MD"
             </h1>
             <p className="font-light text-[26px] noto-znamenny">

@@ -23,7 +23,7 @@ const Page = () => {
               className="float-right w-48 h-30 object-cover mx-3 my-2 border-2 border-black rounded"
               src="https://images.unsplash.com/photo-1605117882932-f9e32b03fea9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHNjYXBpbmd8ZW58MHx8MHx8fDA%3D"
             />
-            <h1 className="font-bold text-sm mb-4 noto-sans-indic">
+            <h1 className="font-bold text-sm mb-4 noto-sans-indic capitalize text-[#8ad7e5]">
               Affordable Landscaping Services for Property Managers, Homeowners,
               and Renters in Baltimore, MD.
             </h1>

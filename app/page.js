@@ -11,7 +11,7 @@ export default function Home() {
         <div>{/**headBanner  */}
           <div className="text-[22px] font-bold italic tracking-wide">
             {/* <h2 className="italic underline text-indigo-200 font-bold tracking-widest">Hanz</h2> */}
-            <h1>`Your Premier All-In-One Home 🏡 Solutions Provider`</h1>
+            <h1>Your Premier All-In-One Home Solutions Provider</h1>
             </div>
         </div>{/**headBanner  */}
         {/* <div className="flex justify-center">
